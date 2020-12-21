@@ -1,0 +1,20 @@
+[ 2020-12-11T09:06:04+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003584s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015949s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.016006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.119892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000795s ]
+
