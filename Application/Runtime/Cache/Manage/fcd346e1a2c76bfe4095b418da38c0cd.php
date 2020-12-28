@@ -25,10 +25,10 @@
         <form class="layui-form">
           <div class="layui-form-item">
             <label for="customer_name" class="layui-form-label">
-              <span class="x-red">*</span>租户姓名
+              <span class="x-red">*</span>房屋编号
             </label>
             <div class="layui-input-inline">
-              <input type="text" id="customer_name" name="customer_name" required
+              <input type="text" id="room_sn" name="room_sn" required
                      autocomplete="off" class="layui-input">
             </div>
           </div>
@@ -45,18 +45,18 @@
 <!--              </select>-->
 <!--            </div>-->
 <!--          </div>-->
-          <div class="layui-form-item">
-            <label for="customer_mobile" class="layui-form-label">
-              <span class="x-red">*</span>联系方式
-            </label>
-            <div class="layui-input-inline">
-              <input type="text" id="customer_mobile" name="customer_mobile" required lay-verify="phone"
-                     autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-mid layui-word-aux">
-              <span class="x-red">*</span>将会成为您唯一的登入名
-            </div>
-          </div>
+<!--          <div class="layui-form-item">-->
+<!--            <label for="customer_mobile" class="layui-form-label">-->
+<!--              <span class="x-red">*</span>联系方式-->
+<!--            </label>-->
+<!--            <div class="layui-input-inline">-->
+<!--              <input type="text" id="customer_mobile" name="customer_mobile" required lay-verify="phone"-->
+<!--                     autocomplete="off" class="layui-input">-->
+<!--            </div>-->
+<!--            <div class="layui-form-mid layui-word-aux">-->
+<!--              <span class="x-red">*</span>将会成为您唯一的登入名-->
+<!--            </div>-->
+<!--          </div>-->
 <!--          <div class="layui-form-item">-->
 <!--            <label for="room_name" class="layui-form-label">-->
 <!--              <span class="x-red">*</span>房间号-->
@@ -112,7 +112,7 @@
             console.log(data);
             //发异步，把数据提交给php
             $.ajax({
-              url: 'addCustomer',
+              url: 'addRoom',
               type: 'post',
               data: data.field,
               dataType: 'json',

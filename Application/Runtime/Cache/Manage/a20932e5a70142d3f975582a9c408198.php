@@ -23,8 +23,8 @@
   <body class="layui-anim layui-anim-up">
     <div class="x-nav">
       <span class="layui-breadcrumb">
-        <a href="">租户管理</a>
-        <a href="">租户列表</a>
+        <a href="">房屋管理</a>
+        <a href="">房屋列表</a>
 <!--        <a>-->
 <!--          <cite>导航元素</cite></a>-->
       </span>
@@ -35,9 +35,9 @@
       <div class="chu">
         <div class="demoTable layui-form-item">
           <div class="layui-inline">
-            <label class="layui-form-label">查询条件:</label>
+<!--            <label class="layui-form-label">查询条件:</label>-->
             <div class="layui-input-inline">
-              <input class="layui-input" name="search" id="search" placeholder="租户姓名/联系方式/备注" autocomplete="off">
+              <input class="layui-input" name="search" id="search" placeholder="房屋编号/备注" autocomplete="off">
             </div>
           </div>
           <div class="layui-btn" data-type="reload">搜索</div>
@@ -46,9 +46,9 @@
     </div>
       <xblock>
 <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-        <button class="layui-btn" onclick="x_admin_show('添加用户','customer_add',600,400)"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加房屋','room_add',600,400)"><i class="layui-icon"></i>添加</button>
       </xblock>
-      <input type="hidden" id="update_customer_id" value="0">
+      <input type="hidden" id="update_room_id" value="0">
       <table class="layui-table" id="demo" lay-filter="test">
 <!--        <thead>-->
 <!--          <tr>-->
@@ -132,17 +132,16 @@
         table.render({
           elem: '#demo',
           height: 450,
-          url: 'getCustomerList',  //数据接口
+          url: 'getRoomList',  //数据接口
           page: true, //开启分页
           cols: [
             [ //表头
               {fixed: 'left', type: 'checkbox'},
-              {field: 'customer_id', width:'5%', title: 'Id', align:'center', sort:'true'},
-              {field: 'customer_name', width: '10%', title: '租户', align: 'center', sort: 'true'},
-              {field: 'manager_name', width: '10%', title: '物业', align: 'center', sort: 'true'},
-              {field: 'customer_mobile', width: '15%', title: '联系方式', align: 'center', sort: 'true'},
+              {field: 'room_id', width:'5%', title: 'Id', align:'center', sort:'true'},
+              {field: 'room_sn', width: '10%', title: '房屋编号', align: 'center', sort: 'true'},
+              {field: 'remark', width: '10%', title: '备注', align: 'center', sort: 'true'},
+              {field: 'room_status', width: '15%', title: '房屋状态', align: 'center', sort: 'true'},
               {field: 'create_time', width: '20%', title: '创建时间', align: 'center', sort: 'true'},
-              {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
               {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
             ]
           ],
@@ -152,7 +151,7 @@
           reload: function () {
             var search = $('#search').val();
             table.reload('demo', {
-              url: 'getCustomerList',
+              url: 'getRoomList',
               method: 'get',
               page: {
                 curr: 1
@@ -187,7 +186,7 @@
               obj.del();
               layer.close(index);
               $.ajax({
-                url: 'deleteCustomer?customerId='+data.customer_id,
+                url: 'deleteRoom?roomId='+data.room_id,
                 type: 'get',
                 dataType: "JSON",
                 success:function (data) {
@@ -200,9 +199,9 @@
               })
             });
           }else if (layEvent === 'edit'){
-            //隐藏域存放customer_id
-            $('#update_customer_id').val(data.customer_id);
-            x_admin_show('编辑租户', 'customer_edit', 600, 300);
+            //隐藏域存放room_id
+            $('#update_room_id').val(data.room_id);
+            x_admin_show('编辑租户', 'room_edit', 600, 300);
           }
         })
       });

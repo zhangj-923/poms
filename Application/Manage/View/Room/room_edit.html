@@ -23,46 +23,46 @@
   <body>
     <div class="x-body">
         <form class="layui-form">
-          <input type="hidden" id="customer_id" name="customer_id" />
+          <input type="hidden" id="room_id" name="room_id" />
           <div class="layui-form-item">
             <label for="customer_name" class="layui-form-label">
-              <span class="x-red">*</span>租户姓名
+              <span class="x-red">*</span>房屋编号
             </label>
             <div class="layui-input-inline">
-              <input type="text" id="customer_name" name="customer_name" required
+              <input type="text" id="room_sn" name="room_sn" required
                      autocomplete="off" class="layui-input">
             </div>
           </div>
-          <div class="layui-form-item">
-            <label for="garden_name" class="layui-form-label">
-              <span class="x-red">*</span>园区
-            </label>
-            <div class="layui-input-inline">
-              <input type="text" id="garden_name" name="garden_name" required
-                     autocomplete="off" class="layui-input" disabled>
-            </div>
-          </div>
-          <div class="layui-form-item">
-              <label for="customer_mobile" class="layui-form-label">
-                  <span class="x-red">*</span>联系方式
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" id="customer_mobile" name="customer_mobile" required
-                  autocomplete="off" class="layui-input">
-              </div>
-              <div class="layui-form-mid layui-word-aux">
-                  <span class="x-red">*</span>将会成为您唯一的登入名
-              </div>
-          </div>
-          <div class="layui-form-item">
-              <label for="room_name" class="layui-form-label">
-                  <span class="x-red">*</span>房间号
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" id="room_name" name="room_name" required
-                  autocomplete="off" class="layui-input">
-              </div>
-          </div>
+<!--          <div class="layui-form-item">-->
+<!--            <label for="garden_name" class="layui-form-label">-->
+<!--              <span class="x-red">*</span>园区-->
+<!--            </label>-->
+<!--            <div class="layui-input-inline">-->
+<!--              <input type="text" id="garden_name" name="garden_name" required-->
+<!--                     autocomplete="off" class="layui-input" disabled>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="layui-form-item">-->
+<!--              <label for="customer_mobile" class="layui-form-label">-->
+<!--                  <span class="x-red">*</span>联系方式-->
+<!--              </label>-->
+<!--              <div class="layui-input-inline">-->
+<!--                  <input type="text" id="customer_mobile" name="customer_mobile" required lay-verify="phone"-->
+<!--                  autocomplete="off" class="layui-input">-->
+<!--              </div>-->
+<!--              <div class="layui-form-mid layui-word-aux">-->
+<!--                  <span class="x-red">*</span>将会成为您唯一的登入名-->
+<!--              </div>-->
+<!--          </div>-->
+<!--          <div class="layui-form-item">-->
+<!--              <label for="room_name" class="layui-form-label">-->
+<!--                  <span class="x-red">*</span>房间号-->
+<!--              </label>-->
+<!--              <div class="layui-input-inline">-->
+<!--                  <input type="text" id="room_name" name="room_name" required-->
+<!--                  autocomplete="off" class="layui-input">-->
+<!--              </div>-->
+<!--          </div>-->
           <div class="layui-form-item">
             <label for="remark" class="layui-form-label">
               <span class="x-red">*</span>备注
@@ -107,7 +107,7 @@
           console.log(data);
           //发异步，把数据提交给php
           $.ajax({
-            url: 'editCostomer',
+            url: 'editRoom',
             type: 'post',
             data: data.field,
             dataType: 'json',
@@ -138,17 +138,14 @@
   <script>
     getCustomerAjax();
     function getCustomerAjax () {
-      var customer_id = window.parent.document.getElementById('update_customer_id').value;
+      var room_id = window.parent.document.getElementById('update_room_id').value;
       $.ajax({
-        url: 'getCustomer?customerId='+customer_id,
+        url: 'getRoom?roomId='+room_id,
         type: 'get',
         dataType: 'json',
         success:function (data) {
-          $("#customer_id").val(data[0].customer_id);
-          $("#customer_name").val(data[0].customer_name);
-          $("#garden_name").val(data[0].garden_name);
-          $("#customer_mobile").val(data[0].customer_mobile);
-          $("#room_name").val(data[0].room_name);
+          $("#room_id").val(data[0].room_id);
+          $("#room_sn").val(data[0].room_sn);
           $("#remark").val(data[0].remark);
         }
       });

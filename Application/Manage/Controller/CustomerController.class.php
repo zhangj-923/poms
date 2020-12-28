@@ -28,11 +28,18 @@ class CustomerController extends Controller {
         $customer = M('customer');
         $where = array();
         $where['is_delete'] = 0;
-        $page = $_GET['_URL_'][4];
-        $limit = $_GET['_URL_'][5];
+        if (!empty($_GET['key'])){
+            $where['customer_name|customer_mobile|remark'] = ['like', '%'.$_GET['key'].'%'];
+        }
+        $page = $_GET['page'];
+        $limit = $_GET['limit'];
         $start = $limit * ($page - 1);
         $data = $customer->where($where)->limit($start, $limit)->order('customer_id', 'desc')->select();
         $count = count($customer->where($where)->select());
+        foreach($data as $key => $value){
+            $data[$key]['manager_name'] = M('user')->where(array('manager_id', $value['manager_id']))->find()['manager_name'];
+            $data[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
+        }
         $msg = [
             'code' => 0,
             'msg' => '查询成功',
@@ -65,11 +72,11 @@ class CustomerController extends Controller {
         $data = [];
         $data['customer_name'] = $_POST['customer_name'];
         $data['customer_mobile'] = $_POST['customer_mobile'];
-        $data['garden_id'] = session('USER.garden_id');
-        $data['manager_id'] = session('USER.id');
-        $data['manager_name'] = session('USER.manager_name');
-        $data['garden_name'] = $_POST['garden_name'];
-        $data['room_name'] = $_POST['room_name'];
+//        $data['garden_id'] = session('USER.garden_id');
+        $data['manager_id'] = session('USER.manager_id');
+//        $data['manager_name'] = session('USER.manager_name');
+//        $data['garden_name'] = $_POST['garden_name'];
+//        $data['room_name'] = $_POST['room_name'];
         $data['remark'] = $_POST['remark'];
         $data['password'] = md5('123456');
         $data['create_time'] = time();
@@ -89,7 +96,7 @@ class CustomerController extends Controller {
      * Update: 2020-12-19 21:58:26
      * Version: 1.00
      */
-    public function getCustomer($customerId){
+    public function getCustomer($customerId = ''){
         $customer = M('customer');
         $where = array();
         $where['customer_id'] = $customerId;
@@ -112,8 +119,8 @@ class CustomerController extends Controller {
         $data = [];
         $data['customer_name'] = $_POST['customer_name'];
         $data['customer_mobile'] = $_POST['customer_mobile'];
-        $data['garden_name'] = $_POST['garden_name'];
-        $data['room_name'] = $_POST['room_name'];
+//        $data['garden_name'] = $_POST['garden_name'];
+//        $data['room_name'] = $_POST['room_name'];
         $data['remark'] = $_POST['remark'];
         $result = $customer->where($where)->save($data);
         if ($result){

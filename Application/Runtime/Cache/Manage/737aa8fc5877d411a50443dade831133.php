@@ -19,7 +19,7 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="index.html"><?php echo ($USER['garden_name']); ?></a></div>
+        <div class="logo"><a href="index.html"><?php echo ($garden_name); ?></a></div>
         <div class="left_open">
             <i title="展开左侧栏" class="iconfont">&#xe699;</i>
         </div>
@@ -90,7 +90,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="html/order-list.html">
+                        <a _href="<?php echo U('Room/index');?>">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>房间列表</cite>
                         </a>

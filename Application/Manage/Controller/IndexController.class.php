@@ -13,6 +13,8 @@ class IndexController extends Controller {
 
     public function index(){
         if (session('USER')){
+            $garden_name = M('garden')->where(array('garden_id', session('USER.garden_id')))->find()['garden_name'];
+            $this->assign('garden_name', $garden_name);
             $this->display();
         }else{
             $this->success('请先登录！！', U('Login/login'),1);
