@@ -138,8 +138,8 @@
             [ //表头
               {fixed: 'left', type: 'checkbox'},
               {field: 'room_id', width:'5%', title: 'Id', align:'center', sort:'true'},
-              {field: 'room_sn', width: '10%', title: '房屋编号', align: 'center', sort: 'true'},
-              {field: 'remark', width: '10%', title: '备注', align: 'center', sort: 'true'},
+              {field: 'room_sn', width: '15%', title: '房屋编号', align: 'center', sort: 'true'},
+              {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
               {field: 'room_status', width: '15%', title: '房屋状态', align: 'center', sort: 'true'},
               {field: 'create_time', width: '20%', title: '创建时间', align: 'center', sort: 'true'},
               {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
@@ -201,7 +201,7 @@
           }else if (layEvent === 'edit'){
             //隐藏域存放room_id
             $('#update_room_id').val(data.room_id);
-            x_admin_show('编辑租户', 'room_edit', 600, 300);
+            x_admin_show('编辑房屋', 'room_edit', 600, 300);
           }
         })
       });

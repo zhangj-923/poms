@@ -37,7 +37,7 @@
           <li class="layui-nav-item">
             <a href="javascript:;" style="color: white;font-size: 15px">{$USER['manager_name']}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-              <dd><a onclick="x_admin_show('个人信息','http://www.baidu.com')">个人信息</a></dd>
+              <dd><a onclick="x_admin_show('个人信息','user_edit', 800, 600)">个人信息</a></dd>
               <dd><a href="{:U('Login/logout')}">退出</a></dd>
             </dl>
           </li>
@@ -57,7 +57,7 @@
                     <i class="iconfont nav_right">&#xe6a7;</i>
                 </a>
                 <ul class="sub-menu">
-                    <li><a _href="welcome"><i class="iconfont">&#xe6a7;</i><cite>控制台</cite></a></li >
+                    <li><a _href="welcome"><i class="iconfont">&#xe6a7;</i><cite>欢迎台</cite></a></li >
                 </ul>
             </li>
             <li>
@@ -113,13 +113,13 @@
                     <li>
                         <a _href="html/admin-role.html">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>报修列表</cite>
+                            <cite>报修处理</cite>
                         </a>
                     </li >
                     <li>
                         <a _href="html/admin-cate.html">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>权限分类</cite>
+                            <cite>租赁</cite>
                         </a>
                     </li >
                     <li>
@@ -139,7 +139,7 @@
     <div class="page-content">
         <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
           <ul class="layui-tab-title">
-            <li class="home"><i class="layui-icon">&#xe68e;</i>我的桌面</li>
+            <li class="home"><i class="layui-icon">&#xe68e;</i>欢迎页</li>
           </ul>
           <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">

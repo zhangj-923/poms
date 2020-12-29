@@ -35,7 +35,7 @@
       <div class="chu">
         <div class="demoTable layui-form-item">
           <div class="layui-inline">
-            <label class="layui-form-label">查询条件:</label>
+<!--            <label class="layui-form-label">查询条件:</label>-->
             <div class="layui-input-inline">
               <input class="layui-input" name="search" id="search" placeholder="租户姓名/联系方式/备注" autocomplete="off">
             </div>

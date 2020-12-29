@@ -104,10 +104,10 @@ class RoomController extends Controller {
         $where['room_id'] = $_POST['room_id'];
         $data = $_POST;
         $result = $room->where($where)->save($data);
-        if ($result){
-            $this->success('编辑成功!!!');
-        }else{
+        if ($result === false){
             $this->error('系统繁忙!!!');
+        }else{
+            $this->success('编辑成功!!!');
         }
     }
 
@@ -127,10 +127,10 @@ class RoomController extends Controller {
         $where = array();
         $where['room_id'] = $roomId;
         $result = $room->where($where)->save(['is_delete' => 1]);
-        if ($result){
-            $this->success('删除成功');
-        }else {
+        if ($result === false){
             $this->error('系统繁忙！！请重试');
+        }else {
+            $this->success('删除成功');
         }
     }
 }

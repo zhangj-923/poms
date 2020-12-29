@@ -21,6 +21,54 @@ class IndexController extends Controller {
         }
     }
 
+    public function user_edit(){
+        $this->display();
+    }
+
+    /**
+     *
+     * 获取物业管理员个人信息
+     * Date: 2020-12-29 13:09:16
+     * Update: 2020-12-29 13:09:16
+     * Version: 1.00
+     */
+    public function getUser(){
+        $user = M('user');
+        $where = array();
+        $where['a.manager_id'] = session('USER.manager_id');
+        $join = ["join __GARDEN__ b on a.garden_id = b.garden_id"];
+        $field = ['a.manager_name', 'a.manager_mobile', 'a.name', 'a.password', 'a.remark', 'b.garden_name'];
+        $data = $user->alias('a')->join($join)->where($where)->field($field)->select();
+        echo json_encode($data);
+        die();
+    }
+
+    /**
+     * 编辑物业管理员信息
+     * Date: 2020-12-29 13:09:35
+     * Update: 2020-12-29 13:09:35
+     * Version: 1.00
+     */
+    public function editUser(){
+        $user = M('user');
+        $where = array();
+        $where['manager_id'] = session('USER.manager_id');
+        $data = $_POST;
+        if (strcmp($_POST['password'], session('USER.password')) == 0){
+            $data['password'] = $_POST['password'];
+        }else{
+            $data['password'] = md5($_POST['password']);
+        }
+        $result = $user->where($where)->save($data);
+        if ($result === false){
+            $this->error('系统繁忙!!!');
+        }else{
+            $userInfo = $user->where($where)->find();
+            session('USER', $userInfo);
+            $this->success('编辑成功!!!');
+        }
+    }
+
     public function welcome(){
         $this->assign('now', date('Y-m-d H:i:s'));
         $this->display();

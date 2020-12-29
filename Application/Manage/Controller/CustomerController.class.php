@@ -123,10 +123,10 @@ class CustomerController extends Controller {
 //        $data['room_name'] = $_POST['room_name'];
         $data['remark'] = $_POST['remark'];
         $result = $customer->where($where)->save($data);
-        if ($result){
-            $this->success('编辑成功!!!');
-        }else{
+        if ($result === false){
             $this->error('系统繁忙!!!');
+        }else{
+            $this->success('编辑成功!!!');
         }
     }
 
@@ -143,10 +143,10 @@ class CustomerController extends Controller {
         $where = array();
         $where['customer_id'] = $customerId;
         $result = $customer->where($where)->save(['is_delete' => 1]);
-        if ($result){
-            $this->success('删除成功');
-        }else {
+        if ($result === false){
             $this->error('系统繁忙！！请重试');
+        }else {
+            $this->success('删除成功');
         }
     }
 
