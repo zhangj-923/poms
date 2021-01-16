@@ -1,0 +1,98 @@
+body {
+  overflow-y: hidden;
+}
+.admin-main {
+  height: 100%;
+}
+.contract-tpl-main {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+  height: 100%;
+}
+.contract-tpl-main .tpl-title {
+  min-height: 50px;
+  border-bottom: 1px solid #f2f2f2;
+  padding-left: 51px;
+  background: #ffffff url("../../../admin/skin/skin_2/images/Contract/contract_icon.png")30px center no-repeat;
+  background-size: 15px 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contract-tpl-main .tpl-left {
+  display: inline-block;
+  width: calc(100% - 764px);
+  float: left;
+  padding: 20px 26px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin-right: 10px;
+  height: calc(100% - 10px);
+}
+.contract-tpl-main .tpl-left .tpl-basic {
+  margin-bottom: 20px;
+}
+.contract-tpl-main .tpl-left .tpl-variable {
+  padding: 0;
+}
+.contract-tpl-main .tpl-left .tpl-variable .tpl-msg-set a span{
+  font-size: 12px;
+}
+.contract-tpl-main .tpl-left .tpl-basic input{
+  width: 230px;
+  display: inline-block;
+}
+.contract-tpl-main .tpl-left .tpl-variable-word-div{
+  display: inline-block;
+  width: 100%;
+}
+.contract-tpl-main .tpl-left .tpl-variable-word-div h4{
+  display: flex;
+  align-items: center;
+  color: #494949;
+  font-size: 12px;
+  flex: 1;
+  float: left;
+  min-height: 30px;
+}
+.tpl-variable-word-div .word-list {
+  display: inline-block;
+  width: 100%;
+  float: left;
+}
+.contract-tpl-main .tpl-right {
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 2px solid #ECF0F4;
+  box-sizing: border-box;
+  width: 744px;
+  float: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.contract-tpl-main .tpl-right .contract-tpl-div {
+  height: 100%;
+}
+#inputContent{margin: 0 auto;
+  height: 100%;
+}
+.edui-default .edui-editor {
+  height: calc(100% - 10px);
+}
+.edui-default .edui-editor-iframeholder {
+  height: 100%;
+}
+.edui-default .edui-editor-bottomContainer{display: none}
+.tpl-variable-word{text-indent: initial!important;text-decoration: none!important;}
+.submit-btn {
+  position: absolute;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+  background: #FAFAFA;
+  min-height: 50px;
+  box-shadow:0px 0px 8px rgba(0,0,0,0.2);
+  width: 100%;
+}

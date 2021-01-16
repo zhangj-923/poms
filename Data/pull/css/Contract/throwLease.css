@@ -1,0 +1,14 @@
+body {
+  background: #f6f6f6;
+}
+.diy-layer,
+.diy-layer-left {
+  height: 100%;
+}
+.diy-layer-main {
+  width: calc(100% - 400px);
+}
+.diy-layer-main .diy-layer-title .layui-layer-title {
+  background-color: #ffffff;
+}
+

@@ -13,4 +13,11 @@ return array(
     'DB_CHARSET'=> 'utf8', // 字符集
     'DB_DEBUG'  =>  TRUE, // 数据库调试模式 开启后可以记录SQL日志
 
+    //'配置项'=>'配置值'
+    'TMPL_PARSE_STRING' => array(
+        '__ADMIN__' => __ROOT__ . '/Data/admin',
+        '__HOME__'  => __ROOT__ . '/Data/home',
+        '__PULL__'  => __ROOT__ . '/Data/pull',
+        '__STATIC__'  => __ROOT__ . 'Data/static'
+    ),
 );
