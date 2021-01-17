@@ -34,11 +34,11 @@
   <!--            </dl>-->
   <!--          </li>-->
   <!--        </ul>-->
-  <ul class="layui-nav right" lay-filter="">
+  <ul class="layui-nav right" lay-filter="" style="margin-right: 30px">
     <li class="layui-nav-item">
       <a href="javascript:;" style="color: black;font-size: 15px"><?php echo ($ADMIN['realname']); ?></a>
       <dl class="layui-nav-child"> <!-- 二级菜单 -->
-        <dd><a onclick="x_admin_show('个人信息','super_edit', 450, 300)">个人信息</a></dd>
+        <dd><a onclick="x_admin_show('管理员信息','super_edit', 450, 300)">管理员信息</a></dd>
         <dd><a href="<?php echo U('Login/logout');?>">退出</a></dd>
       </dl>
     </li>

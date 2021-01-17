@@ -1,6 +1,7 @@
 <?php
 namespace Super\Controller;
 use Think\Controller;
+
 class IndexController extends Controller {
 
     public function _initialize(){
@@ -40,5 +41,32 @@ class IndexController extends Controller {
 
     public function super_edit(){
         $this->display();
+    }
+
+    /**
+     * 获取超级管理员信息
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-17 13:43:13
+     * Update: 2021-01-17 13:43:13
+     * Version: 1.00
+     */
+    public function getAdmin(){
+        $id = session('ADMIN.id');
+        $data = D('Admin')->getSuperInfo($id);
+        echo json_encode($data);
+    }
+
+    /**
+     * 修改超级管理员信息
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-17 14:15:36
+     * Update: 2021-01-17 14:15:36
+     * Version: 1.00
+     */
+    public function editAdmin(){
+        if (IS_AJAX){
+            $result = D('Admin')->editSuperInfo($_POST);
+            echo json_encode($result);
+        }
     }
 }

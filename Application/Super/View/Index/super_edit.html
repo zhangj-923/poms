@@ -119,13 +119,13 @@
           console.log(data);
           //发异步，把数据提交给php
           $.ajax({
-            url: 'editUser',
+            url: 'editAdmin',
             type: 'post',
             data: data.field,
             dataType: 'json',
             success:function (data) {
-              if (data.status == "1"){
-                layer.msg(data.info, function () {
+              if (data.code == "200"){
+                layer.msg(data.msg, function () {
                   // 获得frame索引
                   var index = parent.layer.getFrameIndex(window.name);
                   //关闭当前frame
@@ -152,16 +152,13 @@
     function getCustomerAjax () {
       // var room_id = window.parent.document.getElementById('update_room_id').value;
       $.ajax({
-        url: 'getUser',
+        url: 'getAdmin',
         type: 'post',
         dataType: 'json',
         success:function (data) {
-          $("#manager_name").val(data[0].manager_name);
-          $("#manager_mobile").val(data[0].manager_mobile);
-          $("#garden_name").val(data[0].garden_name);
-          $("#name").val(data[0].name);
-          $("#password").val(data[0].password);
-          $("#remark").val(data[0].remark);
+          $("#id").val(data.data.id);
+          $("#realname").val(data.data.realname);
+          $("#tel").val(data.data.tel);
         }
       });
     }
