@@ -1,4 +1,5 @@
 <?php
+
 namespace Common\Model;
 
 class AdminModel extends BaseModel
@@ -36,16 +37,14 @@ class AdminModel extends BaseModel
         $where = [];
         $where['id'] = $request['id'];
         $result = $this->where($where)->save($request);
-        if ($result === false){
+        if ($result === false) {
             return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
-        }else{
+        } else {
             $adminInfo = $this->where($where)->find();
             session('ADMIN', $adminInfo);
             return getReturn(CODE_SUCCESS, '编辑成功！！');
         }
     }
-
-
 
 
 }

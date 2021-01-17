@@ -1,13 +1,18 @@
 <?php
-namespace Manage\Controller;
-use Think\Controller;
-class CustomerController extends Controller {
 
-    public function _initialize(){
-        if (session('USER')){
+namespace Manage\Controller;
+
+use Think\Controller;
+
+class CustomerController extends Controller
+{
+
+    public function _initialize()
+    {
+        if (session('USER')) {
             $user = session('USER');
             $this->assign('USER', $user);
-        }else{
+        } else {
             $this->assign('USER', '请先登录！！！');
         }
     }
@@ -24,19 +29,20 @@ class CustomerController extends Controller {
      * Update: 2020-12-19 18:46:01
      * Version: 1.00
      */
-    public function getCustomerList(){
+    public function getCustomerList()
+    {
         $customer = M('customer');
         $where = array();
         $where['is_delete'] = 0;
-        if (!empty($_GET['key'])){
-            $where['customer_name|customer_mobile|remark'] = ['like', '%'.$_GET['key'].'%'];
+        if (!empty($_GET['key'])) {
+            $where['customer_name|customer_mobile|remark'] = ['like', '%' . $_GET['key'] . '%'];
         }
         $page = $_GET['page'];
         $limit = $_GET['limit'];
         $start = $limit * ($page - 1);
         $data = $customer->where($where)->limit($start, $limit)->order('customer_id', 'desc')->select();
         $count = count($customer->where($where)->select());
-        foreach($data as $key => $value){
+        foreach ($data as $key => $value) {
             $data[$key]['manager_name'] = M('user')->where(array('manager_id', $value['manager_id']))->find()['manager_name'];
             $data[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
         }
@@ -67,7 +73,8 @@ class CustomerController extends Controller {
      * Update: 2020-12-19 21:56:34
      * Version: 1.00
      */
-    public function addCustomer(){
+    public function addCustomer()
+    {
         $customer = M('customer');
         $data = [];
         $data['customer_name'] = $_POST['customer_name'];
@@ -81,9 +88,9 @@ class CustomerController extends Controller {
         $data['password'] = md5('123456');
         $data['create_time'] = time();
         $result = $customer->add($data);
-        if ($result){
+        if ($result) {
             $this->success('添加成功');
-        }else {
+        } else {
             $this->error('系统繁忙，请重试！！');
         }
     }
@@ -96,7 +103,8 @@ class CustomerController extends Controller {
      * Update: 2020-12-19 21:58:26
      * Version: 1.00
      */
-    public function getCustomer($customerId = ''){
+    public function getCustomer($customerId = '')
+    {
         $customer = M('customer');
         $where = array();
         $where['customer_id'] = $customerId;
@@ -112,7 +120,8 @@ class CustomerController extends Controller {
      * Update: 2020-12-19 21:57:06
      * Version: 1.00
      */
-    public function editCostomer(){
+    public function editCostomer()
+    {
         $customer = M('customer');
         $where = array();
         $where['customer_id'] = $_POST['customer_id'];
@@ -123,9 +132,9 @@ class CustomerController extends Controller {
 //        $data['room_name'] = $_POST['room_name'];
         $data['remark'] = $_POST['remark'];
         $result = $customer->where($where)->save($data);
-        if ($result === false){
+        if ($result === false) {
             $this->error('系统繁忙!!!');
-        }else{
+        } else {
             $this->success('编辑成功!!!');
         }
     }
@@ -138,14 +147,15 @@ class CustomerController extends Controller {
      * Update: 2020-12-19 21:57:27
      * Version: 1.00
      */
-    public function deleteCustomer($customerId){
+    public function deleteCustomer($customerId)
+    {
         $customer = M('customer');
         $where = array();
         $where['customer_id'] = $customerId;
         $result = $customer->where($where)->save(['is_delete' => 1]);
-        if ($result === false){
+        if ($result === false) {
             $this->error('系统繁忙！！请重试');
-        }else {
+        } else {
             $this->success('删除成功');
         }
     }

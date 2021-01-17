@@ -1,5 +1,10 @@
 <?php
 
+
+//定义删除状态
+define('NOT_DELETED', 0);
+define('DELETED', 1);
+
 //定义状态码
 define('CODE_SUCCESS', 200); // 请求成功
 define('CODE_ERROR', 406); // 请求失败

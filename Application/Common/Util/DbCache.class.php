@@ -11,7 +11,6 @@ use Think\Exception;
  * 数据库缓存操作类
  * Class DbCache
  * @package Common\Util
- * User: hjun
  * Date: 2018-06-01 01:10:17
  * Update: 2018-06-01 01:10:17
  * Version: 1.00
@@ -81,7 +80,7 @@ class DbCache extends File
      * @param string $type
      * @param array $options
      * @return $this
-     * User: hjun
+     *
      * Date: 2018-06-07 01:34:29
      * Update: 2018-06-07 01:34:29
      * Version: 1.00
@@ -135,7 +134,7 @@ class DbCache extends File
      * 判断是否是不需要缓存的表
      * @param $tableName
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
-     * User: hjun
+     *
      * Date: 2018-07-26 16:10:25
      * Update: 2018-07-26 16:10:25
      * Version: 1.00
@@ -161,7 +160,7 @@ class DbCache extends File
      * 设置Model
      * @param $model
      * @return void
-     * User: hjun
+     *
      * Date: 2018-06-07 01:34:58
      * Update: 2018-06-07 01:34:58
      * Version: 1.00
@@ -306,7 +305,7 @@ class DbCache extends File
      * 判断缓存是否无效
      * @param $result
      * @return boolean
-     * User: hjun
+     *
      * Date: 2018-06-01 00:38:26
      * Update: 2018-06-01 00:38:26
      * Version: 1.00
@@ -319,7 +318,7 @@ class DbCache extends File
     /**
      * 如果是数据库类型
      * @return bool
-     * User: hjun
+     *
      * Date: 2018-08-11 00:30:56
      * Update: 2018-08-11 00:30:56
      * Version: 1.00
@@ -332,7 +331,7 @@ class DbCache extends File
     /**
      * 如果是数组类型
      * @return bool
-     * User: hjun
+     *
      * Date: 2019-04-14 03:44:49
      * Update: 2019-04-14 03:44:49
      * Version: 1.00
@@ -345,7 +344,7 @@ class DbCache extends File
     /**
      * 如果是redis类型
      * @return bool
-     * User: hjun
+     *
      * Date: 2019-04-14 03:44:08
      * Update: 2019-04-14 03:44:08
      * Version: 1.00
@@ -359,7 +358,7 @@ class DbCache extends File
      * 获取缓存键值
      * @param string $sql
      * @return string
-     * User: hjun
+     *
      * Date: 2018-06-01 00:38:49
      * Update: 2018-06-01 00:38:49
      * Version: 1.00
@@ -375,7 +374,7 @@ class DbCache extends File
      * @param $method
      * @param $sql
      * @return bool
-     * User: hjun
+     *
      * Date: 2018-08-11 00:31:14
      * Update: 2018-08-11 00:31:14
      * Version: 1.00
@@ -412,7 +411,7 @@ class DbCache extends File
      * @param array $options
      * @param string $method
      * @return mixed
-     * User: hjun
+     *
      * Date: 2018-06-01 01:05:01
      * Update: 2018-06-01 01:05:01
      * Version: 1.00
@@ -458,7 +457,7 @@ class DbCache extends File
      * 查询数据集
      * @param array $options
      * @return array
-     * User: hjun
+     *
      * Date: 2018-06-01 00:38:59
      * Update: 2018-06-01 00:38:59
      * Version: 1.00
@@ -476,7 +475,7 @@ class DbCache extends File
      * 查询数据
      * @param array $options
      * @return array
-     * User: hjun
+     *
      * Date: 2018-06-01 00:39:16
      * Update: 2018-06-01 00:39:16
      * Version: 1.00
@@ -489,7 +488,7 @@ class DbCache extends File
     /**
      * 保存表名和缓存键值的关联表
      * @return boolean
-     * User: hjun
+     *
      * Date: 2018-06-01 15:28:19
      * Update: 2018-06-01 15:28:19
      * Version: 1.00
@@ -505,7 +504,7 @@ class DbCache extends File
      * @param array $options 查询条件
      * @param array $result 结果
      * @return mixed
-     * User: hjun
+     *
      * Date: 2018-06-01 14:50:47
      * Update: 2018-06-01 14:50:47
      * Version: 1.00
@@ -548,7 +547,7 @@ class DbCache extends File
      * @param array $data
      * @param array $options
      * @return mixed
-     * User: hjun
+     *
      * Date: 2018-06-01 15:25:05
      * Update: 2018-06-01 15:25:05
      * Version: 1.00
@@ -592,7 +591,7 @@ class DbCache extends File
      * @param array $data
      * @param array $options
      * @return boolean
-     * User: hjun
+     *
      * Date: 2018-06-01 15:24:34
      * Update: 2018-06-01 15:24:34
      * Version: 1.00
@@ -607,7 +606,7 @@ class DbCache extends File
      * @param array $data
      * @param array $options
      * @return boolean
-     * User: hjun
+     *
      * Date: 2018-06-01 15:24:50
      * Update: 2018-06-01 15:24:50
      * Version: 1.00
@@ -621,7 +620,7 @@ class DbCache extends File
      * 判断是否需要直接使用clear
      * @param array $deleteKeys
      * @return boolean
-     * User: hjun
+     *
      * Date: 2018-08-09 13:39:29
      * Update: 2018-08-09 13:39:29
      * Version: 1.00
@@ -636,7 +635,7 @@ class DbCache extends File
      * 保存查询缓存映射关系
      * @param $set
      * @return mixed
-     * User: hjun
+     *
      * Date: 2018-08-10 17:48:10
      * Update: 2018-08-10 17:48:10
      * Version: 1.00
@@ -687,7 +686,7 @@ class DbCache extends File
      * @param array $data
      * @param array $options
      * @return mixed
-     * User: hjun
+     *
      * Date: 2018-08-10 17:52:02
      * Update: 2018-08-10 17:52:02
      * Version: 1.00

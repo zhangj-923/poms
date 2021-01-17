@@ -69,14 +69,14 @@
         </a>
         <ul class="sub-menu" style="background: #0080FF">
           <li style="background: #0080FF">
-            <a _href="<?php echo U('Customer/index');?>">
+            <a _href="<?php echo U('Garden/index');?>">
               <i class="iconfont">&#xe6a7;</i>
               <cite style="color: black">园区列表</cite>
 
             </a>
           </li>
           <li style="background: #0080FF">
-            <a _href="<?php echo U('Customer/customer_del');?>">
+            <a _href="<?php echo U('User/index');?>">
               <i class="iconfont">&#xe6a7;</i>
               <cite style="color: black">物业列表</cite>
             </a>
