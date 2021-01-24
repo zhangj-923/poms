@@ -104,4 +104,18 @@ class GardenController extends Controller
             echo json_encode($result);
         }
     }
+
+    /**
+     * 监听园区状态
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-24 20:25:17
+     * Update: 2021-01-24 20:25:17
+     * Version: 1.00
+     */
+    public function changeStatus(){
+        if (IS_AJAX){
+            $result = D('Garden')->changeStatusByGardenId($_POST);
+            echo json_encode($result);
+        }
+    }
 }

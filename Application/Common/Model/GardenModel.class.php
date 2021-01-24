@@ -30,11 +30,11 @@ class GardenModel extends BaseModel
         $options['order'] = 'garden_id desc';
         $list = $this->queryList($options);
         foreach ($list as $key => $value) {
-            if ($value['garden_status'] == 1) {
-                $list[$key]['garden_status'] = '正常';
-            } else {
-                $list[$key]['garden_status'] = '关闭';
-            }
+//            if ($value['garden_status'] == 1) {
+//                $list[$key]['garden_status'] = '正常';
+//            } else {
+//                $list[$key]['garden_status'] = '关闭';
+//            }
             $list[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
         }
         return ['list' => $list, 'count' => $count];
@@ -114,6 +114,31 @@ class GardenModel extends BaseModel
             return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
         } else {
             return getReturn(CODE_SUCCESS, '编辑成功！！');
+        }
+    }
+
+    /**
+     * 监听园区状态
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-24 20:28:54
+     * Update: 2021-01-24 20:28:54
+     * Version: 1.00
+     */
+    public function changeStatusByGardenId($request = []){
+        $where = array();
+        $where['garden_id'] = $request['garden_id'];
+        $data = [];
+        $data['garden_status'] = $request['garden_status'];
+        $result = $this->where($where)->save($data);
+        if ($result === false) {
+            return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
+        } else {
+            if ($data['garden_status'] == 1){
+                return getReturn(CODE_SUCCESS, '开启园区成功！！');
+            }else{
+                return getReturn(CODE_SUCCESS, '关闭园区成功！！');
+            }
         }
     }
 }
