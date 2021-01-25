@@ -112,8 +112,9 @@ class GardenController extends Controller
      * Update: 2021-01-24 20:25:17
      * Version: 1.00
      */
-    public function changeStatus(){
-        if (IS_AJAX){
+    public function changeStatus()
+    {
+        if (IS_AJAX) {
             $result = D('Garden')->changeStatusByGardenId($_POST);
             echo json_encode($result);
         }

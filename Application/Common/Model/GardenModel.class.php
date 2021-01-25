@@ -125,7 +125,8 @@ class GardenModel extends BaseModel
      * Update: 2021-01-24 20:28:54
      * Version: 1.00
      */
-    public function changeStatusByGardenId($request = []){
+    public function changeStatusByGardenId($request = [])
+    {
         $where = array();
         $where['garden_id'] = $request['garden_id'];
         $data = [];
@@ -134,9 +135,9 @@ class GardenModel extends BaseModel
         if ($result === false) {
             return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
         } else {
-            if ($data['garden_status'] == 1){
+            if ($data['garden_status'] == 1) {
                 return getReturn(CODE_SUCCESS, '开启园区成功！！');
-            }else{
+            } else {
                 return getReturn(CODE_SUCCESS, '关闭园区成功！！');
             }
         }
