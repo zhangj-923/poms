@@ -25,7 +25,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">园区管理</a>
-        <a href="">物业列表</a>
+        <a href="">楼宇列表</a>
         <!--        <a>-->
         <!--          <cite>导航元素</cite></a>-->
       </span>
@@ -39,19 +39,13 @@
       <div class="layui-inline">
         <label class="layui-form-label">园区名称:</label>
         <div class="layui-input-inline">
-          <select class="layui-select" id="gardenId" name="gardenId" lay-filter="garden">
+          <select class="layui-select" id="selectId" name="selectId" lay-filter="garden">
             <option value="">请选择</option>
           </select>
         </div>
         <label class="layui-form-label">楼宇名称:</label>
         <div class="layui-input-inline">
-          <select class="layui-select" id="buildingId" name="buildingId" lay-filter="building">
-            <option value="">请选择</option>
-          </select>
-        </div>
-        <label class="layui-form-label">管理员名称:</label>
-        <div class="layui-input-inline">
-          <input class="layui-input" name="manager_name" id="manager_name" placeholder="管理员名称" autocomplete="off">
+          <input class="layui-input" name="building" id="building" placeholder="楼宇名称" autocomplete="off">
         </div>
       </div>
       <div class="layui-btn" data-type="reload">搜索</div>
@@ -60,10 +54,9 @@
   </div>
   <xblock>
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-    <button class="layui-btn" onclick="x_admin_show('添加楼宇管理员','user_add',600,400)"><i class="layui-icon"></i>添加
-    </button>
+    <button class="layui-btn" onclick="x_admin_show('添加楼宇','building_add',600,400)"><i class="layui-icon"></i>添加</button>
   </xblock>
-  <input type="hidden" id="manager_id" value="0">
+  <input type="hidden" id="building_id" value="0">
   <table class="layui-table" id="demo" lay-filter="test">
     <!--        <thead>-->
     <!--          <tr>-->
@@ -137,32 +130,24 @@
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<!--<script type="text/html" id="typeConvert">-->
-<!--  <input type="checkbox" name="status" value={{d.garden_status}} lay-skin="switch" lay-text="开启|关闭" mid={{d.garden_id}}-->
-<!--         lay-filter="status" {{ d.garden_status== '1' ? 'checked' : '' }}>-->
-<!--</script>-->
-
 <script>
-  layui.use(['table', 'layer', 'form', 'jquery'], function () {
-    var table = layui.table,
-      layer = layui.layer,
-      form = layui.form;
+  layui.use(['table', 'layer', 'form'], function () {
+    var table = layui.table;
+    layer = layui.layer;
+    form = layui.form;
     //第一个实例
     table.render({
       elem: '#demo',
       height: 450,
-      url: 'getUserList',  //数据接口
+      url: 'getBuildingList',  //数据接口
       page: true, //开启分页
       cols: [
         [ //表头
           {fixed: 'left', type: 'checkbox'},
-          {field: 'manager_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
-          {field: 'manager_name', width: '10%', title: '管理员名称', align: 'center', sort: 'true'},
-          {field: 'manager_mobile', width: '10%', title: '联系方式', align: 'center', sort: 'true'},
-          {field: 'garden_name', width: '10%', title: '园区', align: 'center', sort: 'true'},
-          {field: 'building_name', width: '10%', title: '楼宇', align: 'center', sort: 'true'},
+          {field: 'building_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
+          {field: 'garden_name', width: '10%', title: '园区名称', align: 'center', sort: 'true'},
+          {field: 'building_name', width: '10%', title: '楼宇名称', align: 'center', sort: 'true'},
           {field: 'create_time', width: '20%', title: '创建时间', align: 'center', sort: 'true'},
-          {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
           {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
       ],
@@ -170,19 +155,17 @@
     });
     var $ = layui.$, active = {
       reload: function () {
-        var gardenId = $('#gardenId').val();
-        var buildingId = $('#buildingId').val();
-        var manager_name = $('#manager_name').val();
+        var selectId = $('#selectId').val();
+        var building = $('#building').val();
         table.reload('demo', {
-          url: 'getUserList',
+          url: 'getBuildingList',
           method: 'get',
           page: {
             curr: 1
           },
           where: {
-            key1: gardenId,
-            key2: buildingId,
-            key3: manager_name
+            key1: selectId,
+            key2: building
           }
         })
       }
@@ -198,9 +181,8 @@
 
     //重置功能
     $('#reset').on('click', function () {
-      $('#gardenId').val("");
-      $('#buildingId').val("");
-      $('#manager_name').val("");
+      $('#selectId').val("");
+      $('#building').val("");
     });
 
     $.ajax({
@@ -209,9 +191,9 @@
         $.each($.parseJSON(data), function (index, item) {
           // console.log(item);
           //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
-          $('#gardenId').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
+          $('#selectId').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
           //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
-          // $('#gardenId').val(1);
+          // $('#selectId').val(1);
         })
         form.render(); //更新全部表单内容
         //form.render('select'); //刷新表单select选择框渲染
@@ -225,13 +207,13 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('确认删除当前楼宇管理员？', {
-          title: '删除',
+        layer.confirm('确认删除当前楼宇？', {
+          title: '删除'
         }, function (index) {
           obj.del();
           layer.close(index);
           $.ajax({
-            url: 'deleteUser?managerId=' + data.manager_id,
+            url: 'deleteBuilding?buildingId=' + data.building_id,
             type: 'get',
             dataType: "JSON",
             success: function (data) {
@@ -244,18 +226,72 @@
           })
         });
       } else if (layEvent === 'edit') {
-        //隐藏域存放manager_id
-        $('#manager_id').val(data.manager_id);
-        x_admin_show('编辑楼宇管理员信息', 'user_edit', 600, 300);
+        //隐藏域存放building_id
+        $('#building_id').val(data.building_id);
+        x_admin_show('编辑楼宇', 'building_edit', 600, 300);
       }
     })
   });
 </script>
 <script>
-  layui.use('form', function () {
-    var form = layui.form;
+  layui.use('laydate', function () {
+    var laydate = layui.laydate;
 
-  })
+    //执行一个laydate实例
+    laydate.render({
+      elem: '#start' //指定元素
+    });
+
+    //执行一个laydate实例
+    laydate.render({
+      elem: '#end' //指定元素
+    });
+  });
+
+  /*用户-停用*/
+  function member_stop (obj, id) {
+    layer.confirm('确认要停用吗？', function (index) {
+
+      if ($(obj).attr('title') == '启用') {
+
+        //发异步把用户状态进行更改
+        $(obj).attr('title', '停用')
+        $(obj).find('i').html('&#xe62f;');
+
+        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+        layer.msg('已停用!', {icon: 5, time: 1000});
+
+      } else {
+        $(obj).attr('title', '启用')
+        $(obj).find('i').html('&#xe601;');
+
+        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+        layer.msg('已启用!', {icon: 5, time: 1000});
+      }
+
+    });
+  }
+
+  /*用户-删除*/
+  function member_del (obj, id) {
+    layer.confirm('确认要删除吗？', function (index) {
+      //发异步删除数据
+      $(obj).parents("tr").remove();
+      layer.msg('已删除!', {icon: 1, time: 1000});
+    });
+  }
+
+
+  function delAll (argument) {
+
+    var data = tableCheck.getData();
+
+    layer.confirm('确认要删除吗？' + data, function (index) {
+      //捉到所有被选中的，发异步进行删除
+      layer.msg('删除成功', {icon: 1});
+      $(".layui-form-checked").not('.header').parents('tr').remove();
+    });
+  }
 </script>
 </body>
 

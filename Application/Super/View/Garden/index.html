@@ -122,6 +122,7 @@
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  <a class="layui-btn layui-btn-xs" lay-event="addBuilding" style="background: cornflowerblue">添加楼宇</a>
 </script>
 
 <script type="text/html" id="typeConvert">
@@ -281,6 +282,9 @@
         //隐藏域存放garden_id
         $('#garden_id').val(data.garden_id);
         x_admin_show('编辑园区', 'garden_edit', 600, 300);
+      } else if (layEvent === 'addBuilding') {
+        $('#garden_id').val(data.garden_id);
+        x_admin_show('添加楼宇', "gBuilding_add", 600, 300);
       }
     })
   });

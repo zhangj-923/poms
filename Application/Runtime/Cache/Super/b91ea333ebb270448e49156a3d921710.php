@@ -39,10 +39,19 @@
       <div class="layui-inline">
         <label class="layui-form-label">园区名称:</label>
         <div class="layui-input-inline">
-          <select class="layui-select" id="selectId" name="selectId" lay-filter="garden">
+          <select class="layui-select" id="gardenId" name="gardenId" lay-filter="garden">
             <option value="">请选择</option>
           </select>
-          <!--          <input class="layui-input" name="search" id="search" placeholder="园区名称" autocomplete="off">-->
+        </div>
+        <label class="layui-form-label">楼宇名称:</label>
+        <div class="layui-input-inline">
+          <select class="layui-select" id="buildingId" name="buildingId" lay-filter="building">
+            <option value="">请选择</option>
+          </select>
+        </div>
+        <label class="layui-form-label">管理员名称:</label>
+        <div class="layui-input-inline">
+          <input class="layui-input" name="manager_name" id="manager_name" placeholder="管理员名称" autocomplete="off">
         </div>
       </div>
       <div class="layui-btn" data-type="reload">搜索</div>
@@ -135,9 +144,9 @@
 
 <script>
   layui.use(['table', 'layer', 'form', 'jquery'], function () {
-    var table = layui.table;
-    layer = layui.layer;
-    form = layui.form;
+    var table = layui.table,
+      layer = layui.layer,
+      form = layui.form;
     //第一个实例
     table.render({
       elem: '#demo',
@@ -161,7 +170,9 @@
     });
     var $ = layui.$, active = {
       reload: function () {
-        var selectId = $('#selectId').val();
+        var gardenId = $('#gardenId').val();
+        var buildingId = $('#buildingId').val();
+        var manager_name = $('#manager_name').val();
         table.reload('demo', {
           url: 'getUserList',
           method: 'get',
@@ -169,7 +180,9 @@
             curr: 1
           },
           where: {
-            key1: selectId
+            key1: gardenId,
+            key2: buildingId,
+            key3: manager_name
           }
         })
       }
@@ -185,7 +198,9 @@
 
     //重置功能
     $('#reset').on('click', function () {
-      $('#selectId').val("");
+      $('#gardenId').val("");
+      $('#buildingId').val("");
+      $('#manager_name').val("");
     });
 
     $.ajax({
@@ -194,9 +209,9 @@
         $.each($.parseJSON(data), function (index, item) {
           // console.log(item);
           //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
-          $('#selectId').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
+          $('#gardenId').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
           //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
-          // $('#selectId').val(1);
+          // $('#gardenId').val(1);
         })
         form.render(); //更新全部表单内容
         //form.render('select'); //刷新表单select选择框渲染
@@ -237,64 +252,7 @@
   });
 </script>
 <script>
-  layui.use('laydate', function () {
-    var laydate = layui.laydate;
-
-    //执行一个laydate实例
-    laydate.render({
-      elem: '#start' //指定元素
-    });
-
-    //执行一个laydate实例
-    laydate.render({
-      elem: '#end' //指定元素
-    });
-  });
-
-  /*用户-停用*/
-  function member_stop (obj, id) {
-    layer.confirm('确认要停用吗？', function (index) {
-
-      if ($(obj).attr('title') == '启用') {
-
-        //发异步把用户状态进行更改
-        $(obj).attr('title', '停用')
-        $(obj).find('i').html('&#xe62f;');
-
-        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
-        layer.msg('已停用!', {icon: 5, time: 1000});
-
-      } else {
-        $(obj).attr('title', '启用')
-        $(obj).find('i').html('&#xe601;');
-
-        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
-        layer.msg('已启用!', {icon: 5, time: 1000});
-      }
-
-    });
-  }
-
-  /*用户-删除*/
-  function member_del (obj, id) {
-    layer.confirm('确认要删除吗？', function (index) {
-      //发异步删除数据
-      $(obj).parents("tr").remove();
-      layer.msg('已删除!', {icon: 1, time: 1000});
-    });
-  }
-
-
-  function delAll (argument) {
-
-    var data = tableCheck.getData();
-
-    layer.confirm('确认要删除吗？' + data, function (index) {
-      //捉到所有被选中的，发异步进行删除
-      layer.msg('删除成功', {icon: 1});
-      $(".layui-form-checked").not('.header').parents('tr').remove();
-    });
-  }
+  
 </script>
 </body>
 

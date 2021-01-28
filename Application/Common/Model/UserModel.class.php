@@ -20,6 +20,12 @@ class UserModel extends BaseModel
         if (!empty($request['key1'])) {
             $where['a.garden_id'] = $request['key1'];
         }
+        if (!empty($request['key2'])) {
+            $where['a.building_id'] = $request['key2'];
+        }
+        if (!empty($request['key3'])) {
+            $where['a.manager_name'] = ['like', '%' . $request['key3'] . '%'];
+        }
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [

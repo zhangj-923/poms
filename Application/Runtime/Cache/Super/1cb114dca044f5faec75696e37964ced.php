@@ -58,7 +58,8 @@
           <i class="iconfont nav_right">&#xe6a7;</i>
         </a>
         <ul class="sub-menu" style="background: #0080FF">
-          <li style="background: #0080FF"><a _href="main"><i class="iconfont">&#xe6a7;</i><cite style="color: black">控制面板</cite></a></li>
+          <li style="background: #0080FF"><a _href="main"><i class="iconfont">&#xe6a7;</i><cite style="color: black">控制面板</cite></a>
+          </li>
         </ul>
       </li>
       <li style="background: #0080FF">
@@ -72,7 +73,12 @@
             <a _href="<?php echo U('Garden/index');?>">
               <i class="iconfont">&#xe6a7;</i>
               <cite style="color: black">园区列表</cite>
-
+            </a>
+          </li>
+          <li style="background: #0080FF">
+            <a _href="<?php echo U('Building/index');?>">
+              <i class="iconfont">&#xe6a7;</i>
+              <cite style="color: black">楼宇列表</cite>
             </a>
           </li>
           <li style="background: #0080FF">
