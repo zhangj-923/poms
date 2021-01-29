@@ -1,0 +1,359 @@
+[ 2021-01-29T13:02:58+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035844s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2021-01-29T13:02:59+08:00 ] 127.0.0.1 /admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054549s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2021-01-29T13:02:59+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001641s ]
+
+[ 2021-01-29T13:03:04+08:00 ] 127.0.0.1 /admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2021-01-29T13:03:04+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002191s ]
+
+[ 2021-01-29T15:58:14+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2021-01-29T15:58:16+08:00 ] 127.0.0.1 /admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2021-01-29T15:58:16+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2021-01-29T15:58:22+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0007s ]
+SQL: SELECT `manager_id`,`name`,`password`,`manager_name`,`manager_mobile`,`garden_id`,`building_id`,`remark`,`is_delete`,`create_time` FROM `user` WHERE `name` = 'garden' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2021-01-29T15:58:26+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `garden` WHERE (  garden_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2021-01-29T15:58:26+08:00 ] 127.0.0.1 /admin.php/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2021-01-29T15:58:28+08:00 ] 127.0.0.1 /admin.php/Index/user_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002474s ]
+
+[ 2021-01-29T15:58:28+08:00 ] 127.0.0.1 /admin.php/Index/getUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0005s ]
+SQL: SELECT a.manager_name,a.manager_mobile,a.name,a.password,a.remark,b.garden_name FROM user a join garden b on a.garden_id = b.garden_id  WHERE a.manager_id = '1'  [ RunTime:0.0003s ]
+
+[ 2021-01-29T15:58:37+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2021-01-29T15:58:37+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0  [ RunTime:0.0004s ]
+
+[ 2021-01-29T15:58:38+08:00 ] 127.0.0.1 /admin.php/Customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002469s ]
+
+[ 2021-01-29T15:58:39+08:00 ] 127.0.0.1 /admin.php/Customer/getCustomerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `customer` WHERE `is_delete` = 0 ORDER BY customer_id LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `customer` WHERE `is_delete` = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `user` WHERE (  manager_id ) AND (  1 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2021-01-29T15:58:39+08:00 ] 127.0.0.1 /admin.php/Customer/customer_del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001865s ]
+
+[ 2021-01-29T16:27:52+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2021-01-29T16:27:53+08:00 ] 127.0.0.1 /admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2021-01-29T16:27:53+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+

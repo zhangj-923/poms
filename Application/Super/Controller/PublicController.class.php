@@ -26,8 +26,10 @@ class PublicController extends Controller
     {
         $where = array();
         $where['is_delete'] = NOT_DELETED;
-        if (empty($_POST)) {
-            $where['garden_id'] = $_POST['garden_id'];
+        if (!empty($_POST)) {
+            if ($_POST['garden_id'] > 0){
+                $where['garden_id'] = $_POST['garden_id'];
+            }
         }
         $list = M('building')->where($where)->select();
         echo json_encode($list);

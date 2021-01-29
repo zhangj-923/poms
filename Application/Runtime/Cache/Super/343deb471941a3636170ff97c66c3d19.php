@@ -24,46 +24,57 @@
 <body>
 <div class="x-body">
   <form class="layui-form">
-    <input type="hidden" id="garden_id" name="garden_id"/>
+    <input type="hidden" id="manager_id" name="manager_id"/>
     <div class="layui-form-item">
-      <label for="garden_name" class="layui-form-label">
-        <span class="x-red">*</span>园区名称
+      <label for="garden_id" class="layui-form-label">
+        <span class="x-red">*</span>所属园区
       </label>
       <div class="layui-input-inline">
-        <input type="text" id="garden_name" name="garden_name" required
+        <select class="layui-select" id="garden_id" name="garden_id" lay-filter="garden" lay-verify="required" disabled>
+          <option value="">请选择</option>
+        </select>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label for="building_id" class="layui-form-label">
+        <span class="x-red">*</span>所属楼宇
+      </label>
+      <div class="layui-input-inline">
+        <select class="layui-select" id="building_id" name="building_id" lay-filter="building" lay-verify="required" disabled>
+          <option value="">请选择</option>
+        </select>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label for="manager_name" class="layui-form-label">
+        <span class="x-red">*</span>楼宇管理员名称
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="manager_name" name="manager_name" required
                autocomplete="off" class="layui-input">
       </div>
     </div>
-    <!--          <div class="layui-form-item">-->
-    <!--            <label for="garden_name" class="layui-form-label">-->
-    <!--              <span class="x-red">*</span>园区-->
-    <!--            </label>-->
-    <!--            <div class="layui-input-inline">-->
-    <!--              <input type="text" id="garden_name" name="garden_name" required-->
-    <!--                     autocomplete="off" class="layui-input" disabled>-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--          <div class="layui-form-item">-->
-    <!--              <label for="customer_mobile" class="layui-form-label">-->
-    <!--                  <span class="x-red">*</span>联系方式-->
-    <!--              </label>-->
-    <!--              <div class="layui-input-inline">-->
-    <!--                  <input type="text" id="customer_mobile" name="customer_mobile" required lay-verify="phone"-->
-    <!--                  autocomplete="off" class="layui-input">-->
-    <!--              </div>-->
-    <!--              <div class="layui-form-mid layui-word-aux">-->
-    <!--                  <span class="x-red">*</span>将会成为您唯一的登入名-->
-    <!--              </div>-->
-    <!--          </div>-->
-    <!--          <div class="layui-form-item">-->
-    <!--              <label for="room_name" class="layui-form-label">-->
-    <!--                  <span class="x-red">*</span>房间号-->
-    <!--              </label>-->
-    <!--              <div class="layui-input-inline">-->
-    <!--                  <input type="text" id="room_name" name="room_name" required-->
-    <!--                  autocomplete="off" class="layui-input">-->
-    <!--              </div>-->
-    <!--          </div>-->
+    <div class="layui-form-item">
+      <label for="manager_mobile" class="layui-form-label">
+        <span class="x-red">*</span>联系方式
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="manager_mobile" name="manager_mobile" required
+               autocomplete="off" class="layui-input" lay-verify="phone">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label for="name" class="layui-form-label">
+        <span class="x-red">*</span>登录名
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="name" name="name"
+               autocomplete="off" class="layui-input"  disabled>
+      </div>
+      <div class="layui-form-mid layui-word-aux">
+        <span class="x-red">*</span>将会成为您唯一的登入名，不可更改
+      </div>
+    </div>
     <div class="layui-form-item">
       <label for="remark" class="layui-form-label">
         <span class="x-red">*</span>备注
@@ -90,9 +101,27 @@
 
     //自定义验证规则
     form.verify({
-      nikename: function (value) {
-        if (value.length < 5) {
-          return '昵称至少得5个字符啊';
+      //验证用户名不重复
+      username: function (value) {
+        var datas = {name: value};
+        var message = '';
+        $.ajax({
+          type: 'post',
+          url: 'verifyName',
+          data: datas,
+          async: false,
+          // dataType: 'json',
+          // contentType: 'application/json;charset=UTF-8',
+          success: function (data) {
+            if ($.parseJSON(data).code == 200) {
+
+            } else {
+              message = "用户名已存在，请重新输入！";
+            }
+          }
+        })
+        if (message !== '') {
+          return message;
         }
       }
       , pass: [/(.+){6,12}$/, '密码必须6到12位']
@@ -103,12 +132,39 @@
       }
     });
 
+    $.ajax({
+      url: "<?php echo U('Public/getGardenData');?>",
+      success: function (data) {
+        $.each($.parseJSON(data), function (index, item) {
+          // console.log(item);
+          //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
+          $('#garden_id').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
+          //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
+        })
+        form.render(); //更新全部表单内容
+        //form.render('select'); //刷新表单select选择框渲染
+      }
+    });
+
+    $.ajax({
+      url: "<?php echo U('Public/getBuildingData');?>",
+      success: function (data) {
+        var optionstring = "";
+        $.each($.parseJSON(data), function (index, item) {
+          optionstring += "<option value=\"" + item.building_id + "\" >" + item.building_name + "</option>";
+        })
+        $("#building_id").html('<option value="">请选择</option>' + optionstring);
+        // form.render(); //更新全部表单内容
+        form.render('select'); //刷新表单select选择框渲染
+      }
+    });
+
     //监听提交
     form.on('submit(edit)', function (data) {
       console.log(data);
       //发异步，把数据提交给php
       $.ajax({
-        url: 'editGarden',
+        url: 'editUser',
         type: 'post',
         data: data.field,
         dataType: 'json',
@@ -133,25 +189,52 @@
       return false;
     });
 
+    getUserAjax();
+
+    function getUserAjax () {
+      var manager_id = window.parent.document.getElementById('manager_id').value;
+      $.ajax({
+        url: 'getUser?managerId=' + manager_id,
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+          $("#manager_id").val(data.data.manager_id);
+          $("#garden_id").val(data.data.garden_id);
+          $("#building_id").val(data.data.building_id);
+          $("#manager_name").val(data.data.manager_name);
+          $("#manager_mobile").val(data.data.manager_mobile);
+          $("#name").val(data.data.name);
+          $("#remark").val(data.data.remark);
+          form.render('select');
+        }
+      });
+    }
+
 
   });
 </script>
 <script>
-  getCustomerAjax();
-
-  function getCustomerAjax () {
-    var garden_id = window.parent.document.getElementById('garden_id').value;
-    $.ajax({
-      url: 'getGarden?gardenId=' + garden_id,
-      type: 'get',
-      dataType: 'json',
-      success: function (data) {
-        $("#garden_id").val(data.data.garden_id);
-        $("#garden_name").val(data.data.garden_name);
-        $("#remark").val(data.data.remark);
-      }
-    });
-  }
+  layui.use('form', function () {
+    var form = layui.form;
+    form.on('select(garden)', function (data) {
+      var garden_id = data.value;
+      // console.log(garden_id);
+      $.ajax({
+        url: "<?php echo U('Public/getBuildingData');?>",
+        type: 'post',
+        data: {garden_id: garden_id},
+        success: function (data) {
+          var optionstring = "";
+          $.each($.parseJSON(data), function (index, item) {
+            optionstring += "<option value=\"" + item.building_id + "\" >" + item.building_name + "</option>";
+          })
+          $('#building_id').empty();
+          $("#building_id").html('<option value="">请选择</option>' + optionstring);
+          form.render('select');
+        }
+      })
+    })
+  })
 </script>
 </body>
 

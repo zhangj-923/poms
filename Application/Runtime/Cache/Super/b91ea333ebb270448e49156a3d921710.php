@@ -7,7 +7,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8"/>
   <link rel="shortcut icon" href="/Data/admin/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="/Data/admin/css/font.css">
   <link rel="stylesheet" href="/Data/admin/css/xadmin.css">
@@ -34,13 +34,13 @@
     <i class="layui-icon" style="line-height:38px">ဂ</i></a>
 </div>
 <div class="x-body">
-  <div class="chu">
+  <form class="layui-form">
     <div class="demoTable layui-form-item">
       <div class="layui-inline">
         <label class="layui-form-label">园区名称:</label>
         <div class="layui-input-inline">
           <select class="layui-select" id="gardenId" name="gardenId" lay-filter="garden">
-            <option value="">请选择</option>
+            <!--            <option value="">请选择</option>-->
           </select>
         </div>
         <label class="layui-form-label">楼宇名称:</label>
@@ -54,13 +54,13 @@
           <input class="layui-input" name="manager_name" id="manager_name" placeholder="管理员名称" autocomplete="off">
         </div>
       </div>
-      <div class="layui-btn" data-type="reload">搜索</div>
-      <div class="layui-btn layui-btn-warm" id="reset">重置</div>
+      <button class="layui-btn" data-type="reload" lay-submit lay-filter="search">搜索</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
     </div>
-  </div>
+  </form>
   <xblock>
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-    <button class="layui-btn" onclick="x_admin_show('添加楼宇管理员','user_add',600,400)"><i class="layui-icon"></i>添加
+    <button class="layui-btn" onclick="x_admin_show('添加楼宇管理员','user_add',800,500)"><i class="layui-icon"></i>添加
     </button>
   </xblock>
   <input type="hidden" id="manager_id" value="0">
@@ -135,6 +135,7 @@
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  <a class="layui-btn layui-btn-xs" lay-event="resetPass" style="background: #7c151f">重置密码</a>
 </script>
 
 <!--<script type="text/html" id="typeConvert">-->
@@ -157,11 +158,12 @@
         [ //表头
           {fixed: 'left', type: 'checkbox'},
           {field: 'manager_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
-          {field: 'manager_name', width: '10%', title: '管理员名称', align: 'center', sort: 'true'},
+          {field: 'manager_name', width: '8%', title: '管理员名称', align: 'center', sort: 'true'},
           {field: 'manager_mobile', width: '10%', title: '联系方式', align: 'center', sort: 'true'},
-          {field: 'garden_name', width: '10%', title: '园区', align: 'center', sort: 'true'},
-          {field: 'building_name', width: '10%', title: '楼宇', align: 'center', sort: 'true'},
-          {field: 'create_time', width: '20%', title: '创建时间', align: 'center', sort: 'true'},
+          {field: 'name', width: '8%', title: '登录名', align: 'center', sort: 'true'},
+          {field: 'garden_name', width: '8%', title: '园区', align: 'center', sort: 'true'},
+          {field: 'building_name', width: '8%', title: '楼宇', align: 'center', sort: 'true'},
+          {field: 'create_time', width: '15%', title: '创建时间', align: 'center', sort: 'true'},
           {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
           {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
@@ -187,34 +189,70 @@
         })
       }
     }
-    $('.chu .layui-btn').on('click', function () {         //搜索点击功能
+
+    form.on('submit(search)', function (data) {
       var type = $(this).data('type');
       // if($('#customer_name').val()==""){
       //   layer.msg('查询项目不能为空');
       //   return false;
       // }
       active[type] ? active[type].call(this) : '';
+      return false;
     });
 
+    // $('.chu .layui-btn').on('click', function () {         //搜索点击功能
+    //   var type = $(this).data('type');
+    //   // if($('#customer_name').val()==""){
+    //   //   layer.msg('查询项目不能为空');
+    //   //   return false;
+    //   // }
+    //   active[type] ? active[type].call(this) : '';
+    // });
+
     //重置功能
-    $('#reset').on('click', function () {
-      $('#gardenId').val("");
-      $('#buildingId').val("");
-      $('#manager_name').val("");
-    });
+    // form.on('submit(submit-form)', function(data){
+    //   var field = data.field;
+    //   //执行操作
+    //   $('#gardenId').val("");
+    //   $('#buildingId').empty();
+    //   $('#manager_name').val("");
+    //   return false;
+    // });
+
+    // $('#reset').on('click', function () {
+    //   $('#gardenId').val("");
+    //   $('#buildingId').val("");
+    //   $('#manager_name').val("");
+    // });
 
     $.ajax({
       url: "<?php echo U('Public/getGardenData');?>",
       success: function (data) {
+        var optionstring = "";
         $.each($.parseJSON(data), function (index, item) {
           // console.log(item);
           //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
-          $('#gardenId').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
+          // $('#gardenId').append(new Option(item.garden_name, item.garden_id));//往下拉菜单里添加元素
           //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
           // $('#gardenId').val(1);
+          optionstring += "<option value=\"" + item.garden_id + "\" >" + item.garden_name + "</option>";
         })
-        form.render(); //更新全部表单内容
-        //form.render('select'); //刷新表单select选择框渲染
+        $("#gardenId").html('<option value="0">请选择</option>' + optionstring);
+        // form.render(); //更新全部表单内容
+        form.render('select'); //刷新表单select选择框渲染
+      }
+    });
+
+    $.ajax({
+      url: "<?php echo U('Public/getBuildingData');?>",
+      success: function (data) {
+        var optionstring = "";
+        $.each($.parseJSON(data), function (index, item) {
+          optionstring += "<option value=\"" + item.building_id + "\" >" + item.building_name + "</option>";
+        })
+        $("#buildingId").html('<option value="">请选择</option>' + optionstring);
+        // form.render(); //更新全部表单内容
+        form.render('select'); //刷新表单select选择框渲染
       }
     });
 
@@ -246,13 +284,51 @@
       } else if (layEvent === 'edit') {
         //隐藏域存放manager_id
         $('#manager_id').val(data.manager_id);
-        x_admin_show('编辑楼宇管理员信息', 'user_edit', 600, 300);
+        x_admin_show('编辑楼宇管理员信息', 'user_edit', 800, 500);
+      } else if (layEvent === 'resetPass') {
+        layer.confirm('确认对该楼宇管理员初始化密码？', {
+          title: '密码初始化',
+        }, function (index) {
+          layer.close(index);
+          $.ajax({
+            url: 'resetUserPass?managerId=' + data.manager_id,
+            type: 'get',
+            dataType: "JSON",
+            success: function (data) {
+              if (data.code == 200) {
+                layer.msg(data.msg);
+              } else {
+                layer.alert(data.msg);
+              }
+            }
+          })
+        });
       }
     })
   });
 </script>
 <script>
-  
+  layui.use('form', function () {
+    var form = layui.form;
+    form.on('select(garden)', function (data) {
+      var garden_id = data.value;
+      // console.log(garden_id);
+      $.ajax({
+        url: "<?php echo U('Public/getBuildingData');?>",
+        type: 'post',
+        data: {garden_id: garden_id},
+        success: function (data) {
+          var optionstring = "";
+          $.each($.parseJSON(data), function (index, item) {
+            optionstring += "<option value=\"" + item.building_id + "\" >" + item.building_name + "</option>";
+          })
+          $('#buildingId').empty();
+          $("#buildingId").html('<option value="">请选择</option>' + optionstring);
+          form.render('select');
+        }
+      })
+    })
+  })
 </script>
 </body>
 
