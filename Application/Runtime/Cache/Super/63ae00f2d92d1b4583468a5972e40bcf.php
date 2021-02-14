@@ -207,7 +207,7 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('确认删除当前楼宇？', {
+        layer.confirm('确认删除当前楼宇？ 会对应删除所属楼宇管理员', {
           title: '删除'
         }, function (index) {
           obj.del();

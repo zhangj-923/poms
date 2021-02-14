@@ -262,7 +262,7 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('确认删除当前行园区信息？', function (index) {
+        layer.confirm('确认删除当前行园区信息？对应删除楼宇和楼宇负责人', function (index) {
           obj.del();
           layer.close(index);
           $.ajax({

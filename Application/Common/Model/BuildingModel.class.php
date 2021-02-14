@@ -46,7 +46,7 @@ class BuildingModel extends BaseModel
     }
 
     /**
-     * 删除园区
+     * 删除楼宇
      * @param int $building_id
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
      * Date: 2021-01-17 15:33:48
@@ -57,11 +57,19 @@ class BuildingModel extends BaseModel
     {
         $where = array();
         $where['building_id'] = $building_id;
+        $this->startTrans();
         $result = $this->where($where)->save(['is_delete' => DELETED]);
         if ($result === false) {
-            return getReturn(CODE_ERROR, '系统繁忙，请稍后重试!!!');
+            return getReturn(CODE_ERROR, '楼宇删除失败，请稍后重试!!!');
         } else {
-            return getReturn(CODE_SUCCESS, '删除成功!!!');
+            $result = D('User')->deleteUserByBuildingId($building_id);
+            if ($result === false){
+                $this->rollback();
+                return getReturn(CODE_ERROR, '楼宇负责人删除失败，请稍后重试！！！');
+            }else{
+                $this->commit();
+                return getReturn(CODE_SUCCESS, '删除成功!!!');
+            }
         }
     }
 
@@ -129,4 +137,34 @@ class BuildingModel extends BaseModel
         }
     }
 
+    /**
+     * 删除园区要对应删除所存在楼宇和楼宇负责人
+     * @param $garden_id
+     * Date: 2021-02-14 13:44:15
+     * Update: 2021-02-14 13:44:15
+     * Version: 1.00
+     */
+    public function deleteBuildingByGardenId($garden_id){
+        $result = D('User')->deleteUserByGardenId($garden_id);  //删除对应楼宇负责人
+        if ($result === false){
+            return false;
+        }else{
+            $where = array();
+            $where['garden_id'] = $garden_id;
+            $where['is_delete'] = NOT_DELETED;
+            $data = $this->where($where)->find();
+            if (empty($data)){
+                return true;
+            }else{
+                $where1 = array();
+                $where1['garden_id'] = $garden_id;
+                $result1 = $this->where($where1)->save(['is_delete' => DELETED]);
+                if ($result1 === false){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        }
+    }
 }

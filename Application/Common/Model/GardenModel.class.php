@@ -52,11 +52,19 @@ class GardenModel extends BaseModel
     {
         $where = array();
         $where['garden_id'] = $garden_id;
+        $this->startTrans();
         $result = $this->where($where)->save(['is_delete' => DELETED]);
         if ($result === false) {
-            return getReturn(CODE_ERROR, '系统繁忙，请稍后重试!!!');
+            return getReturn(CODE_ERROR, '删除园区失败，请稍后重试!!!');
         } else {
-            return getReturn(CODE_SUCCESS, '删除成功!!!');
+            $result1 = D('Building')->deleteBuildingByGardenId($garden_id);
+            if ($result1 === false){
+                $this->rollback();
+                return getReturn(CODE_ERROR, '删除楼宇失败，请稍后重试！！！');
+            }else{
+                $this->commit();
+                return getReturn(CODE_SUCCESS, '删除成功!!!');
+            }
         }
     }
 

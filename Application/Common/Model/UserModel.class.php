@@ -193,4 +193,59 @@ class UserModel extends BaseModel
             return getReturn(CODE_SUCCESS, '密码初始化完成！！');
         }
     }
+
+    /**
+     * 删除楼宇要对应删除楼宇负责人
+     * @param int $building_id
+     * Date: 2021-02-14 13:28:00
+     * Update: 2021-02-14 13:28:00
+     * Version: 1.00
+     */
+    public function deleteUserByBuildingId($building_id = 0)
+    {
+        $where = array();
+        $where['building_id'] = $building_id;
+        $where['is_delete'] = NOT_DELETED;
+        $data = $this->where($where)->find();
+        if (empty($data)) {
+            return true;
+        } else {
+            $where1 = array();
+            $where1['building_id'] = $building_id;
+            $result = $this->where($where1)->save(['is_delete' => DELETED]);
+            if ($result === false) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+
+    /**
+     * 根据园区id删除楼宇负责人
+     * @param int $garden_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-14 13:51:21
+     * Update: 2021-02-14 13:51:21
+     * Version: 1.00
+     */
+    public function deleteUserByGardenId($garden_id = 0)
+    {
+        $where = array();
+        $where['garden_id'] = $garden_id;
+        $where['is_delete'] = NOT_DELETED;
+        $data = $this->where($where)->find();
+        if (empty($data)) {
+            return true;
+        } else {
+            $where1 = array();
+            $where1['garden_id'] = $garden_id;
+            $result = $this->where($where1)->save(['is_delete' => DELETED]);
+            if ($result === false) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
 }
