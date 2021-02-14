@@ -131,4 +131,19 @@ class UserController extends Controller
             echo json_encode($result);
         }
     }
+
+    /**
+     * 验证楼宇管理员编辑录用户名不重复
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-29 13:54:28
+     * Update: 2021-01-29 13:54:28
+     * Version: 1.00
+     */
+    public function verifyNameByID()
+    {
+        if (IS_AJAX) {
+            $result = D('User')->checkNameByID($_POST);
+            echo json_encode($result);
+        }
+    }
 }

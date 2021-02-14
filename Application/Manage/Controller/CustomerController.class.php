@@ -34,6 +34,8 @@ class CustomerController extends Controller
         $customer = M('customer');
         $where = array();
         $where['is_delete'] = 0;
+        $where['garden_id'] = session('USER.garden_id');
+        $where['manager_id'] = session('USER.manager_id');
         if (!empty($_GET['key'])) {
             $where['customer_name|customer_mobile|remark'] = ['like', '%' . $_GET['key'] . '%'];
         }
@@ -43,7 +45,9 @@ class CustomerController extends Controller
         $data = $customer->where($where)->limit($start, $limit)->order('customer_id', 'desc')->select();
         $count = count($customer->where($where)->select());
         foreach ($data as $key => $value) {
-            $data[$key]['manager_name'] = M('user')->where(array('manager_id', $value['manager_id']))->find()['manager_name'];
+            $where1 = array();
+            $where1['manager_id'] = $value['manager_id'];
+            $data[$key]['manager_name'] = M('user')->where($where1)->find()['manager_name'];
             $data[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
         }
         $msg = [

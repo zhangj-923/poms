@@ -23,7 +23,7 @@
   <body>
     <div class="x-body">
         <form class="layui-form">
-          <input type="hidden" id="room_id" name="room_id" />
+          <input type="hidden" id="manager_id" name="manager_id" />
           <div class="layui-form-item">
             <label for="manager_name" class="layui-form-label">
               <span class="x-red">*</span>姓名
@@ -43,11 +43,20 @@
             </div>
           </div>
           <div class="layui-form-item">
+            <label for="building_name" class="layui-form-label">
+              <span class="x-red">*</span>楼宇
+            </label>
+            <div class="layui-input-inline">
+              <input type="text" id="building_name" name="building_name" required
+                     autocomplete="off" class="layui-input" disabled>
+            </div>
+          </div>
+          <div class="layui-form-item">
               <label for="manager_mobile" class="layui-form-label">
                   <span class="x-red">*</span>联系方式
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="manager_mobile" name="manager_mobile" required lay-verify="phone"
+                  <input type="text" id="manager_mobile" name="manager_mobile" required lay-verify="phone|required"
                   autocomplete="off" class="layui-input">
               </div>
 <!--              <div class="layui-form-mid layui-word-aux">-->
@@ -59,7 +68,7 @@
               <span class="x-red">*</span>登录名
             </label>
             <div class="layui-input-inline">
-              <input type="text" id="name" name="name" required lay-verify="nikename"
+              <input type="text" id="name" name="name" required lay-verify="username|required"
                      autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">
@@ -101,7 +110,31 @@
       
         //自定义验证规则
         form.verify({
-          nikename: function(value){
+          //验证用户名不重复
+          username: function (value) {
+            var datas = {name: value,
+            manager_id: $("#manager_id").val()};
+            var message = '';
+            $.ajax({
+              type: 'post',
+              url: 'verifyName',
+              data: datas,
+              async: false,
+              // dataType: 'json',
+              // contentType: 'application/json;charset=UTF-8',
+              success: function (data) {
+                if ($.parseJSON(data).code == 200) {
+
+                } else {
+                  message = "用户名已存在，请重新输入！";
+                }
+              }
+            })
+            if (message !== '') {
+              return message;
+            }
+          }
+          , nikename: function(value){
             if(value.length < 5){
               return '昵称至少得5个字符啊';
             }
@@ -156,9 +189,11 @@
         type: 'post',
         dataType: 'json',
         success:function (data) {
+          $("#manager_id").val(data[0].manager_id);
           $("#manager_name").val(data[0].manager_name);
           $("#manager_mobile").val(data[0].manager_mobile);
           $("#garden_name").val(data[0].garden_name);
+          $("#building_name").val(data[0].building_name);
           $("#name").val(data[0].name);
           $("#password").val(data[0].password);
           $("#remark").val(data[0].remark);

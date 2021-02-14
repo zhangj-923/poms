@@ -69,7 +69,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="name" name="name"
-               autocomplete="off" class="layui-input"  disabled>
+               autocomplete="off" class="layui-input" lay-verify="username|required">
       </div>
       <div class="layui-form-mid layui-word-aux">
         <span class="x-red">*</span>将会成为您唯一的登入名，不可更改
@@ -103,11 +103,12 @@
     form.verify({
       //验证用户名不重复
       username: function (value) {
-        var datas = {name: value};
+        var datas = {name: value,
+        manager_id: $("#manager_id").val()};
         var message = '';
         $.ajax({
           type: 'post',
-          url: 'verifyName',
+          url: 'verifyNameByID',
           data: datas,
           async: false,
           // dataType: 'json',

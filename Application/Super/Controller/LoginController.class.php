@@ -34,7 +34,7 @@ class LoginController extends Controller {
      * Version: 1.00
      */
     public function logout(){
-        session(null);
+        session('ADMIN', null);
         $this->success('退出系统！！', U('Login/login'),1);
     }
 

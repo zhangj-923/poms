@@ -248,4 +248,26 @@ class UserModel extends BaseModel
             }
         }
     }
+
+    /**
+     * 验证楼宇管理员编辑时登录用户名修改不重复
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-29 13:55:50
+     * Update: 2021-01-29 13:55:50
+     * Version: 1.00
+     */
+    public function checkNameByID($request = [])
+    {
+        $where = array();
+        $where['name'] = $request['name'];
+        $where['manager_id'] = array('neq', $request['manager_id']);
+        $where['is_delete'] = NOT_DELETED;
+        $result = $this->where($where)->find();
+        if ($result) {
+            return getReturn(CODE_ERROR, '楼宇管理员登录名重复，请重新输入！！！', $result);
+        } else {
+            return getReturn(CODE_SUCCESS, '没有重复');
+        }
+    }
 }

@@ -25,6 +25,8 @@ class RoomController extends Controller {
         $room = M('room');
         $where = array();
         $where['is_delete'] = 0;
+        $where['garden_id'] = session('USER.garden_id');
+        $where['manager_id'] = session('USER.manager_id');
         if (!empty($_GET['key'])){
             $where['room_sn|remark'] = ['like', '%'.$_GET['key'].'%'];
         }
