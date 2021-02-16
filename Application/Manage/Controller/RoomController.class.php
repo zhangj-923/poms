@@ -37,7 +37,7 @@ class RoomController extends Controller {
         $count = count($room->where($where)->select());
         foreach ($data as $key => $value){
             $data[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
-            if ($value['room_status'] === 1){
+            if ($value['room_status'] == 1){
                 $data[$key]['room_status'] = '已签约';
             }else{
                 $data[$key]['room_status'] = '未签约';
@@ -133,6 +133,21 @@ class RoomController extends Controller {
             $this->error('系统繁忙！！请重试');
         }else {
             $this->success('删除成功');
+        }
+    }
+
+    /**
+     * 对租户生成房屋租赁关系
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-16 14:15:06
+     * Update: 2021-02-16 14:15:06
+     * Version: 1.00
+     */
+    public function addLease()
+    {
+        if (IS_AJAX) {
+            $result = D('Lease')->addLeaseByCustomer($_POST);
+            echo json_encode($result);
         }
     }
 }

@@ -117,7 +117,7 @@
                         </a>
                     </li >
                     <li>
-                        <a _href="html/admin-cate.html">
+                        <a _href="<?php echo U('Lease/index');?>">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>租赁</cite>
                         </a>

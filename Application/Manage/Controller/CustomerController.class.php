@@ -173,4 +173,19 @@ class CustomerController extends Controller
     {
         $this->display();
     }
+
+    /**
+     * 对租户生成房屋租赁关系
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-16 14:15:06
+     * Update: 2021-02-16 14:15:06
+     * Version: 1.00
+     */
+    public function addLease()
+    {
+        if (IS_AJAX) {
+            $result = D('Lease')->addLeaseByCustomer($_POST);
+            echo json_encode($result);
+        }
+    }
 }
