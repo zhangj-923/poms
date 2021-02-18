@@ -44,66 +44,45 @@ class LeaseController extends Controller
     }
 
     /**
-     * 删除楼宇
-     * @param $buildingId
+     * 对租户生成房屋租赁关系
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
-     * Date: 2021-01-17 15:31:53
-     * Update: 2021-01-17 15:31:53
+     * Date: 2021-02-16 14:15:06
+     * Update: 2021-02-16 14:15:06
      * Version: 1.00
      */
-    public function deleteBuilding($buildingId = 0)
+    public function addLease()
     {
         if (IS_AJAX) {
-            $result = D('Building')->deleteBuildingById($buildingId);
-            echo json_encode($result);
+            $post_token = I('post.TOKEN');
+            if (!checkToken($post_token)) {
+                echo json_encode(getReturn(CODE_ERROR, '请不要重复提交页面!!!!'));
+//                $this->error('请不要重复提交页面',U('User/Index/login'));
+            } else {
+                $result = D('Lease')->addLeaseByCustomer($_POST);
+                echo json_encode($result);
+            }
         }
     }
 
-    /**
-     * 添加楼宇
-     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
-     * Date: 2021-01-17 15:42:42
-     * Update: 2021-01-17 15:42:42
-     * Version: 1.00
-     */
-    public function addBuilding()
+    public function lease_add()
     {
-        if (IS_AJAX) {
-            $result = D('Building')->addBuildingInfo($_POST);
-            echo json_encode($result);
-        }
+        createToken('TOKEN');
+        $this->display();
     }
 
     /**
-     * 根据楼宇id获取楼宇信息
-     * @param int $buildingId
+     *
+     * @param int $leaseId
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
-     * Date: 2021-01-17 15:53:36
-     * Update: 2021-01-17 15:53:36
+     * Date: 2021-02-18 15:49:10
+     * Update: 2021-02-18 15:49:10
      * Version: 1.00
      */
-    public function getBuilding($buildingId = 0)
+    public function getLease($leaseId = 0)
     {
         if (IS_AJAX) {
-            $data = D('Building')->getBuildingById($buildingId);
+            $data = D('Lease')->getLeaseById($leaseId);
             echo json_encode($data);
         }
     }
-
-    /**
-     * 编辑楼宇信息
-     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
-     * Date: 2021-01-17 15:59:29
-     * Update: 2021-01-17 15:59:29
-     * Version: 1.00
-     */
-    public function editBuilding()
-    {
-        if (IS_AJAX) {
-            $result = D('Building')->editBuildingInfo($_POST);
-            echo json_encode($result);
-        }
-    }
-
-
 }

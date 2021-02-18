@@ -27,6 +27,7 @@ class LeaseModel extends BaseModel
         $request['sing_time'] = strtotime($request['sing_time']);
         $request['expire_time'] = strtotime($request['expire_time']);
         $request['create_time'] = time();
+        $request['garden_id'] = session('USER.garden_id');
         $this->startTrans();
         $result = $this->add($request);
         if ($result) {
@@ -55,25 +56,30 @@ class LeaseModel extends BaseModel
      */
     public function getLeaseInfo($request = [])
     {
-        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'b.customer_id', 'c.room_sn', 'c.room_id'];
+        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
-        if (!empty($request['key1'])) {
-            $where['a.garden_id'] = $request['key1'];
-        }
-        if (!empty($request['key2'])) {
-            $where['a.building_name'] = ['like', '%' . $request['key2'] . '%'];
-        }
+//        if (!empty($request['key2'])) {
+//            $where['a.building_name'] = ['like', '%' . $request['key2'] . '%'];
+//        }
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [
             'join __CUSTOMER__ b on a.customer_id = b.customer_id',
-            'join __ROOM__ c on a.room_id = c.room_id'
+            'join __ROOM__ c on a.room_id = c.room_id',
+            'join __GARDEN__ d on a.garden_id = d.garden_id'
         ];
         $options = [];
         $options['alias'] = 'a';
         $options['where'] = $where;
         $count = $this->getCount($options);
+        if (!empty($request['key1'])) {
+            $where['b.customer_name|c.room_sn'] = ['like', '%' . $request['key1'] . '%'];
+        }
+        if (!empty($request['key2'])) {
+            $where['lease_team'] = $request['key2'];
+        }
+        $options['where'] = $where;
         $options['field'] = $field;
         $options['join'] = $join;
         $options['limit'] = $limit;
@@ -82,8 +88,48 @@ class LeaseModel extends BaseModel
         $list = $this->queryList($options);
         foreach ($list as $key => $value) {
             $list[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
+            $list[$key]['sing_time'] = date('Y-m-d', $value['sing_time']);
+            $list[$key]['expire_time'] = date('Y-m-d', $value['expire_time']);
+            if ($value['lease_team'] == 1) {
+                $list[$key]['total_rent'] = $value['rent'] * 3;
+                $list[$key]['team'] = '一季度';
+            } elseif ($value['lease_team'] == 2) {
+                $list[$key]['total_rent'] = $value['rent'] * 6;
+                $list[$key]['team'] = '半年';
+            } elseif ($value['lease_team'] == 3) {
+                $list[$key]['total_rent'] = $value['rent'] * 12;
+                $list[$key]['team'] = '一年';
+            }
         }
         return ['list' => $list, 'count' => $count];
+    }
+
+    /**
+     *
+     * @param int $lease_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-18 15:52:32
+     * Update: 2021-02-18 15:52:32
+     * Version: 1.00
+     */
+    public function getLeaseById($lease_id = 0)
+    {
+        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name'];
+        $where = array();
+        $where['a.lease_id'] = $lease_id;
+        $join = [
+            'join __CUSTOMER__ b on a.customer_id = b.customer_id',
+            'join __ROOM__ c on a.room_id = c.room_id',
+            'join __GARDEN__ d on a.garden_id = d.garden_id'
+        ];
+        $options = [];
+        $options['alias'] = 'a';
+        $options['where'] = $where;
+        $options['field'] = $field;
+        $options['join'] = $join;
+        $options['order'] = 'a.create_time asc';
+        $data = $this->queryRow($options);
+        return getReturn(CODE_SUCCESS, '查询成功', $data);
     }
 
 }

@@ -29,8 +29,8 @@ function check_verify($code, $id = 1)
 /**
  * 返回规范结构
  * @param $code 状态码
- * @param null $msg  信息
- * @param array $data  数据
+ * @param null $msg 信息
+ * @param array $data 数据
  * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
  * Date: 2021-01-16 13:23:29
  * Update: 2021-01-16 13:23:29
@@ -40,4 +40,30 @@ function getReturn($code = CODE_ERROR, $msg = null, $data = [])
 {
     $msg = !isset($msg) ? '系统繁忙,请稍候重试...' : $msg;
     return array('time' => '', 'code' => $code, 'msg' => $msg, 'data' => $data);
+}
+
+//创建TOKEN
+function createToken($tokenName)
+{
+    $code = chr(mt_rand(0xB0, 0xF7)) . chr(mt_rand(0xA1, 0xFE)) . chr(mt_rand(0xB0, 0xF7)) . chr(mt_rand(0xA1, 0xFE)) . chr(mt_rand(0xB0, 0xF7)) . chr(mt_rand(0xA1, 0xFE));
+    session($tokenName, authcode($code));
+}
+
+//判断TOKEN
+function checkToken($tokenName)
+{
+    if ($tokenName == session('TOKEN')) {
+        session('TOKEN', NULL);
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
+//加密TOKEN
+function authcode($str)
+{
+    $key = "YOURKEY";
+    $str = substr(md5($str), 8, 10);
+    return md5($key . $str);
 }

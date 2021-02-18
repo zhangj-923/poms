@@ -37,7 +37,16 @@
           <div class="layui-inline">
 <!--            <label class="layui-form-label">查询条件:</label>-->
             <div class="layui-input-inline">
-              <input class="layui-input" name="search" id="search" placeholder="租户姓名/联系方式/备注" autocomplete="off">
+              <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号" autocomplete="off">
+            </div>
+            <label class="layui-form-label">租期类型:</label>
+            <div class="layui-input-inline">
+              <select class="layui-select" id="leaseTeam" name="leaseTeam" lay-filter="Team">
+                <option value="">请选择</option>
+                <option value="1">一季度</option>
+                <option value="2">半年</option>
+                <option value="3">一年</option>
+              </select>
             </div>
           </div>
           <div class="layui-btn" data-type="reload">搜索</div>
@@ -46,9 +55,9 @@
     </div>
       <xblock>
 <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-        <button class="layui-btn" onclick="x_admin_show('添加用户','customer_add',600,400)"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,600)"><i class="layui-icon"></i>添加</button>
       </xblock>
-      <input type="hidden" id="update_customer_id" value="0">
+      <input type="hidden" id="update_lease_id" value="0">
       <table class="layui-table" id="demo" lay-filter="test">
 <!--        <thead>-->
 <!--          <tr>-->
@@ -138,11 +147,16 @@
             [ //表头
               {fixed: 'left', type: 'checkbox'},
               {field: 'lease_id', width:'5%', title: 'Id', align:'center', sort:'true'},
-              {field: 'customer_name', width: '10%', title: '租户', align: 'center', sort: 'true'},
-              {field: 'customer_mobile', width: '15%', title: '联系方式', align: 'center', sort: 'true'},
-              {field: 'room_sn', width: '10%', title: '房屋', align: 'center', sort: 'true'},
-              {field: 'create_time', width: '20%', title: '创建时间', align: 'center', sort: 'true'},
-              {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
+              {field: 'customer_name', width: '8%', title: '租户', align: 'center', sort: 'true'},
+              {field: 'customer_mobile', width: '10%', title: '联系方式', align: 'center', sort: 'true'},
+              {field: 'garden_name', width: '6%', title: '园区', align: 'center', sort: 'true'},
+              {field: 'room_sn', width: '6%', title: '房屋', align: 'center', sort: 'true'},
+              {field: 'team', width: '8%', title: '租期', align: 'center', sort: 'true'},
+              {field: 'sing_time', width: '10%', title: ' 起租日期', align: 'center', sort: 'true'},
+              {field: 'expire_time', width: '10%', title: ' 到期日期', align: 'center', sort: 'true', style:'color: red;'},
+              {field: 'rent', width: '7%', title: ' 租金', align: 'center', sort: 'true'},
+              {field: 'create_time', width: '15%', title: '创建时间', align: 'center', sort: 'true'},
+              // {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
               {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
             ]
           ],
@@ -151,6 +165,7 @@
         var $ = layui.$,active = {
           reload: function () {
             var search = $('#search').val();
+            var leaseTeam = $('#leaseTeam').val();
             table.reload('demo', {
               url: 'getLeaseList',
               method: 'get',
@@ -158,7 +173,8 @@
                 curr: 1
               },
               where: {
-                key: search
+                key1: search,
+                key2: leaseTeam
               }
             })
           }
@@ -175,6 +191,7 @@
         //重置功能
         $('#reset').on('click', function () {
            $('#search').val("");
+           $('#leaseTeam').val("");
         });
 
         table.on('tool(test)', function (obj) {
@@ -201,8 +218,8 @@
             });
           }else if (layEvent === 'edit'){
             //隐藏域存放customer_id
-            $('#update_customer_id').val(data.customer_id);
-            x_admin_show('编辑租户', 'customer_edit', 600, 300);
+            $('#update_lease_id').val(data.lease_id);
+            x_admin_show('编辑租赁关系', 'lease_edit', 600, 600);
           }
         })
       });
