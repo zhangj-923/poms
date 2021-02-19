@@ -122,7 +122,14 @@
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  {{#  if(d.room_status === '未签约'){ }}
   <a class="layui-btn layui-btn-xs" lay-event="addCustomer" style="background: cornflowerblue">租赁</a>
+  {{#  } }}
+<!--  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="water">水表</a>-->
+  {{#  if(d.room_status === '已签约'){ }}
+  <a class="layui-btn layui-btn-xs layui-btn-sm" lay-event="water">水表</a>
+  <a class="layui-btn layui-btn-xs layui-btn-sm" lay-event="power">电表</a>
+  {{#  } }}
 </script>
 <script>
   layui.use(['table', 'layer', 'form'], function () {

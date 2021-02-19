@@ -85,4 +85,47 @@ class LeaseController extends Controller
             echo json_encode($data);
         }
     }
+
+    public function lease_edit()
+    {
+        createToken('TOKEN');
+        $this->display();
+    }
+
+    /**
+     * 编辑修改租赁关系
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-19 14:28:58
+     * Update: 2021-02-19 14:28:58
+     * Version: 1.00
+     */
+    public function editLease()
+    {
+        if (IS_AJAX) {
+            $post_token = I('post.TOKEN');
+            if (!checkToken($post_token)) {
+                echo json_encode(getReturn(CODE_ERROR, '请不要重复提交页面!!!!'));
+            } else {
+                $result = D('Lease')->leaseEdit($_POST);
+                echo json_encode($result);
+            }
+        }
+    }
+
+    /**
+     * 解除当前租赁关系
+     * @param int $leaseId
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-19 14:43:20
+     * Update: 2021-02-19 14:43:20
+     * Version: 1.00
+     */
+    public function deleteLease($leaseId = 0)
+    {
+        if (IS_AJAX) {
+            $result = D('Lease')->deleteLeasegById($leaseId);
+            echo json_encode($result);
+        }
+    }
+
 }

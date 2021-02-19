@@ -41,7 +41,7 @@
         <span class="x-red">*</span>房屋
       </label>
       <div class="layui-input-inline">
-        <select class="layui-select" id="room_id" name="room_id" lay-filter="room" lay-verify="required">
+        <select class="layui-select" id="room_id" name="room_id" lay-filter="room" lay-verify="required" disabled>
           <option value="">请选择</option>
         </select>
       </div>
@@ -109,7 +109,8 @@
     //联系方式不可重复验证
     //房屋下拉框
     $.ajax({
-      url: "{:U('Public/getRoomData')}",
+      url: "{:U('Public/getRoom')}",
+      // data: {room_id: $("#room_id").val()},
       success: function (data) {
         $.each($.parseJSON(data), function (index, item) {
           // console.log(item);
@@ -142,7 +143,7 @@
       console.log(data);
       //发异步，把数据提交给php
       $.ajax({
-        url: 'addLease',
+        url: 'editLease',
         type: 'post',
         data: data.field,
         dataType: 'json',
@@ -178,9 +179,13 @@
           $("#lease_id").val(data.data.lease_id);
           $("#customer_id").val(data.data.customer_id);
           $("#room_id").val(data.data.room_id);
-          $("#lease_team").val(data.data.lease_team);
+          // $("#lease_team").val(data.data.lease_team);
           $("#rent").val(data.data.rent);
-          form.render('select');
+          $("#sing_time").val(data.data.sing_time);
+          $("input[name=lease_team][value='1']").attr("checked", data.data.lease_team == 1 ? true : false);
+          $("input[name=lease_team][value='2']").attr("checked", data.data.lease_team == 2 ? true : false);
+          $("input[name=lease_team][value='3']").attr("checked", data.data.lease_team == 3 ? true : false);
+          form.render();
         }
       });
     }

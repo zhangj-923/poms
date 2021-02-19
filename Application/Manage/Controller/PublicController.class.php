@@ -3,6 +3,7 @@
 namespace Manage\Controller;
 
 use Think\Controller;
+use Think\Model;
 
 class PublicController extends Controller
 {
@@ -47,5 +48,16 @@ class PublicController extends Controller
         $where['manager_id'] = session('USER.manager_id');
         $list = M('customer')->where($where)->select();
         echo json_encode($list);
+    }
+
+    public function getRoom()
+    {
+        if (IS_AJAX) {
+            $where = array();
+            $where['is_delete'] = NOT_DELETED;
+            $where['room_status'] = 1;
+            $list = M('room')->where($where)->select();
+            echo json_encode($list);
+        }
     }
 }

@@ -154,7 +154,7 @@
               {field: 'team', width: '8%', title: '租期', align: 'center', sort: 'true'},
               {field: 'sing_time', width: '10%', title: ' 起租日期', align: 'center', sort: 'true'},
               {field: 'expire_time', width: '10%', title: ' 到期日期', align: 'center', sort: 'true', style:'color: red;'},
-              {field: 'rent', width: '7%', title: ' 租金', align: 'center', sort: 'true'},
+              {field: 'rent', width: '7%', title: '月租金', align: 'center', sort: 'true'},
               {field: 'create_time', width: '15%', title: '创建时间', align: 'center', sort: 'true'},
               // {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
               {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
@@ -200,18 +200,18 @@
           var tr = obj.tr;
 
           if (layEvent === 'del'){
-            layer.confirm('删除当前行数据？', function (index) {
+            layer.confirm('确认解除当前租赁关系？解除即释放当前房屋状态', function (index) {
               obj.del();
               layer.close(index);
               $.ajax({
-                url: 'deleteCustomer?customerId='+data.customer_id,
+                url: 'deleteLease?leaseId='+data.lease_id,
                 type: 'get',
                 dataType: "JSON",
                 success:function (data) {
-                  if (data.status == 1){
-                    layer.msg(data.info);
+                  if (data.code == 200){
+                    layer.msg(data.msg);
                   }else{
-                    layer.alert(data.info);
+                    layer.alert(data.msg);
                   }
                 }
               })
