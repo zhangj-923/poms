@@ -25,7 +25,7 @@
         <form class="layui-form">
           <input type="hidden" id="room_id" name="room_id" />
           <div class="layui-form-item">
-            <label for="customer_name" class="layui-form-label">
+            <label for="room_sn" class="layui-form-label">
               <span class="x-red">*</span>房屋编号
             </label>
             <div class="layui-input-inline">

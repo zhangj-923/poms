@@ -55,7 +55,7 @@
     </div>
       <xblock>
 <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-        <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,600)"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加</button>
       </xblock>
       <input type="hidden" id="update_lease_id" value="0">
       <table class="layui-table" id="demo" lay-filter="test">
@@ -219,7 +219,7 @@
           }else if (layEvent === 'edit'){
             //隐藏域存放customer_id
             $('#update_lease_id').val(data.lease_id);
-            x_admin_show('编辑租赁关系', 'lease_edit', 600, 600);
+            x_admin_show('编辑租赁关系', 'lease_edit', 600, 500);
           }
         })
       });

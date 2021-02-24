@@ -24,49 +24,54 @@
 <body>
 <div class="x-body layui-anim layui-anim-up">
   <form class="layui-form">
-    <!--    TOKEN 避免重复提交表单验证-->
+    <input type="hidden" id="water_id" name="water_id"/>
     <input type="hidden" name="TOKEN" value="{:session('TOKEN')}"/>
+    <input type="hidden" id="room_id" name="room_id"/>
     <div class="layui-form-item">
-      <label for="customer_id" class="layui-form-label">
-        <span class="x-red">*</span>租户
+      <label for="room_sn" class="layui-form-label">
+        <span class="x-red">*</span>房屋编号
       </label>
       <div class="layui-input-inline">
-        <select class="layui-select" id="customer_id" name="customer_id" lay-filter="customer" lay-verify="required">
-          <option value="">请选择</option>
-        </select>
+        <input type="text" id="room_sn" name="room_sn" required
+               autocomplete="off" class="layui-input" disabled>
       </div>
     </div>
     <div class="layui-form-item">
-      <label for="room_id" class="layui-form-label">
-        <span class="x-red">*</span>房屋
+      <label for="water_sn" class="layui-form-label">
+        <span class="x-red">*</span>水表编号
       </label>
       <div class="layui-input-inline">
-        <select class="layui-select" id="room_id" name="room_id" lay-filter="room" lay-verify="required">
-          <option value="">请选择</option>
-        </select>
+        <input type="text" id="water_sn" name="water_sn" required
+               autocomplete="off" class="layui-input" placeholder="输入水表编号">
       </div>
     </div>
     <div class="layui-form-item">
-      <label class="layui-form-label">租期</label>
-      <div class="layui-input-block">
-        <input type="radio" name="lease_team" value="1" title="一季度" checked="">
-        <input type="radio" name="lease_team" value="2" title="半年">
-        <input type="radio" name="lease_team" value="3" title="一年">
+      <label for="price" class="layui-form-label">
+        <span class="x-red">*</span>单价
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="price" name="price" required
+               autocomplete="off" class="layui-input" placeholder="输入单价">
+      </div>
+      <div class="layui-form-mid layui-word-aux">
+        <span class="x-red">*</span>元/吨
       </div>
     </div>
     <div class="layui-form-item">
-      <label for="remark" class="layui-form-label">
-        <span class="x-red">*</span>月租金
+      <label for="current" class="layui-form-label">
+        <span class="x-red">*</span>初始读数
       </label>
       <div class="layui-input-inline">
-        <input type="text" id="rent" name="rent" required
-               autocomplete="off" class="layui-input">
+        <input type="text" id="current" name="current" required
+               autocomplete="off" class="layui-input" placeholder="输入初始读数">
       </div>
     </div>
     <div class="layui-inline">
-      <label class="layui-form-label">签约日期</label>
+      <label for="current" class="layui-form-label">
+        <span class="x-red">*</span>初始抄表日期
+      </label>
       <div class="layui-input-inline">
-        <input type="text" name="sing_time" id="sing_time" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
+        <input type="text" name="time" id="time" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
                class="layui-input">
       </div>
     </div>
@@ -74,7 +79,7 @@
       <label for="L_repass" class="layui-form-label">
       </label>
       <button class="layui-btn" lay-filter="add" lay-submit="">
-        添加
+        确定
       </button>
     </div>
   </form>
@@ -88,7 +93,7 @@
 
     //日期
     laydate.render({
-      elem: '#sing_time'
+      elem: '#time'
     });
 
     //自定义验证规则
@@ -107,42 +112,13 @@
     });
 
     //联系方式不可重复验证
-    //房屋下拉框
-    $.ajax({
-      url: "{:U('Public/getRoomData')}",
-      success: function (data) {
-        $.each($.parseJSON(data), function (index, item) {
-          // console.log(item);
-          //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
-          $('#room_id').append(new Option(item.room_sn + ' ' + item.remark, item.room_id));//往下拉菜单里添加元素
-          //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
-        })
-        form.render('select'); //更新全部表单内容
-        //form.render('select'); //刷新表单select选择框渲染
-      }
-    });
-
-    //租户下拉框
-    $.ajax({
-      url: "{:U('Public/getCustomerData')}",
-      success: function (data) {
-        $.each($.parseJSON(data), function (index, item) {
-          // console.log(item);
-          //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
-          $('#customer_id').append(new Option(item.customer_name, item.customer_id));//往下拉菜单里添加元素
-          //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
-        })
-        form.render('select'); //更新全部表单内容
-        //form.render('select'); //刷新表单select选择框渲染
-      }
-    });
 
     //监听提交
     form.on('submit(add)', function (data) {
       console.log(data);
       //发异步，把数据提交给php
       $.ajax({
-        url: 'addLease',
+        url: 'editWater',
         type: 'post',
         data: data.field,
         dataType: 'json',
@@ -167,8 +143,31 @@
       return false;
     });
 
+    getLeaseAjax();
+
+    function getLeaseAjax () {
+      var water_id = window.parent.document.getElementById('update_water_id').value;
+      $.ajax({
+        url: 'getWater?waterId=' + water_id,
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+          $("#water_id").val(data.data.water_id);
+          $("#room_id").val(data.data.room_id);
+          $("#room_sn").val(data.data.room_sn);
+          $("#water_sn").val(data.data.water_sn);
+          $("#current").val(data.data.current);
+          $("#price").val(data.data.price);
+          $("#time").val(data.data.time);
+          form.render();
+        }
+      });
+    }
 
   });
+</script>
+<script>
+
 </script>
 </body>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 
 <head>
@@ -6,14 +6,14 @@
   <title>欢迎页面-L-admin1.0</title>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<!--  <meta name="viewport"-->
-<!--        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>-->
-  <link rel="shortcut icon" href="__ADMIN__/favicon.ico" type="image/x-icon"/>
-  <link rel="stylesheet" href="__ADMIN__/css/font.css">
-  <link rel="stylesheet" href="__ADMIN__/css/xadmin.css">
-  <script src="__ADMIN__/js/jquery.min.js"></script>
-  <script type="text/javascript" src="__ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
-  <script type="text/javascript" src="__ADMIN__/js/xadmin.js"></script>
+  <meta name="viewport"
+        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+  <link rel="shortcut icon" href="/Data/admin/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="/Data/admin/css/font.css">
+  <link rel="stylesheet" href="/Data/admin/css/xadmin.css">
+  <script src="/Data/admin/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/Data/admin/lib/layui/layui.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/Data/admin/js/xadmin.js"></script>
   <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
   <!--[if lt IE 9]>
   <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -24,8 +24,8 @@
 <body class="layui-anim layui-anim-up">
 <div class="x-nav">
       <span class="layui-breadcrumb">
-        <a href="">房屋管理</a>
-        <a href="">房屋列表</a>
+        <a href="">租务管理</a>
+        <a href="">水表管理</a>
         <!--        <a>-->
         <!--          <cite>导航元素</cite></a>-->
       </span>
@@ -39,8 +39,17 @@
       <div class="layui-inline">
         <!--            <label class="layui-form-label">查询条件:</label>-->
         <div class="layui-input-inline">
-          <input class="layui-input" name="search" id="search" placeholder="房屋编号/备注" autocomplete="off">
+          <input class="layui-input" name="search" id="search" placeholder="房间号" autocomplete="off">
         </div>
+        <!--        <label class="layui-form-label">租期类型:</label>-->
+        <!--        <div class="layui-input-inline">-->
+        <!--          <select class="layui-select" id="leaseTeam" name="leaseTeam" lay-filter="Team">-->
+        <!--            <option value="">请选择</option>-->
+        <!--            <option value="1">一季度</option>-->
+        <!--            <option value="2">半年</option>-->
+        <!--            <option value="3">一年</option>-->
+        <!--          </select>-->
+        <!--        </div>-->
       </div>
       <div class="layui-btn" data-type="reload">搜索</div>
       <div class="layui-btn layui-btn-warm" id="reset">重置</div>
@@ -48,9 +57,10 @@
   </div>
   <xblock>
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-    <button class="layui-btn" onclick="x_admin_show('添加房屋','room_add',600,400)"><i class="layui-icon"></i>添加</button>
+    <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加
+    </button>
   </xblock>
-  <input type="hidden" id="update_room_id" value="0">
+  <input type="hidden" id="update_water_id" value="0">
   <table class="layui-table" id="demo" lay-filter="test">
     <!--        <thead>-->
     <!--          <tr>-->
@@ -122,14 +132,7 @@
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-  {{#  if(d.room_status === '未签约'){ }}
-  <a class="layui-btn layui-btn-xs" lay-event="addCustomer" style="background: cornflowerblue">租赁</a>
-  {{#  } }}
-  <!--  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="water">水表</a>-->
-  {{#  if(d.room_status === '已签约'){ }}
-  <a class="layui-btn layui-btn-xs layui-btn-sm" lay-event="water">水表</a>
-  <a class="layui-btn layui-btn-xs layui-btn-sm" lay-event="power">电表</a>
-  {{#  } }}
+  <a class="layui-btn layui-btn-xs" lay-event="readMeter" style="background: cornflowerblue">抄表</a>
 </script>
 <script>
   layui.use(['table', 'layer', 'form'], function () {
@@ -140,17 +143,21 @@
     table.render({
       elem: '#demo',
       height: 450,
-      url: 'getRoomList',  //数据接口
+      url: 'getWaterList',  //数据接口
       page: true, //开启分页
       cols: [
         [ //表头
           {fixed: 'left', type: 'checkbox'},
-          {field: 'room_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
-          {field: 'room_sn', width: '15%', title: '房屋编号', align: 'center', sort: 'true'},
-          {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
-          {field: 'room_status', width: '15%', title: '房屋状态', align: 'center', sort: 'true', templet: '#statusTpl'},
-          {field: 'create_time', width: '20%', title: '创建时间', align: 'center', sort: 'true'},
-          {fixed: 'right', title: '操作', align: 'center', toolbar: '#barDemo'}
+          {field: 'water_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
+          {field: 'room_sn', width: '6%', title: '房屋', align: 'center', sort: 'true'},
+          {field: 'water_sn', width: '6%', title: '水表', align: 'center', sort: 'true'},
+          {field: 'current', width: '9%', title: '初始读数', align: 'center', sort: 'true'},
+          {field: 'time', width: '12%', title: '初始抄表时间', align: 'center', sort: 'true'},
+          {field: 'last_current', width: '9%', title: '上次读数', align: 'center', sort: 'true'},
+          {field: 'last_time', width: '12%', title: '上次抄表时间', align: 'center', sort: 'true'},
+          {field: 'price', width: '7%', title: '元/吨', align: 'center', sort: 'true'},
+          {field: 'create_time', width: '15%', title: '创建时间', align: 'center', sort: 'true'},
+          {fixed: 'right', width: '18%', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
       ],
       id: 'demo'
@@ -158,14 +165,16 @@
     var $ = layui.$, active = {
       reload: function () {
         var search = $('#search').val();
+        // var leaseTeam = $('#leaseTeam').val();
         table.reload('demo', {
-          url: 'getRoomList',
+          url: 'getWaterList',
           method: 'get',
           page: {
             curr: 1
           },
           where: {
-            key: search
+            key1: search
+            // key2: leaseTeam
           }
         })
       }
@@ -182,6 +191,7 @@
     //重置功能
     $('#reset').on('click', function () {
       $('#search').val("");
+      $('#leaseTeam').val("");
     });
 
     table.on('tool(test)', function (obj) {
@@ -190,122 +200,37 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('删除当前行数据？', function (index) {
+        layer.confirm('确认解除当前水表嘛？', function (index) {
           obj.del();
           layer.close(index);
           $.ajax({
-            url: 'deleteRoom?roomId=' + data.room_id,
+            url: 'deleteWater?waterId=' + data.water_id,
             type: 'get',
             dataType: "JSON",
             success: function (data) {
-              if (data.status == 1) {
-                layer.msg(data.info);
+              if (data.code == 200) {
+                layer.msg(data.msg);
               } else {
                 //删除失败刷新表单
-                layer.msg(data.info, {icon: 2, time: 1000}, function () {
+                layer.msg(data.msg, {icon: 2, time: 1000}, function () {
                   setTimeout('window.location.reload()', 1000);
                 });
-                // layer.alert(data.info);
+                // layer.alert(data.msg);
               }
             }
           })
         });
       } else if (layEvent === 'edit') {
-        //隐藏域存放room_id
-        $('#update_room_id').val(data.room_id);
-        x_admin_show('编辑房屋', 'room_edit', 600, 300);
-      } else if (layEvent === 'addCustomer') {
-        if (data.room_status === '已签约') {
-          layer.msg('房屋只能签约一位租户！！！！！', {icon: 0})
-        } else {
-          $('#update_room_id').val(data.room_id);
-          x_admin_show('租赁', 'room_addCustomer', 600, 600);
-        }
-      } else if (layEvent === 'water') {
-        $('#update_room_id').val(data.room_id);
-        $.ajax({
-          url: 'checkWater?roomId=' + data.room_id,
-          type: 'get',
-          dataType: "JSON",
-          success: function (data) {
-            if (data.code == 200) {
-              x_admin_show('添加水表', 'room_addWater', 600, 500);
-            } else {
-              layer.msg(data.msg);
-            }
-          }
-        })
+        //隐藏域存放customer_id
+        $('#update_water_id').val(data.water_id);
+        x_admin_show('编辑租赁关系', 'water_edit', 600, 500);
+      } else if (layEvent === 'readMeter') {
+
       }
     })
   });
 </script>
-<script>
-  layui.use('laydate', function () {
-    var laydate = layui.laydate;
 
-    //执行一个laydate实例
-    laydate.render({
-      elem: '#start' //指定元素
-    });
-
-    //执行一个laydate实例
-    laydate.render({
-      elem: '#end' //指定元素
-    });
-  });
-
-  /*用户-停用*/
-  function member_stop (obj, id) {
-    layer.confirm('确认要停用吗？', function (index) {
-
-      if ($(obj).attr('title') == '启用') {
-
-        //发异步把用户状态进行更改
-        $(obj).attr('title', '停用')
-        $(obj).find('i').html('&#xe62f;');
-
-        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
-        layer.msg('已停用!', {icon: 5, time: 1000});
-
-      } else {
-        $(obj).attr('title', '启用')
-        $(obj).find('i').html('&#xe601;');
-
-        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
-        layer.msg('已启用!', {icon: 5, time: 1000});
-      }
-
-    });
-  }
-
-  /*用户-删除*/
-  function member_del (obj, id) {
-    layer.confirm('确认要删除吗？', function (index) {
-      //发异步删除数据
-      $(obj).parents("tr").remove();
-      layer.msg('已删除!', {icon: 1, time: 1000});
-    });
-  }
-
-
-  function delAll (argument) {
-
-    var data = tableCheck.getData();
-
-    layer.confirm('确认要删除吗？' + data, function (index) {
-      //捉到所有被选中的，发异步进行删除
-      layer.msg('删除成功', {icon: 1});
-      $(".layui-form-checked").not('.header').parents('tr').remove();
-    });
-  }
-</script>
-<script type="text/html" id="statusTpl">
-  {{#  if(d.room_status === '已签约'){ }}
-  <span style="color: red;">{{ d.room_status }}</span>
-  {{#  } else { }}
-  {{ d.room_status }}
-  {{#  } }}
-</script>
 </body>
 
 </html>

@@ -6,8 +6,8 @@
   <title>欢迎页面-L-admin1.0</title>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"
-        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+<!--  <meta name="viewport"-->
+<!--        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>-->
   <link rel="shortcut icon" href="/Data/admin/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="/Data/admin/css/font.css">
   <link rel="stylesheet" href="/Data/admin/css/xadmin.css">
@@ -125,7 +125,7 @@
   {{#  if(d.room_status === '未签约'){ }}
   <a class="layui-btn layui-btn-xs" lay-event="addCustomer" style="background: cornflowerblue">租赁</a>
   {{#  } }}
-<!--  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="water">水表</a>-->
+  <!--  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="water">水表</a>-->
   {{#  if(d.room_status === '已签约'){ }}
   <a class="layui-btn layui-btn-xs layui-btn-sm" lay-event="water">水表</a>
   <a class="layui-btn layui-btn-xs layui-btn-sm" lay-event="power">电表</a>
@@ -201,7 +201,11 @@
               if (data.status == 1) {
                 layer.msg(data.info);
               } else {
-                layer.alert(data.info);
+                //删除失败刷新表单
+                layer.msg(data.info, {icon: 2, time: 1000}, function () {
+                  setTimeout('window.location.reload()', 1000);
+                });
+                // layer.alert(data.info);
               }
             }
           })
@@ -211,12 +215,26 @@
         $('#update_room_id').val(data.room_id);
         x_admin_show('编辑房屋', 'room_edit', 600, 300);
       } else if (layEvent === 'addCustomer') {
-        if (data.room_status === '已签约'){
+        if (data.room_status === '已签约') {
           layer.msg('房屋只能签约一位租户！！！！！', {icon: 0})
-        }else{
+        } else {
           $('#update_room_id').val(data.room_id);
           x_admin_show('租赁', 'room_addCustomer', 600, 600);
         }
+      } else if (layEvent === 'water') {
+        $('#update_room_id').val(data.room_id);
+        $.ajax({
+          url: 'checkWater?roomId=' + data.room_id,
+          type: 'get',
+          dataType: "JSON",
+          success: function (data) {
+            if (data.code == 200) {
+              x_admin_show('添加水表', 'room_addWater', 600, 500);
+            } else {
+              layer.msg(data.msg);
+            }
+          }
+        })
       }
     })
   });

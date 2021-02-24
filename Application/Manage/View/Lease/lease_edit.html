@@ -70,11 +70,11 @@
                class="layui-input">
       </div>
     </div>
-    <div class="layui-form-item">
+    <div class="layui-form-item" style="margin-top: 15px">
       <label for="L_repass" class="layui-form-label">
       </label>
       <button class="layui-btn" lay-filter="add" lay-submit="">
-        添加
+        确定
       </button>
     </div>
   </form>
