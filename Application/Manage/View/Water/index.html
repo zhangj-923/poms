@@ -200,30 +200,34 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('确认解除当前水表嘛？', function (index) {
-          obj.del();
-          layer.close(index);
-          $.ajax({
-            url: 'deleteWater?waterId=' + data.water_id,
-            type: 'get',
-            dataType: "JSON",
-            success: function (data) {
-              if (data.code == 200) {
-                layer.msg(data.msg);
-              } else {
-                //删除失败刷新表单
-                layer.msg(data.msg, {icon: 2, time: 1000}, function () {
-                  setTimeout('window.location.reload()', 1000);
-                });
-                // layer.alert(data.msg);
+        layer.confirm('确认解除当前水表嘛？', {
+            title: '解除水表'
+          }, function (index) {
+            obj.del();
+            layer.close(index);
+            $.ajax({
+              url: 'deleteWater?waterId=' + data.water_id,
+              type: 'get',
+              dataType: "JSON",
+              success: function (data) {
+                if (data.code == 200) {
+                  layer.msg(data.msg);
+                } else {
+                  //删除失败刷新表单
+                  layer.msg(data.msg, {icon: 2, time: 1000}, function () {
+                    setTimeout('window.location.reload()', 1000);
+                  });
+                  // layer.alert(data.msg);
+                }
               }
-            }
-          })
-        });
+            })
+          }
+        )
+        ;
       } else if (layEvent === 'edit') {
         //隐藏域存放customer_id
         $('#update_water_id').val(data.water_id);
-        x_admin_show('编辑租赁关系', 'water_edit', 600, 500);
+        x_admin_show('编辑水表信息', 'water_edit', 600, 500);
       } else if (layEvent === 'readMeter') {
 
       }
