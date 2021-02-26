@@ -100,4 +100,30 @@ class PowerController extends Controller
             }
         }
     }
+
+    public function power_add()
+    {
+        createToken('TOKEN');
+        $this->display();
+    }
+
+    /**
+     * 添加电表
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-25 15:50:43
+     * Update: 2021-02-25 15:50:43
+     * Version: 1.00
+     */
+    public function addPower()
+    {
+        if (IS_AJAX) {
+            $post_token = I('post.TOKEN');
+            if (!checkToken($post_token)) {
+                echo json_encode(getReturn(CODE_ERROR, '请不要重复提交页面!!!!'));
+            } else {
+                $result = D('Power')->addPower($_POST);
+                echo json_encode($result);
+            }
+        }
+    }
 }

@@ -60,4 +60,56 @@ class PublicController extends Controller
             echo json_encode($list);
         }
     }
+
+    /**
+     * 获取已租赁且未添加水表的房屋
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-26 16:50:35
+     * Update: 2021-02-26 16:50:35
+     * Version: 1.00
+     */
+    public function getRoomByWater()
+    {
+        if (IS_AJAX) {
+            $where = array();
+            $where['is_delete'] = NOT_DELETED;
+            $where['room_status'] = 1;
+            $list = M('room')->where($where)->select();
+            foreach ($list as $key => $value) {
+                $map = array();
+                $map['room_id'] = $value['room_id'];
+                $data = M('water')->where($map)->select();
+                if (!empty($data)) {
+                    unset($list[$key]);
+                }
+            }
+            echo json_encode($list);
+        }
+    }
+
+    /**
+     * 获取已租赁且未添加电表的房屋
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-26 16:50:35
+     * Update: 2021-02-26 16:50:35
+     * Version: 1.00
+     */
+    public function getRoomByPower()
+    {
+        if (IS_AJAX) {
+            $where = array();
+            $where['is_delete'] = NOT_DELETED;
+            $where['room_status'] = 1;
+            $list = M('room')->where($where)->select();
+            foreach ($list as $key => $value) {
+                $map = array();
+                $map['room_id'] = $value['room_id'];
+                $data = M('power')->where($map)->select();
+                if (!empty($data)) {
+                    unset($list[$key]);
+                }
+            }
+            echo json_encode($list);
+        }
+    }
 }

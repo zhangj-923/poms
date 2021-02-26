@@ -138,15 +138,19 @@ class RoomController extends Controller
      */
     public function deleteRoom($roomId = '')
     {
-        $room = M('room');
-        $where = array();
-        $where['room_id'] = $roomId;
-        $result = $room->where($where)->save(['is_delete' => 1]);
-        if ($result === false) {
-            $this->error('系统繁忙！！请重试');
-        } else {
-            $this->success('删除成功');
+        if (IS_AJAX) {
+            $result = D('Room')->deleteRoomById($roomId);
+            echo json_encode($result);
         }
+//        $room = M('room');
+//        $where = array();
+//        $where['room_id'] = $roomId;
+//        $result = $room->where($where)->save(['is_delete' => 1]);
+//        if ($result === false) {
+//            $this->error('系统繁忙！！请重试');
+//        } else {
+//            $this->success('删除成功');
+//        }
     }
 
     /**

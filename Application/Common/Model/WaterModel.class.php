@@ -87,7 +87,7 @@ class WaterModel extends BaseModel
         foreach ($list as $key => $value) {
             $list[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
             $list[$key]['time'] = date('Y-m-d', $value['time']);
-            if ($value['last_time'] != 0){
+            if ($value['last_time'] != 0) {
                 $list[$key]['last_time'] = date('Y-m-d', $value['last_time']);
             }
         }

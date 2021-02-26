@@ -190,7 +190,9 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('删除当前行数据？', function (index) {
+        layer.confirm('删除当前房屋信息？会对应解除租赁关系和水电表。', {
+          title: '删除房屋'
+        }, function (index) {
           obj.del();
           layer.close(index);
           $.ajax({
@@ -198,11 +200,11 @@
             type: 'get',
             dataType: "JSON",
             success: function (data) {
-              if (data.status == 1) {
-                layer.msg(data.info);
+              if (data.code == 200) {
+                layer.msg(data.msg);
               } else {
                 //删除失败刷新表单
-                layer.msg(data.info, {icon: 2, time: 1000}, function () {
+                layer.msg(data.msg, {icon: 2, time: 1000}, function () {
                   setTimeout('window.location.reload()', 1000);
                 });
                 // layer.alert(data.info);

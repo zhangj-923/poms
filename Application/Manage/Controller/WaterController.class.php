@@ -100,4 +100,31 @@ class WaterController extends Controller
             }
         }
     }
+
+
+    public function water_add()
+    {
+        createToken('TOKEN');
+        $this->display();
+    }
+
+    /**
+     * 添加水表
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-26 16:46:43
+     * Update: 2021-02-26 16:46:43
+     * Version: 1.00
+     */
+    public function addWater()
+    {
+        if (IS_AJAX) {
+            $post_token = I('post.TOKEN');
+            if (!checkToken($post_token)) {
+                echo json_encode(getReturn(CODE_ERROR, '请不要重复提交页面!!!!'));
+            } else {
+                $result = D('Water')->addWater($_POST);
+                echo json_encode($result);
+            }
+        }
+    }
 }

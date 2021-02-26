@@ -57,7 +57,7 @@
   </div>
   <xblock>
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-    <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加
+    <button class="layui-btn" onclick="x_admin_show('添加电表信息','power_add',600,500)"><i class="layui-icon"></i>添加
     </button>
   </xblock>
   <input type="hidden" id="update_power_id" value="0">
