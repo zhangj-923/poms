@@ -60,7 +60,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="rent" name="rent" required
-               autocomplete="off" class="layui-input">
+               autocomplete="off" class="layui-input" lay-verify="required|number">
       </div>
     </div>
     <div class="layui-inline">

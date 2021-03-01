@@ -30,7 +30,7 @@
             </label>
             <div class="layui-input-inline">
               <input type="text" id="room_sn" name="room_sn" required
-                     autocomplete="off" class="layui-input">
+                     autocomplete="off" class="layui-input" lay-verify="required">
             </div>
           </div>
 <!--          <div class="layui-form-item">-->
@@ -69,7 +69,7 @@
             </label>
             <div class="layui-input-inline">
               <input type="text" id="remark" name="remark" required
-                     autocomplete="off" class="layui-input">
+                     autocomplete="off" class="layui-input" lay-verify="required">
             </div>
           </div>
           <div class="layui-form-item">

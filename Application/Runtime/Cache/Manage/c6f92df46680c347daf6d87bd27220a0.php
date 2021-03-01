@@ -24,10 +24,12 @@
 <body>
 <div class="x-body layui-anim layui-anim-up">
   <form class="layui-form">
+    <input type="hidden" id="water_id" name="water_id"/>
+    <input type="hidden" name="TOKEN" value="<?php echo session('TOKEN');?>"/>
     <input type="hidden" id="room_id" name="room_id"/>
     <div class="layui-form-item">
       <label for="room_sn" class="layui-form-label">
-        <span class="x-red">*</span>房屋
+        <span class="x-red">*</span>房屋编号
       </label>
       <div class="layui-input-inline">
         <input type="text" id="room_sn" name="room_sn" required
@@ -35,53 +37,71 @@
       </div>
     </div>
     <div class="layui-form-item">
+      <label for="water_sn" class="layui-form-label">
+        <span class="x-red">*</span>水表编号
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="water_sn" name="water_sn" required
+               autocomplete="off" class="layui-input" placeholder="输入水表编号" disabled>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label for="last_current" class="layui-form-label">
+        <span class="x-red">*</span>上次读数
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="last_current" name="last_current" required
+               autocomplete="off" class="layui-input" placeholder="" disabled>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label for="current" class="layui-form-label">
+        <span class="x-red">*</span>本次读数
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="current" name="current" required
+               autocomplete="off" class="layui-input" placeholder="输入本次读数" lay-verify="required|number|dayu">
+      </div>
+      <div class="layui-form-mid layui-word-aux">
+        <span class="x-red">*</span>本次读数需大于上次读数
+      </div>
+    </div>
+    <!--    <div class="layui-form-item">-->
+    <!--      <label for="price" class="layui-form-label">-->
+    <!--        <span class="x-red">*</span>单价-->
+    <!--      </label>-->
+    <!--      <div class="layui-input-inline">-->
+    <!--        <input type="text" id="price" name="price" required-->
+    <!--               autocomplete="off" class="layui-input" placeholder="输入单价">-->
+    <!--      </div>-->
+    <!--      <div class="layui-form-mid layui-word-aux">-->
+    <!--        <span class="x-red">*</span>元/吨-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <div class="layui-form-item">
       <label for="remark" class="layui-form-label">
         <span class="x-red">*</span>备注
       </label>
       <div class="layui-input-inline">
-        <input type="text" id="remark" name="remark" required
-               autocomplete="off" class="layui-input" disabled>
-      </div>
-    </div>
-    <div class="layui-form-item">
-      <label for="customer_id" class="layui-form-label">
-        <span class="x-red">*</span>租户
-      </label>
-      <div class="layui-input-inline">
-        <select class="layui-select" id="customer_id" name="customer_id" lay-filter="customer" lay-verify="required">
-          <option value="">请选择</option>
-        </select>
-      </div>
-    </div>
-    <div class="layui-form-item">
-      <label class="layui-form-label">租期</label>
-      <div class="layui-input-block">
-        <input type="radio" name="lease_team" value="1" title="一季度" checked="">
-        <input type="radio" name="lease_team" value="2" title="半年">
-        <input type="radio" name="lease_team" value="3" title="一年">
-      </div>
-    </div>
-    <div class="layui-form-item">
-      <label for="remark" class="layui-form-label">
-        <span class="x-red">*</span>月租金
-      </label>
-      <div class="layui-input-inline">
-        <input type="text" id="rent" name="rent" required
-               autocomplete="off" class="layui-input" lay-verify="required|number">
+        <input type="text" id="remark" name="remark"
+               autocomplete="off" class="layui-input" placeholder="输入账单备注" lay-verify="required">
       </div>
     </div>
     <div class="layui-inline">
-      <label class="layui-form-label">签约日期</label>
+      <label for="current" class="layui-form-label">
+        <span class="x-red">*</span>本次抄表日期
+      </label>
       <div class="layui-input-inline">
-        <input type="text" name="sing_time" id="sing_time" lay-verify="date|required" placeholder="yyyy-MM-dd" autocomplete="off"
+        <input type="text" name="time" id="time" lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off"
                class="layui-input">
       </div>
     </div>
-    <div class="layui-form-item" style="margin-top: 20px">
+    <input type="hidden" id="last_time" name="last_time"/>
+    <div class="layui-form-item" style="margin-top: 15px">
       <label for="L_repass" class="layui-form-label">
       </label>
       <button class="layui-btn" lay-filter="add" lay-submit="">
-        添加
+        确定
       </button>
     </div>
   </form>
@@ -93,12 +113,10 @@
       , layer = layui.layer
       , laydate = layui.laydate;
 
-
     //日期
     laydate.render({
-      elem: '#sing_time'
+      elem: '#time'
     });
-
 
     //自定义验证规则
     form.verify({
@@ -113,30 +131,21 @@
           return '两次密码不一致';
         }
       }
+      , dayu: function (value) {
+        if (parseFloat(value) <= parseFloat($('#last_current').val())) {
+          return '本次抄表读数需大于上次读数';
+        }
+      }
     });
 
     //联系方式不可重复验证
 
-    $.ajax({
-      url: "<?php echo U('Public/getCustomerData');?>",
-      success: function (data) {
-        $.each($.parseJSON(data), function (index, item) {
-          // console.log(item);
-          //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
-          $('#customer_id').append(new Option(item.customer_name, item.customer_id));//往下拉菜单里添加元素
-          //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
-        })
-        form.render('select'); //更新全部表单内容
-        //form.render('select'); //刷新表单select选择框渲染
-      }
-    });
-
     //监听提交
     form.on('submit(add)', function (data) {
       console.log(data);
-      //发异步，把数据提交给php
+      // 发异步，把数据提交给php
       $.ajax({
-        url: 'addLease',
+        url: 'readWater',
         type: 'post',
         data: data.field,
         dataType: 'json',
@@ -161,24 +170,30 @@
       return false;
     });
 
+    getLeaseAjax();
+
+    function getLeaseAjax () {
+      var water_id = window.parent.document.getElementById('update_water_id').value;
+      $.ajax({
+        url: 'getWater?waterId=' + water_id,
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+          $("#water_id").val(data.data.water_id);
+          $("#room_id").val(data.data.room_id);
+          $("#room_sn").val(data.data.room_sn);
+          $("#water_sn").val(data.data.water_sn);
+          $("#last_current").val(data.data.current);
+          $("#last_time").val(data.data.time);
+          form.render();
+        }
+      });
+    }
 
   });
 </script>
 <script>
-  getCustomerAjax();
-  function getCustomerAjax () {
-    var room_id = window.parent.document.getElementById('update_room_id').value;
-    $.ajax({
-      url: 'getRoom?roomId='+room_id,
-      type: 'get',
-      dataType: 'json',
-      success:function (data) {
-        $("#room_id").val(data[0].room_id);
-        $("#room_sn").val(data[0].room_sn);
-        $("#remark").val(data[0].remark);
-      }
-    });
-  }
+
 </script>
 </body>
 

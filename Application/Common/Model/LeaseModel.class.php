@@ -27,7 +27,7 @@ class LeaseModel extends BaseModel
         $request['sing_time'] = strtotime($request['sing_time']);
         $request['expire_time'] = strtotime($request['expire_time']);
         $request['create_time'] = time();
-        $request['garden_id'] = session('USER.garden_id');
+        $request['manager_id'] = session('USER.manager_id');
         $this->startTrans();
         $result = $this->add($request);
         if ($result) {
@@ -56,7 +56,7 @@ class LeaseModel extends BaseModel
      */
     public function getLeaseInfo($request = [])
     {
-        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name'];
+        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name', 'e.building_name'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
 //        if (!empty($request['key2'])) {
@@ -67,7 +67,9 @@ class LeaseModel extends BaseModel
         $join = [
             'join __CUSTOMER__ b on a.customer_id = b.customer_id',
             'join __ROOM__ c on a.room_id = c.room_id',
-            'join __GARDEN__ d on a.garden_id = d.garden_id'
+            'join __USER__ u on a.manager_id = u.manager_id',
+            'join __GARDEN__ d on u.garden_id = d.garden_id',
+            'join __BUILDING__ e on u.building_id = e.building_id'
         ];
         $options = [];
         $options['alias'] = 'a';

@@ -151,8 +151,8 @@
           {field: 'water_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
           {field: 'room_sn', width: '6%', title: '房屋', align: 'center', sort: 'true'},
           {field: 'water_sn', width: '6%', title: '水表', align: 'center', sort: 'true'},
-          {field: 'current', width: '9%', title: '初始读数', align: 'center', sort: 'true'},
-          {field: 'time', width: '12%', title: '初始抄表时间', align: 'center', sort: 'true'},
+          {field: 'current', width: '9%', title: '本次读数', align: 'center', sort: 'true'},
+          {field: 'time', width: '12%', title: '本次抄表时间', align: 'center', sort: 'true'},
           {field: 'last_current', width: '9%', title: '上次读数', align: 'center', sort: 'true'},
           {field: 'last_time', width: '12%', title: '上次抄表时间', align: 'center', sort: 'true'},
           {field: 'price', width: '7%', title: '元/吨', align: 'center', sort: 'true'},
@@ -229,7 +229,8 @@
         $('#update_water_id').val(data.water_id);
         x_admin_show('编辑水表信息', 'water_edit', 600, 500);
       } else if (layEvent === 'readMeter') {
-
+        $('#update_water_id').val(data.water_id);
+        x_admin_show('抄表', 'water_read', 600, 500);
       }
     })
   });

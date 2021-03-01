@@ -24,7 +24,8 @@
 <body>
 <div class="x-body layui-anim layui-anim-up">
   <form class="layui-form">
-    <input type="hidden" name="TOKEN" value="<?php echo session('TOKEN');?>" />
+    <!--    TOKEN 避免重复提交表单验证-->
+    <input type="hidden" name="TOKEN" value="<?php echo session('TOKEN');?>"/>
     <div class="layui-form-item">
       <label for="customer_id" class="layui-form-label">
         <span class="x-red">*</span>租户
@@ -59,13 +60,13 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="rent" name="rent" required
-               autocomplete="off" class="layui-input">
+               autocomplete="off" class="layui-input" lay-verify="required|number">
       </div>
     </div>
     <div class="layui-inline">
       <label class="layui-form-label">签约日期</label>
       <div class="layui-input-inline">
-        <input type="text" name="sing_time" id="sing_time" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
+        <input type="text" name="sing_time" id="sing_time" lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off"
                class="layui-input">
       </div>
     </div>

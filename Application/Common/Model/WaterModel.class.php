@@ -166,4 +166,51 @@ class WaterModel extends BaseModel
             return getReturn(CODE_SUCCESS, '当前水表编辑修改成功！！');
         }
     }
+
+    /**
+     * 水表抄表 并生成账单
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-01 16:44:07
+     * Update: 2021-03-01 16:44:07
+     * Version: 1.00
+     */
+    public function readWater($request = [])
+    {
+        $where = array();
+        $where['water_id'] = $request['water_id'];
+        $request['time'] = strtotime($request['time']);
+        $request['last_time'] = strtotime($request['last_time']);
+        $this->startTrans();
+        $result = $this->where($where)->save($request);
+        if ($result === false) {
+            $this->rollback();
+            return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
+        } else {
+            $field = ['a.current', 'a.last_current', 'a.price','a.last_time', 'a.time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
+            $where = array();
+            $where['a.is_delete'] = NOT_DELETED;
+            $where['a.water_id'] = $request['water_id'];
+            $join = [
+                'join __LEASE__ b on a.room_id = b.room_id'
+            ];
+            $options = [];
+            $options['alias'] = 'a';
+            $options['where'] = $where;
+            $options['where'] = $where;
+            $options['field'] = $field;
+            $options['join'] = $join;
+            $list = $this->queryRow($options);
+            $list['bill_remark'] = $request['remark'];
+            $result1 = D('Bill')->createBillByWater($list);
+            if ($result1 === false) {
+                $this->rollback();
+                return getReturn(CODE_ERROR, '抄表时生成账单失败，请稍后重试！！！！');
+            } else {
+                $this->commit();
+                return getReturn(CODE_SUCCESS, '抄表成功！！并生成账单');
+            }
+        }
+    }
+
 }

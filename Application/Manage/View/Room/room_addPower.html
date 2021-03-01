@@ -42,7 +42,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="power_sn" name="power_sn" required
-               autocomplete="off" class="layui-input" placeholder="输入电表编号">
+               autocomplete="off" class="layui-input" placeholder="输入电表编号" lay-verify="required">
       </div>
     </div>
     <div class="layui-form-item">
@@ -51,7 +51,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="p_price" name="p_price" required
-               autocomplete="off" class="layui-input" placeholder="输入单价">
+               autocomplete="off" class="layui-input" placeholder="输入单价" lay-verify="required|number">
       </div>
       <div class="layui-form-mid layui-word-aux">
         <span class="x-red">*</span>元/度
@@ -63,7 +63,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="p_current" name="p_current" required
-               autocomplete="off" class="layui-input" placeholder="输入初始读数">
+               autocomplete="off" class="layui-input" placeholder="输入初始读数" lay-verify="required|number">
       </div>
     </div>
     <div class="layui-inline">
@@ -71,7 +71,7 @@
         <span class="x-red">*</span>初始抄表日期
       </label>
       <div class="layui-input-inline">
-        <input type="text" name="p_time" id="p_time" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
+        <input type="text" name="p_time" id="p_time" lay-verify="date|required" placeholder="yyyy-MM-dd" autocomplete="off"
                class="layui-input">
       </div>
     </div>

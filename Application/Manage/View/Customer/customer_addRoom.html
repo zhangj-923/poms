@@ -31,7 +31,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="customer_name" name="customer_name" required
-               autocomplete="off" class="layui-input">
+               autocomplete="off" class="layui-input" disabled>
       </div>
     </div>
     <div class="layui-form-item">
@@ -58,13 +58,13 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="rent" name="rent" required
-               autocomplete="off" class="layui-input">
+               autocomplete="off" class="layui-input" lay-verify="required|number">
       </div>
     </div>
     <div class="layui-inline">
       <label class="layui-form-label">签约日期</label>
       <div class="layui-input-inline">
-        <input type="text" name="sing_time" id="sing_time" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
+        <input type="text" name="sing_time" id="sing_time" lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off"
                class="layui-input">
       </div>
     </div>

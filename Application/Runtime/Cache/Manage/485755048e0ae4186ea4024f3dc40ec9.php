@@ -29,7 +29,7 @@
             </label>
             <div class="layui-input-inline">
               <input type="text" id="customer_name" name="customer_name" required
-                     autocomplete="off" class="layui-input">
+                     autocomplete="off" class="layui-input" lay-verify="required">
             </div>
           </div>
 <!--          <div class="layui-form-item">-->
@@ -50,7 +50,7 @@
               <span class="x-red">*</span>联系方式
             </label>
             <div class="layui-input-inline">
-              <input type="text" id="customer_mobile" name="customer_mobile" required lay-verify="phone"
+              <input type="text" id="customer_mobile" name="customer_mobile" required lay-verify="required|phone"
                      autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux">
@@ -72,7 +72,7 @@
             </label>
             <div class="layui-input-inline">
               <input type="text" id="remark" name="remark" required
-                     autocomplete="off" class="layui-input">
+                     autocomplete="off" class="layui-input" lay-verify="required">
             </div>
           </div>
           <div class="layui-form-item">

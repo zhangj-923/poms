@@ -124,7 +124,7 @@
             </a>
           </li>
           <li>
-            <a _href="html/admin-role.html">
+            <a _href="<?php echo U('Bill/index');?>">
               <i class="iconfont">&#xe6a7;</i>
               <cite>账单</cite>
             </a>

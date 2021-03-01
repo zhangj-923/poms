@@ -5,6 +5,11 @@
 define('NOT_DELETED', 0);
 define('DELETED', 1);
 
+//定义账单类型
+define('BILL_LEASE', 1);
+define('BILL_WATER', 2);
+define('BILL_POWER', 3);
+
 //定义状态码
 define('CODE_SUCCESS', 200); // 请求成功
 define('CODE_ERROR', 406); // 请求失败
