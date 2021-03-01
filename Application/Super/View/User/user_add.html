@@ -50,7 +50,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="manager_name" name="manager_name" required
-               autocomplete="off" class="layui-input">
+               autocomplete="off" class="layui-input" lay-verify="required">
       </div>
     </div>
     <div class="layui-form-item">
@@ -59,7 +59,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="manager_mobile" name="manager_mobile" required
-               autocomplete="off" class="layui-input" lay-verify="phone">
+               autocomplete="off" class="layui-input" lay-verify="required|phone">
       </div>
     </div>
     <div class="layui-form-item">
@@ -68,7 +68,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="name" name="name"
-               autocomplete="off" class="layui-input" lay-verify="username">
+               autocomplete="off" class="layui-input" lay-verify="required|username">
       </div>
       <div class="layui-form-mid layui-word-aux">
         <span class="x-red">*</span>将会成为您唯一的登入名，切不可更改
@@ -80,7 +80,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="remark" name="remark" required
-               autocomplete="off" class="layui-input">
+               autocomplete="off" class="layui-input" lay-verify="required">
       </div>
     </div>
     <div class="layui-form-item">

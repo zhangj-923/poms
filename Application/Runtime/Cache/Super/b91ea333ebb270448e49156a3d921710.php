@@ -47,7 +47,7 @@
         <label class="layui-form-label">楼宇名称:</label>
         <div class="layui-input-inline">
           <select class="layui-select" id="buildingId" name="buildingId" lay-filter="building">
-            <option value="">请选择</option>
+<!--            <option value="">请选择</option>-->
           </select>
         </div>
         <label class="layui-form-label">管理员名称:</label>
@@ -56,7 +56,8 @@
         </div>
       </div>
       <button class="layui-btn" data-type="reload" lay-submit lay-filter="search">搜索</button>
-      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+<!--      <button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+      <div class="layui-btn layui-btn-warm" id="reset" style="background: gray">重置</div>
     </div>
   </form>
   <xblock>
@@ -220,11 +221,24 @@
     //   return false;
     // });
 
-    // $('#reset').on('click', function () {
-    //   $('#gardenId').val("");
-    //   $('#buildingId').val("");
-    //   $('#manager_name').val("");
-    // });
+    $('#reset').on('click', function () {
+      $('#gardenId').val("");
+      $('#buildingId').empty();
+      $.ajax({
+        url: "<?php echo U('Public/getBuildingData');?>",
+        success: function (data) {
+          var optionstring = "";
+          $.each($.parseJSON(data), function (index, item) {
+            optionstring += "<option value=\"" + item.building_id + "\" >" + item.building_name + "</option>";
+          })
+          $("#buildingId").html('<option value="">请选择</option>' + optionstring);
+          // form.render(); //更新全部表单内容
+          form.render('select'); //刷新表单select选择框渲染
+        }
+      });
+      $('#manager_name').val("");
+      form.render();
+    });
 
     $.ajax({
       url: "<?php echo U('Public/getGardenData');?>",
@@ -238,7 +252,7 @@
           // $('#gardenId').val(1);
           optionstring += "<option value=\"" + item.garden_id + "\" >" + item.garden_name + "</option>";
         })
-        $("#gardenId").html('<option value="0">请选择</option>' + optionstring);
+        $("#gardenId").html('<option value="">请选择</option>' + optionstring);
         // form.render(); //更新全部表单内容
         form.render('select'); //刷新表单select选择框渲染
       }

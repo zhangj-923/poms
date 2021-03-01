@@ -30,7 +30,7 @@
             </label>
             <div class="layui-input-inline">
               <input type="text" id="realname" name="realname" required
-                     autocomplete="off" class="layui-input">
+                     autocomplete="off" class="layui-input" lay-verify="required">
             </div>
           </div>
 <!--          <div class="layui-form-item">-->
@@ -47,7 +47,7 @@
                   <span class="x-red">*</span>联系方式
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="tel" name="tel" required lay-verify="phone"
+                  <input type="text" id="tel" name="tel" required lay-verify="required|phone"
                   autocomplete="off" class="layui-input">
               </div>
 <!--              <div class="layui-form-mid layui-word-aux">-->
