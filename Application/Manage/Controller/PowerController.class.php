@@ -126,4 +126,30 @@ class PowerController extends Controller
             }
         }
     }
+
+    public function power_read()
+    {
+        createToken('TOKEN');
+        $this->display();
+    }
+
+    /**
+     * 抄表功能
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-02 19:56:34
+     * Update: 2021-03-02 19:56:34
+     * Version: 1.00
+     */
+    public function readPower()
+    {
+        if (IS_AJAX) {
+            $post_token = I('post.TOKEN');
+            if (!checkToken($post_token)) {
+                echo json_encode(getReturn(CODE_ERROR, '请不要重复提交页面!!!!'));
+            } else {
+                $result = D('Power')->readPower($_POST);
+                echo json_encode($result);
+            }
+        }
+    }
 }

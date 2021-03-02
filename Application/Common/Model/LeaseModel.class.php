@@ -73,8 +73,8 @@ class LeaseModel extends BaseModel
         ];
         $options = [];
         $options['alias'] = 'a';
-        $options['where'] = $where;
-        $count = $this->getCount($options);
+//        $options['where'] = $where;
+//        $count = $this->getCount($options);
         if (!empty($request['key1'])) {
             $where['b.customer_name|c.room_sn'] = ['like', '%' . $request['key1'] . '%'];
         }
@@ -84,6 +84,7 @@ class LeaseModel extends BaseModel
         $options['where'] = $where;
         $options['field'] = $field;
         $options['join'] = $join;
+        $count = $this->getCount($options);
         $options['limit'] = $limit;
         $options['page'] = $page;
         $options['order'] = 'a.create_time asc';

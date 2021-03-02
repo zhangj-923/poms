@@ -40,7 +40,7 @@ class BillModel extends BaseModel
      */
     public function getBillInfo($request = [])
     {
-        $field = ['a.*', 'b.customer_name','b.customer_mobile', 'c.room_sn', 'd.garden_name', 'e.building_name', 'u.manager_name'];
+        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name', 'e.building_name', 'u.manager_name'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
         $page = $request['page'];
@@ -54,17 +54,26 @@ class BillModel extends BaseModel
         ];
         $options = [];
         $options['alias'] = 'a';
-        $options['where'] = $where;
-        $count = $this->getCount($options);
+//        $options['where'] = $where;
+//        $count = $this->getCount($options);
         if (!empty($request['key1'])) {
-            $where['b.customer_name|c.room_sn'] = ['like', '%' . $request['key1'] . '%'];
+            $where['b.customer_name|c.room_sn|a.bill_remark'] = ['like', '%' . $request['key1'] . '%'];
         }
         if (!empty($request['key2'])) {
             $where['bill_type'] = $request['key2'];
         }
+        if (!empty($request['last_time']) && empty($request['time'])) {
+            $where['a.last_time'] = array('egt', strtotime($request['last_time']));
+        } else if (empty($request['last_time']) && !empty($request['time'])) {
+            $where['a.time'] = array('elt', strtotime($request['time']));
+        } else if (!empty($request['last_time']) && !empty($request['time'])) {
+            $where['a.last_time'] = array('egt', strtotime($request['last_time']));
+            $where['a.time'] = array('elt', strtotime($request['time']));
+        }
         $options['where'] = $where;
         $options['field'] = $field;
         $options['join'] = $join;
+        $count = $this->getCount($options);
         $options['limit'] = $limit;
         $options['page'] = $page;
         $options['order'] = 'a.create_time asc';
@@ -84,9 +93,35 @@ class BillModel extends BaseModel
             } else {
                 $list[$key]['status'] = '未支付';
             }
-            $list[$key]['roomInfo'] = $value['building_name'].$value['room_sn'].'室';
-            $list[$key]['bill_cycle'] = date('Y-m-d', $value['last_time']).'-'.date('Y-m-d', $value['time']);
+            $list[$key]['roomInfo'] = $value['building_name'] . $value['room_sn'] . '室';
+            $list[$key]['bill_cycle'] = date('Y-m-d', $value['last_time']) . '-' . date('Y-m-d', $value['time']);
         }
         return ['list' => $list, 'count' => $count];
+    }
+
+    /**
+     * 生成电费账单
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-02 20:03:57
+     * Update: 2021-03-02 20:03:57
+     * Version: 1.00
+     */
+    public function createBillByPower($request = [])
+    {
+        $request['total'] = ($request['p_current'] - $request['plast_current']) * $request['p_price'];
+        $request['bill_type'] = BILL_POWER;
+        $request['last_time'] = $request['plast_time'];
+        $request['time'] = $request['p_time'];
+        $request['create_time'] = time();
+        $this->startTrans();
+        $result = $this->add($request);
+        if ($result) {
+            $this->commit();
+            return true;
+        } else {
+            $this->rollback();
+            return false;
+        }
     }
 }

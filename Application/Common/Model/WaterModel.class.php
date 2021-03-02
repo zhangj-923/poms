@@ -69,8 +69,7 @@ class WaterModel extends BaseModel
         ];
         $options = [];
         $options['alias'] = 'a';
-        $options['where'] = $where;
-        $count = $this->getCount($options);
+//        $options['where'] = $where;
         if (!empty($request['key1'])) {
             $where['b.room_sn'] = ['like', '%' . $request['key1'] . '%'];
         }
@@ -80,6 +79,7 @@ class WaterModel extends BaseModel
         $options['where'] = $where;
         $options['field'] = $field;
         $options['join'] = $join;
+        $count = $this->getCount($options);
         $options['limit'] = $limit;
         $options['page'] = $page;
         $options['order'] = 'a.create_time asc';
@@ -205,10 +205,10 @@ class WaterModel extends BaseModel
             $result1 = D('Bill')->createBillByWater($list);
             if ($result1 === false) {
                 $this->rollback();
-                return getReturn(CODE_ERROR, '抄表时生成账单失败，请稍后重试！！！！');
+                return getReturn(CODE_ERROR, '水表抄表时生成账单失败，请稍后重试！！！！');
             } else {
                 $this->commit();
-                return getReturn(CODE_SUCCESS, '抄表成功！！并生成账单');
+                return getReturn(CODE_SUCCESS, '水表抄表成功！！并生成账单');
             }
         }
     }

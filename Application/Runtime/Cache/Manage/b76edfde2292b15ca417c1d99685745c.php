@@ -50,6 +50,7 @@
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
     <button class="layui-btn" onclick="x_admin_show('添加用户','customer_add',600,400)"><i class="layui-icon"></i>添加
     </button>
+    <button class="layui-btn" id="createBill">房租账单</button>
   </xblock>
   <input type="hidden" id="update_customer_id" value="0">
   <table class="layui-table" id="demo" lay-filter="test">
@@ -173,6 +174,16 @@
       // }
       active[type] ? active[type].call(this) : '';
     });
+
+    $('#createBill').on('click', function () {
+      layer.confirm('是否生成当月账单？', {
+        title: '房租账单'
+      }, function (index) {
+        var datas1 = new Array();
+        datas = table.cache["demo"];
+        console.log(datas);
+      })
+    })
 
     //重置功能
     $('#reset').on('click', function () {

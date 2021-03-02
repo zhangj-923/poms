@@ -34,12 +34,21 @@
     <i class="layui-icon" style="line-height:38px">ဂ</i></a>
 </div>
 <div class="x-body">
-  <div class="chu">
+  <form class="layui-form">
     <div class="demoTable layui-form-item">
       <div class="layui-inline">
-        <!--            <label class="layui-form-label">查询条件:</label>-->
         <div class="layui-input-inline">
-          <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号" autocomplete="off">
+          <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号/账单备注" autocomplete="off">
+        </div>
+        <label class="layui-form-label">账单周期:</label>
+        <div class="layui-input-inline">
+          <input type="text" name="last_time" id="last_time"  placeholder="开始日期" autocomplete="off"
+                 class="layui-input">
+        </div>
+        <label class="layui-form-label" style="margin-left: -80px">--</label>
+        <div class="layui-input-inline">
+          <input type="text" name="time" id="time"  placeholder="截止日期" autocomplete="off"
+                 class="layui-input">
         </div>
         <label class="layui-form-label">账单类型:</label>
         <div class="layui-input-inline">
@@ -51,10 +60,32 @@
           </select>
         </div>
       </div>
-      <div class="layui-btn" data-type="reload">搜索</div>
-      <div class="layui-btn layui-btn-warm" id="reset">重置</div>
+      <button class="layui-btn" data-type="reload" lay-submit lay-filter="search">搜索</button>
+      <!--      <button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+      <div class="layui-btn layui-btn-warm" id="reset" name="reset" style="background: gray">重置</div>
     </div>
-  </div>
+  </form>
+<!--  <div class="chu">-->
+<!--    <div class="demoTable layui-form-item">-->
+<!--      <div class="layui-inline">-->
+<!--        &lt;!&ndash;            <label class="layui-form-label">查询条件:</label>&ndash;&gt;-->
+<!--        <div class="layui-input-inline">-->
+<!--          <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号" autocomplete="off">-->
+<!--        </div>-->
+<!--        <label class="layui-form-label">账单类型:</label>-->
+<!--        <div class="layui-input-inline">-->
+<!--          <select class="layui-select" id="leaseTeam" name="leaseTeam" lay-filter="Team">-->
+<!--            <option value="">请选择</option>-->
+<!--            <option value="1">房租</option>-->
+<!--            <option value="2">水费</option>-->
+<!--            <option value="3">电费</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="layui-btn" data-type="reload">搜索</div>-->
+<!--      <div class="layui-btn layui-btn-warm" id="reset">重置</div>-->
+<!--    </div>-->
+<!--  </div>-->
   <xblock>
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
     <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加
@@ -66,40 +97,7 @@
     <!--          <tr>-->
     <!--            <th>-->
     <!--              <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>-->
-    <!--            </th>-->
-    <!--            <th>ID</th>-->
-    <!--            <th>用户名</th>-->
-    <!--            <th>性别</th>-->
-    <!--            <th>手机</th>-->
-    <!--            <th>邮箱</th>-->
-    <!--            <th>地址</th>-->
-    <!--            <th>加入时间</th>-->
-    <!--            <th>状态</th>-->
-    <!--            <th>操作</th></tr>-->
-    <!--        </thead>-->
-    <!--        <tbody>-->
-    <!--          <tr>-->
-    <!--            <td>-->
-    <!--              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>-->
-    <!--            </td>-->
-    <!--            <td>1</td>-->
-    <!--            <td>小明</td>-->
-    <!--            <td>男</td>-->
-    <!--            <td>13000000000</td>-->
-    <!--            <td>admin@mail.com</td>-->
-    <!--            <td>北京市 海淀区</td>-->
-    <!--            <td>2017-01-01 11:11:42</td>-->
-    <!--            <td class="td-status">-->
-    <!--              <span class="layui-btn layui-btn-normal layui-btn-sm">已启用</span></td>-->
-    <!--            <td class="td-manage">-->
-    <!--              <a onclick="member_stop(this,'10001')" class="layui-btn layui-btn-sm layui-btn-primary" href="javascript:;"  title="启用">-->
-    <!--              启用-->
-    <!--              </a>-->
-    <!--              <a title="编辑" class="layui-btn layui-btn-sm layui-btn-normal"  onclick="x_admin_show('编辑','customer_edit',600,400)" href="javascript:;">-->
-    <!--                编辑-->
-    <!--              </a>-->
-    <!--              <a  class="layui-btn layui-btn-sm layui-btn-warm" onclick="x_admin_show('修改密码','customer_password',600,400)" title="修改密码" href="javascript:;">-->
-    <!--                修改密码-->
+    <!--                   修改密码-->
     <!--              </a>-->
     <!--              <a title="删除" class="layui-btn layui-btn-sm layui-btn-danger" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
     <!--                删除-->
@@ -136,10 +134,11 @@
 
 </script>
 <script>
-  layui.use(['table', 'layer', 'form'], function () {
+  layui.use(['table', 'layer', 'form', 'laydate'], function () {
     var table = layui.table;
     layer = layui.layer;
     form = layui.form;
+    laydate = layui.laydate;
     //第一个实例
     table.render({
       elem: '#demo',
@@ -167,10 +166,24 @@
       ],
       id: 'demo'
     });
+
+    //日期
+    laydate.render({
+      elem: '#time'
+    });
+
+    //日期
+    laydate.render({
+      elem: '#last_time'
+    });
+
+
     var $ = layui.$, active = {
       reload: function () {
         var search = $('#search').val();
         var leaseTeam = $('#leaseTeam').val();
+        var last_time = $('#last_time').val();
+        var time = $('#time').val();
         table.reload('demo', {
           url: 'getBillList',
           method: 'get',
@@ -179,24 +192,40 @@
           },
           where: {
             key1: search,
-            key2: leaseTeam
+            key2: leaseTeam,
+            last_time: last_time,
+            time: time
           }
         })
       }
     }
-    $('.chu .layui-btn').on('click', function () {         //搜索点击功能
+
+    form.on('submit(search)', function (data) {
       var type = $(this).data('type');
       // if($('#customer_name').val()==""){
       //   layer.msg('查询项目不能为空');
       //   return false;
       // }
       active[type] ? active[type].call(this) : '';
+      return false;
     });
+
+    // $('.chu .layui-btn').on('click', function () {         //搜索点击功能
+    //   var type = $(this).data('type');
+    //   // if($('#customer_name').val()==""){
+    //   //   layer.msg('查询项目不能为空');
+    //   //   return false;
+    //   // }
+    //   active[type] ? active[type].call(this) : '';
+    // });
 
     //重置功能
     $('#reset').on('click', function () {
       $('#search').val("");
       $('#leaseTeam').val("");
+      $('#last_time').val("");
+      $('#time').val("");
+      form.render();
     });
 
     table.on('tool(test)', function (obj) {

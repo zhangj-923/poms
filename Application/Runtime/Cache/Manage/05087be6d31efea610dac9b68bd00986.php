@@ -151,8 +151,8 @@
           {field: 'power_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
           {field: 'room_sn', width: '6%', title: '房屋', align: 'center', sort: 'true'},
           {field: 'power_sn', width: '6%', title: '电表', align: 'center', sort: 'true'},
-          {field: 'p_current', width: '9%', title: '初始读数', align: 'center', sort: 'true'},
-          {field: 'p_time', width: '12%', title: '初始抄表时间', align: 'center', sort: 'true'},
+          {field: 'p_current', width: '9%', title: '本次读数', align: 'center', sort: 'true'},
+          {field: 'p_time', width: '12%', title: '本次抄表时间', align: 'center', sort: 'true'},
           {field: 'plast_current', width: '9%', title: '上次读数', align: 'center', sort: 'true'},
           {field: 'plast_time', width: '12%', title: '上次抄表时间', align: 'center', sort: 'true'},
           {field: 'p_price', width: '7%', title: '元/度', align: 'center', sort: 'true'},
@@ -227,7 +227,8 @@
         $('#update_power_id').val(data.power_id);
         x_admin_show('编辑电表信息', 'power_edit', 600, 500);
       } else if (layEvent === 'readMeter') {
-
+        $('#update_power_id').val(data.power_id);
+        x_admin_show('抄表', 'power_read', 600, 500);
       }
     })
   });

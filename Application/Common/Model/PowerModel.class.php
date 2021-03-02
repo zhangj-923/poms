@@ -69,8 +69,8 @@ class PowerModel extends BaseModel
         ];
         $options = [];
         $options['alias'] = 'a';
-        $options['where'] = $where;
-        $count = $this->getCount($options);
+//        $options['where'] = $where;
+
         if (!empty($request['key1'])) {
             $where['b.room_sn'] = ['like', '%' . $request['key1'] . '%'];
         }
@@ -80,6 +80,7 @@ class PowerModel extends BaseModel
         $options['where'] = $where;
         $options['field'] = $field;
         $options['join'] = $join;
+        $count = $this->getCount($options);
         $options['limit'] = $limit;
         $options['page'] = $page;
         $options['order'] = 'a.create_time asc';
@@ -164,6 +165,52 @@ class PowerModel extends BaseModel
         } else {
             $this->commit();
             return getReturn(CODE_SUCCESS, '当前电表编辑修改成功！！');
+        }
+    }
+
+    /**
+     * 电表抄表 并生成账单
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-02 20:00:16
+     * Update: 2021-03-02 20:00:16
+     * Version: 1.00
+     */
+    public function readPower($request = [])
+    {
+        $where = array();
+        $where['power_id'] = $request['power_id'];
+        $request['p_time'] = strtotime($request['p_time']);
+        $request['plast_time'] = strtotime($request['plast_time']);
+        $this->startTrans();
+        $result = $this->where($where)->save($request);
+        if ($result === false) {
+            $this->rollback();
+            return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
+        } else {
+            $field = ['a.p_current', 'a.plast_current', 'a.p_price','a.plast_time', 'a.p_time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
+            $where = array();
+            $where['a.is_delete'] = NOT_DELETED;
+            $where['a.power_id'] = $request['power_id'];
+            $join = [
+                'join __LEASE__ b on a.room_id = b.room_id'
+            ];
+            $options = [];
+            $options['alias'] = 'a';
+            $options['where'] = $where;
+            $options['where'] = $where;
+            $options['field'] = $field;
+            $options['join'] = $join;
+            $list = $this->queryRow($options);
+            $list['bill_remark'] = $request['remark'];
+            $result1 = D('Bill')->createBillByPower($list);
+            if ($result1 === false) {
+                $this->rollback();
+                return getReturn(CODE_ERROR, '电表抄表时生成账单失败，请稍后重试！！！！');
+            } else {
+                $this->commit();
+                return getReturn(CODE_SUCCESS, '电表抄表成功！！并生成账单');
+            }
         }
     }
 }
