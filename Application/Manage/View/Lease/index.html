@@ -34,12 +34,19 @@
     <i class="layui-icon" style="line-height:38px">ဂ</i></a>
 </div>
 <div class="x-body">
-  <div class="chu">
+  <form class="layui-form">
     <div class="demoTable layui-form-item">
       <div class="layui-inline">
-        <!--            <label class="layui-form-label">查询条件:</label>-->
         <div class="layui-input-inline">
           <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号" autocomplete="off">
+        </div>
+        <label class="layui-form-label">租赁状态:</label>
+        <div class="layui-input-inline">
+          <select class="layui-select" id="leaseCycle" name="leaseCycle" lay-filter="Team">
+            <option value="">请选择</option>
+            <option value="1">生效中</option>
+            <option value="2">已到期</option>
+          </select>
         </div>
         <label class="layui-form-label">租期类型:</label>
         <div class="layui-input-inline">
@@ -51,10 +58,32 @@
           </select>
         </div>
       </div>
-      <div class="layui-btn" data-type="reload">搜索</div>
-      <div class="layui-btn layui-btn-warm" id="reset">重置</div>
+      <button class="layui-btn" data-type="reload" lay-submit lay-filter="search">搜索</button>
+      <!--      <button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+      <div class="layui-btn layui-btn-warm" id="reset" name="reset" style="background: gray">重置</div>
     </div>
-  </div>
+  </form>
+  <!--  <div class="chu">-->
+  <!--    <div class="demoTable layui-form-item">-->
+  <!--      <div class="layui-inline">-->
+  <!--        &lt;!&ndash;            <label class="layui-form-label">查询条件:</label>&ndash;&gt;-->
+  <!--        <div class="layui-input-inline">-->
+  <!--          <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号" autocomplete="off">-->
+  <!--        </div>-->
+  <!--        <label class="layui-form-label">租期类型:</label>-->
+  <!--        <div class="layui-input-inline">-->
+  <!--          <select class="layui-select" id="leaseTeam" name="leaseTeam" lay-filter="Team">-->
+  <!--            <option value="">请选择</option>-->
+  <!--            <option value="1">一季度</option>-->
+  <!--            <option value="2">半年</option>-->
+  <!--            <option value="3">一年</option>-->
+  <!--          </select>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <div class="layui-btn" data-type="reload">搜索</div>-->
+  <!--      <div class="layui-btn layui-btn-warm" id="reset">重置</div>-->
+  <!--    </div>-->
+  <!--  </div>-->
   <xblock>
     <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
     <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加
@@ -122,17 +151,19 @@
       cols: [
         [ //表头
           {fixed: 'left', type: 'checkbox'},
-          {field: 'lease_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
-          {field: 'customer_name', width: '8%', title: '租户', align: 'center', sort: 'true'},
-          {field: 'customer_mobile', width: '10%', title: '联系方式', align: 'center', sort: 'true'},
-          {field: 'garden_name', width: '6%', title: '园区', align: 'center', sort: 'true'},
-          {field: 'building_name', width: '6%', title: '楼宇', align: 'center', sort: 'true'},
-          {field: 'room_sn', width: '6%', title: '房屋', align: 'center', sort: 'true'},
-          {field: 'team', width: '8%', title: '租期', align: 'center', sort: 'true'},
-          {field: 'sing_time', width: '10%', title: ' 起租日期', align: 'center', sort: 'true'},
-          {field: 'expire_time', width: '10%', title: ' 到期日期', align: 'center', sort: 'true', style: 'color: red;'},
+          {field: 'lease_id', width: '4%', title: 'Id', align: 'center', sort: 'true'},
+          {field: 'lease_status', width: '6%', title: '租赁状态', align: 'center', sort: 'true', templet: '#statusTpl'},
+          {field: 'customer_name', width: '5%', title: '租户', align: 'center', sort: 'true'},
+          {field: 'customer_mobile', width: '7%', title: '联系方式', align: 'center', sort: 'true'},
+          {field: 'garden_name', width: '5%', title: '园区', align: 'center', sort: 'true'},
+          {field: 'building_name', width: '5%', title: '楼宇', align: 'center', sort: 'true'},
+          {field: 'room_sn', width: '5%', title: '房屋', align: 'center', sort: 'true'},
+          {field: 'team', width: '6%', title: '租期', align: 'center', sort: 'true'},
+          {field: 'create_time', width: '10%', title: '签约时间', align: 'center', sort: 'true'},
+          {field: 'sing_time', width: '10%', title: ' 开始时间', align: 'center', sort: 'true'},
+          {field: 'expire_time', width: '10%', title: ' 到期时间', align: 'center', sort: 'true', style: 'color: red;'},
           {field: 'rent', width: '7%', title: '月租金', align: 'center', sort: 'true'},
-          {field: 'create_time', width: '15%', title: '创建时间', align: 'center', sort: 'true'},
+          {field: 'total_rent', width: '7%', title: '总金额', align: 'center', sort: 'true'},
           // {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
           {fixed: 'right', width: '10%', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
@@ -143,6 +174,7 @@
       reload: function () {
         var search = $('#search').val();
         var leaseTeam = $('#leaseTeam').val();
+        var leaseCycle = $('#leaseCycle').val();
         table.reload('demo', {
           url: 'getLeaseList',
           method: 'get',
@@ -151,24 +183,29 @@
           },
           where: {
             key1: search,
-            key2: leaseTeam
+            key2: leaseTeam,
+            key3: leaseCycle
           }
         })
       }
     }
-    $('.chu .layui-btn').on('click', function () {         //搜索点击功能
+
+    form.on('submit(search)', function (data) {
       var type = $(this).data('type');
       // if($('#customer_name').val()==""){
       //   layer.msg('查询项目不能为空');
       //   return false;
       // }
       active[type] ? active[type].call(this) : '';
+      return false;
     });
 
     //重置功能
     $('#reset').on('click', function () {
       $('#search').val("");
+      $('#leaseCycle').val("");
       $('#leaseTeam').val("");
+      form.render();
     });
 
     table.on('tool(test)', function (obj) {
@@ -201,16 +238,28 @@
     })
 
     $('#createBill').on('click', function () {
-      layer.confirm('是否生成当月账单？', {
+      layer.confirm('是否批量生成当月房租账单？', {
         title: '房租账单'
       }, function (index) {
-        var datas1 = new Array();
-        datas = table.cache["demo"];
-        console.log(datas);
-        for (i = 0; i < datas.length; i++) {
-          datas1.push(datas[i].lease_id);
-        }
-        console.log(datas1);
+        // var datas1 = new Array();
+        // datas = table.cache["demo"];
+        // console.log(datas);
+        // for (i = 0; i < datas.length; i++) {
+        //   datas1.push(datas[i].lease_id);
+        // }
+        // layer.close(index);
+        $.ajax({
+          url: 'createBill',
+          type: 'post',
+          dataType: "JSON",
+          success: function (data) {
+            if (data.code == 200) {
+              layer.msg(data.msg);
+            } else {
+              layer.alert(data.msg);
+            }
+          }
+        })
       })
     })
 
@@ -232,6 +281,13 @@
   });
 
 
+</script>
+<script type="text/html" id="statusTpl">
+  {{#  if(d.lease_status === '已到期'){ }}
+  <span style="color: red;">{{ d.lease_status }}</span>
+  {{#  } else { }}
+  {{ d.lease_status }}
+  {{#  } }}
 </script>
 </body>
 

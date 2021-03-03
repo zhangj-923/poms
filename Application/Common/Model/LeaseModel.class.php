@@ -79,7 +79,14 @@ class LeaseModel extends BaseModel
             $where['b.customer_name|c.room_sn'] = ['like', '%' . $request['key1'] . '%'];
         }
         if (!empty($request['key2'])) {
-            $where['lease_team'] = $request['key2'];
+            $where['a.lease_team'] = $request['key2'];
+        }
+        if (!empty($request['key3'])) {
+            if ($request['key3'] == 1) {
+                $where['a.expire_time'] = array('egt', time());
+            } else {
+                $where['a.expire_time'] = array('lt', time());
+            }
         }
         $options['where'] = $where;
         $options['field'] = $field;
@@ -90,19 +97,24 @@ class LeaseModel extends BaseModel
         $options['order'] = 'a.create_time asc';
         $list = $this->queryList($options);
         foreach ($list as $key => $value) {
+            if ($value['expire_time'] >= time()) {
+                $list[$key]['lease_status'] = '生效中';
+            } else {
+                $list[$key]['lease_status'] = '已到期';
+            }
+            if ($value['lease_team'] == 1) {
+                $list[$key]['total_rent'] = number_format($value['rent'] * 3, 2);
+                $list[$key]['team'] = '一季度';
+            } elseif ($value['lease_team'] == 2) {
+                $list[$key]['total_rent'] = number_format($value['rent'] * 6, 2);
+                $list[$key]['team'] = '半年';
+            } elseif ($value['lease_team'] == 3) {
+                $list[$key]['total_rent'] = number_format($value['rent'] * 12, 2);
+                $list[$key]['team'] = '一年';
+            }
             $list[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
             $list[$key]['sing_time'] = date('Y-m-d', $value['sing_time']);
             $list[$key]['expire_time'] = date('Y-m-d', $value['expire_time']);
-            if ($value['lease_team'] == 1) {
-                $list[$key]['total_rent'] = $value['rent'] * 3;
-                $list[$key]['team'] = '一季度';
-            } elseif ($value['lease_team'] == 2) {
-                $list[$key]['total_rent'] = $value['rent'] * 6;
-                $list[$key]['team'] = '半年';
-            } elseif ($value['lease_team'] == 3) {
-                $list[$key]['total_rent'] = $value['rent'] * 12;
-                $list[$key]['team'] = '一年';
-            }
         }
         return ['list' => $list, 'count' => $count];
     }
@@ -212,6 +224,42 @@ class LeaseModel extends BaseModel
                 $this->commit();
                 return getReturn(CODE_SUCCESS, '当前租赁关系解除成功!!!!!');
             }
+        }
+    }
+
+    /**
+     * 获取租赁信息 传递生成当月账单
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-03 16:00:48
+     * Update: 2021-03-03 16:00:48
+     * Version: 1.00
+     */
+    public function createBillByLease()
+    {
+        $where = array();
+        $where['is_delete'] = NOT_DELETED;
+        $where['expire_time'] = array('egt', time());
+        $where['sing_time'] = array('elt', time());
+        $list = $this->where($where)->select();
+        foreach ($list as $key => $value) {
+            $time = floor(floor(((time() - $value['sing_time']) / (24 * 3600))) / 30);
+            if ($time == 0) {
+                $list[$key]['bill_remark'] = date('m', $value['sing_time']) . '月房租';
+                $list[$key]['last_time'] = $value['sing_time'];
+            } else if ($time >= 1) {
+                $month = $time - 1;
+                $singTime = date('Y-m-d', $value['sing_time']);
+                $list[$key]['bill_remark'] = date('m', strtotime("$singTime +$month month")) . '月房租';
+                $list[$key]['last_time'] = strtotime("$singTime +$month month");
+            }
+        }
+        $result = D('Bill')->createBillLease($list);
+        if ($result > 0) {
+            return getReturn(CODE_SUCCESS, '共生成' . $result . '条房租账单记录！！！');
+        } else if ($result == 0) {
+            return getReturn(CODE_SUCCESS, '当月房租账单均与生成，不用在重复生成！！！');
+        } else {
+            return getReturn(CODE_ERROR, '生成房租账单失败，请稍后重试！！！');
         }
     }
 }

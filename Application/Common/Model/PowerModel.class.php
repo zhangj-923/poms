@@ -90,7 +90,13 @@ class PowerModel extends BaseModel
             $list[$key]['p_time'] = date('Y-m-d', $value['p_time']);
             if ($value['plast_time'] != 0) {
                 $list[$key]['plast_time'] = date('Y-m-d', $value['plast_time']);
+            } else {
+                $list[$key]['plast_time'] = '--';
             }
+            if ($value['plast_current'] == 0) {
+                $list[$key]['plast_current'] = '--';
+            }
+
         }
         return ['list' => $list, 'count' => $count];
     }
@@ -188,7 +194,7 @@ class PowerModel extends BaseModel
             $this->rollback();
             return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
         } else {
-            $field = ['a.p_current', 'a.plast_current', 'a.p_price','a.plast_time', 'a.p_time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
+            $field = ['a.p_current', 'a.plast_current', 'a.p_price', 'a.plast_time', 'a.p_time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
             $where = array();
             $where['a.is_delete'] = NOT_DELETED;
             $where['a.power_id'] = $request['power_id'];

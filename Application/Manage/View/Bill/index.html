@@ -42,12 +42,12 @@
         </div>
         <label class="layui-form-label">账单周期:</label>
         <div class="layui-input-inline">
-          <input type="text" name="last_time" id="last_time"  placeholder="开始日期" autocomplete="off"
+          <input type="text" name="last_time" id="last_time" placeholder="开始日期" autocomplete="off"
                  class="layui-input">
         </div>
         <label class="layui-form-label" style="margin-left: -80px">--</label>
         <div class="layui-input-inline">
-          <input type="text" name="time" id="time"  placeholder="截止日期" autocomplete="off"
+          <input type="text" name="time" id="time" placeholder="截止日期" autocomplete="off"
                  class="layui-input">
         </div>
         <label class="layui-form-label">账单类型:</label>
@@ -65,31 +65,15 @@
       <div class="layui-btn layui-btn-warm" id="reset" name="reset" style="background: gray">重置</div>
     </div>
   </form>
-<!--  <div class="chu">-->
-<!--    <div class="demoTable layui-form-item">-->
-<!--      <div class="layui-inline">-->
-<!--        &lt;!&ndash;            <label class="layui-form-label">查询条件:</label>&ndash;&gt;-->
-<!--        <div class="layui-input-inline">-->
-<!--          <input class="layui-input" name="search" id="search" placeholder="租户姓名/房间号" autocomplete="off">-->
-<!--        </div>-->
-<!--        <label class="layui-form-label">账单类型:</label>-->
-<!--        <div class="layui-input-inline">-->
-<!--          <select class="layui-select" id="leaseTeam" name="leaseTeam" lay-filter="Team">-->
-<!--            <option value="">请选择</option>-->
-<!--            <option value="1">房租</option>-->
-<!--            <option value="2">水费</option>-->
-<!--            <option value="3">电费</option>-->
-<!--          </select>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="layui-btn" data-type="reload">搜索</div>-->
-<!--      <div class="layui-btn layui-btn-warm" id="reset">重置</div>-->
-<!--    </div>-->
-<!--  </div>-->
-  <xblock>
-    <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-    <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加
-    </button>
+  <!--  <xblock>-->
+  <!--    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
+  <!--    &lt;!&ndash;    <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加&ndash;&gt;-->
+  <!--    &lt;!&ndash;    </button>&ndash;&gt;-->
+  <!--  </xblock>-->
+  <xblock class="demoTable">
+    <button class="layui-btn" data-type="delAllBill">批量删除</button>
+    <!--    <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>-->
+    <!--    <button class="layui-btn" data-type="isAll">验证是否全选</button>-->
   </xblock>
   <input type="hidden" id="update_lease_id" value="0">
   <table class="layui-table" id="demo" lay-filter="test">
@@ -119,20 +103,12 @@
 
 </div>
 
-<!--    <script type="text/html" id="toolbarDemo">-->
-<!--      <div class="layui-btn-container">-->
-<!--        <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>-->
-<!--        <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>-->
-<!--        <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>-->
-<!--      </div>-->
-<!--    </script>-->
 
 <script type="text/html" id="barDemo">
-  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+  <!--  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>-->
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-
-
 </script>
+
 <script>
   layui.use(['table', 'layer', 'form', 'laydate'], function () {
     var table = layui.table;
@@ -144,6 +120,7 @@
       elem: '#demo',
       height: 450,
       url: 'getBillList',  //数据接口
+      // toolbar: '#toolbarDemo', //开启头部工具栏，并为其绑定左侧模板
       page: true, //开启分页
       cols: [
         [ //表头
@@ -157,11 +134,11 @@
           {field: 'total', width: '6%', title: '账单金额', align: 'center', sort: 'true'},
           {field: 'customer_name', width: '5%', title: '承租方', align: 'center', sort: 'true'},
           {field: 'customer_mobile', width: '7%', title: '联系电话', align: 'center', sort: 'true'},
-          {field: 'status', width: '6%', title: '支付状态', align: 'center', sort: 'true',  templet: '#statusTpl'},
-          {field: 'pay_time', width: '10%', title: '支付日期', align: 'center', sort: 'true'},
-          {field: 'bill_remark', width: '15%', title: '账单备注', align: 'center', sort: 'true'},
+          {field: 'status', width: '6%', title: '支付状态', align: 'center', sort: 'true', templet: '#statusTpl'},
+          {field: 'pay_time', width: '8%', title: '支付日期', align: 'center', sort: 'true'},
+          {field: 'bill_remark', width: '10%', title: '账单备注', align: 'center', sort: 'true'},
           {field: 'create_time', width: '15%', title: '创建时间', align: 'center', sort: 'true'},
-          {fixed: 'right', width: '10%', title: '操作', align: 'center', toolbar: '#barDemo'}
+          {fixed: 'right', width: '5%', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
       ],
       id: 'demo'
@@ -228,17 +205,56 @@
       form.render();
     });
 
+    var $ = layui.$, active = {
+      delAllBill: function () { //获取选中数据
+        var checkStatus = table.checkStatus('demo')
+          , data = checkStatus.data;
+        var datas = new Array();
+        for (i = 0; i < data.length; i++) {
+          datas.push(data[i].bill_id);
+        }
+        if (datas.length == 0) {
+          layer.msg('请选择要删除的账单！！！');
+        } else {
+          layer.confirm('确认批量删除所选中的账单？', {
+            title: '批量删除账单'
+          }, function (index) {
+            $.ajax({
+              url: 'delAllBill',
+              type: 'post',
+              data: {'datas': datas},
+              dataType: "JSON",
+              success: function (data) {
+                if (data.code == 200) {
+                  layer.msg(data.msg);
+                } else {
+                  layer.alert(data.msg);
+                }
+                table.reload('demo');   //刷新表单
+              }
+            })
+          })
+        }
+      }
+    };
+
+    $('.demoTable .layui-btn').on('click', function () {
+      var type = $(this).data('type');
+      active[type] ? active[type].call(this) : '';
+    });
+
+    //监听行工具事件
     table.on('tool(test)', function (obj) {
       var data = obj.data;
       var layEvent = obj.event;
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('确认解除当前租赁关系？解除即释放当前房屋状态', function (index) {
+        layer.confirm('确认删除当前行账单？？', function (index) {
           obj.del();
           layer.close(index);
           $.ajax({
-            url: 'deleteLease?leaseId=' + data.lease_id,
+            url: 'deleteBill?billId=' + data.bill_id,
             type: 'get',
             dataType: "JSON",
             success: function (data) {
@@ -257,55 +273,6 @@
       }
     })
   });
-</script>
-<script>
-  layui.use('laydate', function () {
-    var laydate = layui.laydate;
-
-    //执行一个laydate实例
-    laydate.render({
-      elem: '#start' //指定元素
-    });
-
-    //执行一个laydate实例
-    laydate.render({
-      elem: '#end' //指定元素
-    });
-  });
-
-  /*用户-停用*/
-  function member_stop (obj, id) {
-    layer.confirm('确认要停用吗？', function (index) {
-
-      if ($(obj).attr('title') == '启用') {
-
-        //发异步把用户状态进行更改
-        $(obj).attr('title', '停用')
-        $(obj).find('i').html('&#xe62f;');
-
-        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
-        layer.msg('已停用!', {icon: 5, time: 1000});
-
-      } else {
-        $(obj).attr('title', '启用')
-        $(obj).find('i').html('&#xe601;');
-
-        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
-        layer.msg('已启用!', {icon: 5, time: 1000});
-      }
-
-    });
-  }
-
-  /*用户-删除*/
-  function member_del (obj, id) {
-    layer.confirm('确认要删除吗？', function (index) {
-      //发异步删除数据
-      $(obj).parents("tr").remove();
-      layer.msg('已删除!', {icon: 1, time: 1000});
-    });
-  }
-
 
   function delAll (argument) {
 

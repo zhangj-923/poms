@@ -93,6 +93,11 @@ class BillModel extends BaseModel
             } else {
                 $list[$key]['status'] = '未支付';
             }
+            if ($value['pay_time'] == 0) {
+                $list[$key]['pay_time'] = '--';
+            } else {
+                $list[$key]['pay_time'] = date('Y-m-d', $value['pay_time']);
+            }
             $list[$key]['roomInfo'] = $value['building_name'] . $value['room_sn'] . '室';
             $list[$key]['bill_cycle'] = date('Y-m-d', $value['last_time']) . '-' . date('Y-m-d', $value['time']);
         }
@@ -122,6 +127,105 @@ class BillModel extends BaseModel
         } else {
             $this->rollback();
             return false;
+        }
+    }
+
+    /**
+     * 生成每月房租账单
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-03 18:40:42
+     * Update: 2021-03-03 18:40:42
+     * Version: 1.00
+     */
+    public function createBillLease($request = [])
+    {
+        $n = 0;
+        foreach ($request as $key => $value) {
+            $data = [];
+            $data['lease_id'] = $value['lease_id'];
+            $data['last_time'] = $value['last_time'];
+            $data['bill_remark'] = $value['bill_remark'];
+            $data['bill_type'] = BILL_LEASE;
+            $data['total'] = $value['rent'];
+            $data['room_id'] = $value['room_id'];
+            $data['customer_id'] = $value['customer_id'];
+            $data['manager_id'] = $value['manager_id'];
+            $data['create_time'] = time();
+            $time = date('Y-m-d', $value['last_time']);
+            $data['time'] = strtotime("$time +1 month");
+            $where = array();
+            $where['lease_id'] = $value['lease_id'];
+            $where['is_delete'] = NOT_DELETED;
+            $where['bill_remark'] = $value['bill_remark'];
+            $result = $this->where($where)->find();
+            if (!empty($result)) {
+                continue;
+            } else {
+                $this->startTrans();
+                $result1 = $this->add($data);
+                if ($result1) {
+                    $n = $n + 1;
+                    $this->commit();
+                } else {
+                    $this->rollback();
+                }
+            }
+        }
+        return $n;
+    }
+
+    /**
+     * 删除当前id的账单信息
+     * @param int $bill_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-03 19:11:19
+     * Update: 2021-03-03 19:11:19
+     * Version: 1.00
+     */
+    public function deleteBillById($bill_id = 0)
+    {
+        $where = array();
+        $where['bill_id'] = $bill_id;
+        $this->startTrans();
+        $result = $this->where($where)->save(['is_delete' => DELETED]);
+        if ($result === false) {
+            $this->rollback();
+            return getReturn(CODE_ERROR, '当前账单删除失败，请稍后再试！！！！');
+        } else {
+            $this->commit();
+            return getReturn(CODE_SUCCESS, '当前账单删除成功！！！');
+        }
+    }
+
+    /**
+     * 批量删除账单
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-03 22:22:34
+     * Update: 2021-03-03 22:22:34
+     * Version: 1.00
+     */
+    public function delAllByBillId($request = [])
+    {
+        $msg = '';
+        foreach ($request as $key => $value) {
+            $where = array();
+            $where['bill_id'] = $value;
+            $this->startTrans();
+            $result = $this->where($where)->save(['is_delete' => DELETED]);
+            if ($result === false) {
+                $msg = $msg . $value . ',';
+                $this->rollback();
+            } else {
+                $this->commit();
+
+            }
+        }
+        if ($msg != '') {
+            return getReturn(CODE_ERROR, '有部分账单删除失败，分别是：' . $msg . '请稍后再试！！');
+        } else {
+            return getReturn(CODE_SUCCESS, '所选账单都删除成功！！！');
         }
     }
 }

@@ -128,4 +128,19 @@ class LeaseController extends Controller
         }
     }
 
+
+    /**
+     * 账单生成
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-03 15:56:54
+     * Update: 2021-03-03 15:56:54
+     * Version: 1.00
+     */
+    public function createBill()
+    {
+        if (IS_AJAX){
+            $result = D('Lease')->createBillByLease();
+            echo json_encode($result);
+        }
+    }
 }

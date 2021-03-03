@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="layui-form-item">
-      <label for="remark" class="layui-form-label">
+      <label for="rent" class="layui-form-label">
         <span class="x-red">*</span>月租金
       </label>
       <div class="layui-input-inline">
@@ -64,7 +64,7 @@
       </div>
     </div>
     <div class="layui-inline">
-      <label class="layui-form-label">签约日期</label>
+      <label class="layui-form-label">开始日期</label>
       <div class="layui-input-inline">
         <input type="text" name="sing_time" id="sing_time" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
                class="layui-input">

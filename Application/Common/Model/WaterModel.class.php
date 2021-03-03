@@ -89,6 +89,11 @@ class WaterModel extends BaseModel
             $list[$key]['time'] = date('Y-m-d', $value['time']);
             if ($value['last_time'] != 0) {
                 $list[$key]['last_time'] = date('Y-m-d', $value['last_time']);
+            } else {
+                $list[$key]['last_time'] = '--';
+            }
+            if ($value['last_current'] == 0) {
+                $list[$key]['last_current'] = '--';
             }
         }
         return ['list' => $list, 'count' => $count];
@@ -187,7 +192,7 @@ class WaterModel extends BaseModel
             $this->rollback();
             return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
         } else {
-            $field = ['a.current', 'a.last_current', 'a.price','a.last_time', 'a.time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
+            $field = ['a.current', 'a.last_current', 'a.price', 'a.last_time', 'a.time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
             $where = array();
             $where['a.is_delete'] = NOT_DELETED;
             $where['a.water_id'] = $request['water_id'];

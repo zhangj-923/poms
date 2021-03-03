@@ -75,12 +75,12 @@
 
             </a>
           </li>
-          <li>
-            <a _href="<?php echo U('Customer/customer_del');?>">
-              <i class="iconfont">&#xe6a7;</i>
-              <cite>租户删除</cite>
-            </a>
-          </li>
+<!--          <li>-->
+<!--            <a _href="<?php echo U('Customer/customer_del');?>">-->
+<!--              <i class="iconfont">&#xe6a7;</i>-->
+<!--              <cite>租户删除</cite>-->
+<!--            </a>-->
+<!--          </li>-->
         </ul>
       </li>
       <li>
