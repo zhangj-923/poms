@@ -19,10 +19,13 @@ class LeaseModel extends BaseModel
         $sing_time = $request['sing_time'];
         if ($request['lease_team'] == 1) {
             $request['expire_time'] = date('Y-m-d', strtotime("$sing_time +3 month"));
-        } elseif ($request['lease_team'] == 2) {
+        } else if ($request['lease_team'] == 2) {
             $request['expire_time'] = date('Y-m-d', strtotime("$sing_time +6 month"));
-        } elseif ($request['lease_team'] == 3) {
+        } else if ($request['lease_team'] == 3) {
             $request['expire_time'] = date('Y-m-d', strtotime("$sing_time +1 year"));
+        } else if ($request['lease_team'] == 4) {
+            $month = $request['month'];
+            $request['expire_time'] = date('Y-m-d', strtotime("$sing_time +$month month"));
         }
         $request['sing_time'] = strtotime($request['sing_time']);
         $request['expire_time'] = strtotime($request['expire_time']);
@@ -59,6 +62,7 @@ class LeaseModel extends BaseModel
         $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name', 'e.building_name'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
+        $where['a.manager_id'] = session('USER.manager_id');
 //        if (!empty($request['key2'])) {
 //            $where['a.building_name'] = ['like', '%' . $request['key2'] . '%'];
 //        }
@@ -84,8 +88,10 @@ class LeaseModel extends BaseModel
         if (!empty($request['key3'])) {
             if ($request['key3'] == 1) {
                 $where['a.expire_time'] = array('egt', time());
-            } else {
+            } else if ($request['key3'] == 2) {
                 $where['a.expire_time'] = array('lt', time());
+            } else if ($request['key3'] == 3) {
+                $where['a.is_exit'] = IS_EXIT;
             }
         }
         $options['where'] = $where;
@@ -102,15 +108,26 @@ class LeaseModel extends BaseModel
             } else {
                 $list[$key]['lease_status'] = '已到期';
             }
+            if ($value['is_exit'] == IS_EXIT) {
+                $list[$key]['lease_status'] = '已退租';
+            }
             if ($value['lease_team'] == 1) {
                 $list[$key]['total_rent'] = number_format($value['rent'] * 3, 2);
                 $list[$key]['team'] = '一季度';
-            } elseif ($value['lease_team'] == 2) {
+            } else if ($value['lease_team'] == 2) {
                 $list[$key]['total_rent'] = number_format($value['rent'] * 6, 2);
                 $list[$key]['team'] = '半年';
-            } elseif ($value['lease_team'] == 3) {
+            } else if ($value['lease_team'] == 3) {
                 $list[$key]['total_rent'] = number_format($value['rent'] * 12, 2);
                 $list[$key]['team'] = '一年';
+            } else if ($value['lease_team'] == 4) {
+                $list[$key]['total_rent'] = number_format($value['rent'] * $value['month'], 2);
+                $list[$key]['team'] = $value['month'].'个月';
+            }
+            if ($value['exit_time'] == 0) {
+                $list[$key]['exit_time'] = '--';
+            } else {
+                $list[$key]['exit_time'] = date('Y-m-d', $value['exit_time']);
             }
             $list[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);
             $list[$key]['sing_time'] = date('Y-m-d', $value['sing_time']);
@@ -238,6 +255,8 @@ class LeaseModel extends BaseModel
     {
         $where = array();
         $where['is_delete'] = NOT_DELETED;
+        $where['is_exit'] = NOT_EXIT;
+        $where['manager_id'] = session('USER.manager_id');
         $where['expire_time'] = array('egt', time());
         $where['sing_time'] = array('elt', time());
         $list = $this->where($where)->select();
@@ -260,6 +279,40 @@ class LeaseModel extends BaseModel
             return getReturn(CODE_SUCCESS, '当月房租账单均与生成，不用在重复生成！！！');
         } else {
             return getReturn(CODE_ERROR, '生成房租账单失败，请稍后重试！！！');
+        }
+    }
+
+    /**
+     * 根据lease_id进行退租
+     * @param int $lease_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-06 13:47:42
+     * Update: 2021-03-06 13:47:42
+     * Version: 1.00
+     */
+    public function exitLeaseById($lease_id = 0)
+    {
+        $where = array();
+        $where['lease_id'] = $lease_id;
+        $room_id = $this->where($where)->find()['room_id'];
+        $this->startTrans();
+        $data['is_exit'] = IS_EXIT;
+        $data['exit_time'] = time();
+        $result = $this->where($where)->save($data);
+        if ($result === false) {
+            $this->rollback();
+            return getReturn(CODE_ERROR, '申请退租失败，请稍后再试！');
+        } else {
+            $where1 = array();
+            $where1['room_id'] = $room_id;
+            $result1 = M('room')->where($where1)->save(['room_status' => 0]);
+            if ($result1 === false) {
+                $this->rollback();
+                return getReturn(CODE_ERROR, '房屋状态释放失败，不能成功进行申请退租，请稍后再试！');
+            } else {
+                $this->commit();
+                return getReturn(CODE_SUCCESS, '当前房屋退租申请成功!!!!!');
+            }
         }
     }
 }

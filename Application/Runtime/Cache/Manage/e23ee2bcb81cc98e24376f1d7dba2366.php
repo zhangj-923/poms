@@ -49,9 +49,19 @@
     <div class="layui-form-item">
       <label class="layui-form-label">租期</label>
       <div class="layui-input-block">
-        <input type="radio" name="lease_team" value="1" title="一季度" checked="">
-        <input type="radio" name="lease_team" value="2" title="半年">
-        <input type="radio" name="lease_team" value="3" title="一年">
+        <input type="radio" name="lease_team" value="1" lay-filter="testRadio" title="一季度" checked="">
+        <input type="radio" name="lease_team" value="2" lay-filter="testRadio" title="半年">
+        <input type="radio" name="lease_team" value="3" lay-filter="testRadio" title="一年">
+        <input type="radio" name="lease_team" value="4" lay-filter="testRadio" title="其他">
+      </div>
+    </div>
+    <div class="layui-form-item" id="contents" style="display: none">
+      <label for="month" class="layui-form-label">
+        <span class="x-red">*</span>月份
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" id="month" name="month" required
+               autocomplete="off" class="layui-input" lay-verify="required|number" placeholder="请输入自定义月份">
       </div>
     </div>
     <div class="layui-form-item">
@@ -60,13 +70,14 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="rent" name="rent" required
-               autocomplete="off" class="layui-input" lay-verify="required|number">
+               autocomplete="off" class="layui-input" lay-verify="required|number" placeholder="请输入月租金">
       </div>
     </div>
     <div class="layui-inline">
       <label class="layui-form-label">签约日期</label>
       <div class="layui-input-inline">
-        <input type="text" name="sing_time" id="sing_time" lay-verify="required|date" placeholder="yyyy-MM-dd" autocomplete="off"
+        <input type="text" name="sing_time" id="sing_time" lay-verify="required|date" placeholder="yyyy-MM-dd"
+               autocomplete="off"
                class="layui-input">
       </div>
     </div>
@@ -136,6 +147,15 @@
         //form.render('select'); //刷新表单select选择框渲染
       }
     });
+
+    form.on('radio(testRadio)', function (data) {
+      if (data.value == '4') {
+        $("#contents").css("display", "block");
+      } else {
+        $("#contents").css("display", "none");
+      }
+    });
+
 
     //监听提交
     form.on('submit(add)', function (data) {

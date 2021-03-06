@@ -138,8 +138,23 @@ class LeaseController extends Controller
      */
     public function createBill()
     {
-        if (IS_AJAX){
+        if (IS_AJAX) {
             $result = D('Lease')->createBillByLease();
+            echo json_encode($result);
+        }
+    }
+
+    /**
+     * 退租申请
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-06 13:45:15
+     * Update: 2021-03-06 13:45:15
+     * Version: 1.00
+     */
+    public function exitLease()
+    {
+        if (IS_AJAX) {
+            $result = D('Lease')->exitLeaseById($_POST['lease_id']);
             echo json_encode($result);
         }
     }

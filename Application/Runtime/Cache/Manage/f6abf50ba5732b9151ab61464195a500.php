@@ -61,17 +61,11 @@
         </div>
       </div>
       <button class="layui-btn" data-type="reload" lay-submit lay-filter="search">搜索</button>
-      <!--      <button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
       <div class="layui-btn layui-btn-warm" id="reset" name="reset" style="background: gray">重置</div>
     </div>
   </form>
-  <!--  <xblock>-->
-  <!--    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
-  <!--    &lt;!&ndash;    <button class="layui-btn" onclick="x_admin_show('添加租赁信息','lease_add',600,500)"><i class="layui-icon"></i>添加&ndash;&gt;-->
-  <!--    &lt;!&ndash;    </button>&ndash;&gt;-->
-  <!--  </xblock>-->
   <xblock class="demoTable">
-    <button class="layui-btn" data-type="delAllBill">批量删除</button>
+    <button class="layui-btn" data-type="delAllBill" style="background: red">批量删除</button>
     <!--    <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>-->
     <!--    <button class="layui-btn" data-type="isAll">验证是否全选</button>-->
   </xblock>
@@ -127,8 +121,9 @@
           {fixed: 'left', type: 'checkbox'},
           {field: 'bill_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
           {field: 'bill_cycle', width: '11%', title: '账单周期', align: 'center', sort: 'true'},
-          {field: 'garden_name', width: '6%', title: '园区', align: 'center', sort: 'true'},
-          {field: 'roomInfo', width: '10%', title: '房屋信息', align: 'center', sort: 'true'},
+          {field: 'garden_name', width: '4%', title: '园区', align: 'center', sort: 'true'},
+          {field: 'roomInfo', width: '8%', title: '房屋信息', align: 'center', sort: 'true'},
+          {field: 'is_exit', width: '6%', title: '租赁状态', align: 'center', sort: 'true', templet: '#isExit'},
           {field: 'type', width: '5%', title: '收费项', align: 'center', sort: 'true'},
           {field: 'manager_name', width: '5%', title: '收款方', align: 'center', sort: 'true'},
           {field: 'total', width: '6%', title: '账单金额', align: 'center', sort: 'true'},
@@ -154,7 +149,6 @@
       elem: '#last_time'
     });
 
-
     var $ = layui.$, active = {
       reload: function () {
         var search = $('#search').val();
@@ -174,38 +168,7 @@
             time: time
           }
         })
-      }
-    }
-
-    form.on('submit(search)', function (data) {
-      var type = $(this).data('type');
-      // if($('#customer_name').val()==""){
-      //   layer.msg('查询项目不能为空');
-      //   return false;
-      // }
-      active[type] ? active[type].call(this) : '';
-      return false;
-    });
-
-    // $('.chu .layui-btn').on('click', function () {         //搜索点击功能
-    //   var type = $(this).data('type');
-    //   // if($('#customer_name').val()==""){
-    //   //   layer.msg('查询项目不能为空');
-    //   //   return false;
-    //   // }
-    //   active[type] ? active[type].call(this) : '';
-    // });
-
-    //重置功能
-    $('#reset').on('click', function () {
-      $('#search').val("");
-      $('#leaseTeam').val("");
-      $('#last_time').val("");
-      $('#time').val("");
-      form.render();
-    });
-
-    var $ = layui.$, active = {
+      },
       delAllBill: function () { //获取选中数据
         var checkStatus = table.checkStatus('demo')
           , data = checkStatus.data;
@@ -236,7 +199,34 @@
           })
         }
       }
-    };
+    }
+
+    form.on('submit(search)', function (data) {
+      var type = $(this).data('type');
+      // if($('#customer_name').val()==""){
+      //   layer.msg('查询项目不能为空');
+      //   return false;
+      // }
+      active[type] ? active[type].call(this) : '';
+      return false;
+    });
+    // $('.chu .layui-btn').on('click', function () {         //搜索点击功能
+    //   var type = $(this).data('type');
+    //   // if($('#customer_name').val()==""){
+    //   //   layer.msg('查询项目不能为空');
+    //   //   return false;
+    //   // }
+    //   active[type] ? active[type].call(this) : '';
+    // });
+
+    //重置功能
+    $('#reset').on('click', function () {
+      $('#search').val("");
+      $('#leaseTeam').val("");
+      $('#last_time').val("");
+      $('#time').val("");
+      form.render();
+    });
 
     $('.demoTable .layui-btn').on('click', function () {
       var type = $(this).data('type');
@@ -263,6 +253,7 @@
               } else {
                 layer.alert(data.msg);
               }
+              table.reload('demo');
             }
           })
         });
@@ -273,23 +264,19 @@
       }
     })
   });
-
-  function delAll (argument) {
-
-    var data = tableCheck.getData();
-
-    layer.confirm('确认要删除吗？' + data, function (index) {
-      //捉到所有被选中的，发异步进行删除
-      layer.msg('删除成功', {icon: 1});
-      $(".layui-form-checked").not('.header').parents('tr').remove();
-    });
-  }
 </script>
 <script type="text/html" id="statusTpl">
   {{#  if(d.status === '未支付'){ }}
   <span style="color: red;">{{ d.status }}</span>
   {{#  } else { }}
   {{ d.status }}
+  {{#  } }}
+</script>
+<script type="text/html" id="isExit">
+  {{#  if(d.is_exit === '已退租'){ }}
+  <span style="color: red;">{{ d.is_exit }}</span>
+  {{#  } else { }}
+  {{ d.is_exit }}
   {{#  } }}
 </script>
 </body>

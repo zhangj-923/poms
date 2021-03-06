@@ -40,9 +40,10 @@ class BillModel extends BaseModel
      */
     public function getBillInfo($request = [])
     {
-        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name', 'e.building_name', 'u.manager_name'];
+        $field = ['a.*', 'b.customer_name', 'b.customer_mobile', 'c.room_sn', 'd.garden_name', 'e.building_name', 'u.manager_name', 'l.is_exit', 'l.expire_time'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
+        $where['a.manager_id'] = session('USER.manager_id');
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [
@@ -50,7 +51,8 @@ class BillModel extends BaseModel
             'join __ROOM__ c on a.room_id = c.room_id',
             'join __USER__ u on a.manager_id = u.manager_id',
             'join __GARDEN__ d on u.garden_id = d.garden_id',
-            'join __BUILDING__ e on u.building_id = e.building_id'
+            'join __BUILDING__ e on u.building_id = e.building_id',
+            'join __LEASE__ l on a.lease_id = l.lease_id'
         ];
         $options = [];
         $options['alias'] = 'a';
@@ -97,6 +99,13 @@ class BillModel extends BaseModel
                 $list[$key]['pay_time'] = '--';
             } else {
                 $list[$key]['pay_time'] = date('Y-m-d', $value['pay_time']);
+            }
+            if ($value['is_exit'] == IS_EXIT) {
+                $list[$key]['is_exit'] = '已退租';
+            } else if ($value['expire_time'] < time()) {
+                $list[$key]['is_exit'] = '已到期';
+            } else if ($value['expire_time'] >= time()) {
+                $list[$key]['is_exit'] = '生效中';
             }
             $list[$key]['roomInfo'] = $value['building_name'] . $value['room_sn'] . '室';
             $list[$key]['bill_cycle'] = date('Y-m-d', $value['last_time']) . '-' . date('Y-m-d', $value['time']);
@@ -227,5 +236,48 @@ class BillModel extends BaseModel
         } else {
             return getReturn(CODE_SUCCESS, '所选账单都删除成功！！！');
         }
+    }
+
+    /**
+     * 获取租户账单
+     * @param int $customer_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * User: hjun
+     * Date: 2021-03-06 17:29:45
+     * Update: 2021-03-06 17:29:45
+     * Version: 1.00
+     */
+    public function getBill($customer_id = 0)
+    {
+
+        $where = array();
+        $where['is_delete'] = NOT_DELETED;
+        $where['customer_id'] = $customer_id;
+//        $page = $request['page'];
+//        $limit = $request['limit'];
+        $options = [];
+        $options['where'] = $where;
+        $count = $this->getCount($options);
+        $options['limit'] = 20;
+        $options['page'] = 1;
+        $order = 'create_time asc';
+        $list = $this->where($where)->order($order)->select();
+//        return ['list' => $list, 'count' => $count];
+        foreach ($list as $key => $value) {
+            if ($value['bill_type'] == BILL_LEASE) {
+                $list[$key]['type'] = '房租';
+            } elseif ($value['bill_type'] == BILL_WATER) {
+                $list[$key]['type'] = '水费';
+            } elseif ($value['bill_type'] == BILL_POWER) {
+                $list[$key]['type'] = '电费';
+            }
+            $list[$key]['last_time'] = date('Y-m-d', $value['last_time']);
+            $list[$key]['time'] = date('Y-m-d', $value['time']);
+            $list[$key]['cycle'] = $list[$key]['last_time'].'-'.$list[$key]['time'];
+            if ($value['pay_time'] > 0){
+                $list[$key]['pay_time'] = date('Y-m-d H:i:s', $value['pay_time']);
+            }
+        }
+        return $list;
     }
 }

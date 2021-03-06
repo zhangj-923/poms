@@ -62,6 +62,7 @@ class PowerModel extends BaseModel
         $field = ['a.*', 'b.room_sn'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
+        $where['a.manager_id'] = session('USER.manager_id');
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [
@@ -197,6 +198,8 @@ class PowerModel extends BaseModel
             $field = ['a.p_current', 'a.plast_current', 'a.p_price', 'a.plast_time', 'a.p_time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
             $where = array();
             $where['a.is_delete'] = NOT_DELETED;
+            $where['b.is_delete'] = NOT_DELETED;
+            $where['b.is_exit'] = NOT_EXIT;
             $where['a.power_id'] = $request['power_id'];
             $join = [
                 'join __LEASE__ b on a.room_id = b.room_id'
@@ -208,15 +211,21 @@ class PowerModel extends BaseModel
             $options['field'] = $field;
             $options['join'] = $join;
             $list = $this->queryRow($options);
-            $list['bill_remark'] = $request['remark'];
-            $result1 = D('Bill')->createBillByPower($list);
-            if ($result1 === false) {
-                $this->rollback();
-                return getReturn(CODE_ERROR, '电表抄表时生成账单失败，请稍后重试！！！！');
+            if (!empty($list)) {
+                $list['bill_remark'] = $request['remark'];
+                $result1 = D('Bill')->createBillByPower($list);
+                if ($result1 === false) {
+                    $this->rollback();
+                    return getReturn(CODE_ERROR, '电表抄表时生成账单失败，请稍后重试！！！！');
+                } else {
+                    $this->commit();
+                    return getReturn(CODE_SUCCESS, '电表抄表成功！！并生成账单');
+                }
             } else {
-                $this->commit();
-                return getReturn(CODE_SUCCESS, '电表抄表成功！！并生成账单');
+                $this->rollback();
+                return getReturn(CODE_ERROR, '查询不到该房屋的租赁状态，所以抄表失败，请查询租赁状态后在进行抄表！！！');
             }
+
         }
     }
 }

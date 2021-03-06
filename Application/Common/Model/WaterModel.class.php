@@ -62,6 +62,7 @@ class WaterModel extends BaseModel
         $field = ['a.*', 'b.room_sn'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
+        $where['a.manager_id'] = session('USER.manager_id');
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [
@@ -195,6 +196,8 @@ class WaterModel extends BaseModel
             $field = ['a.current', 'a.last_current', 'a.price', 'a.last_time', 'a.time', 'a.manager_id', 'a.room_id', 'b.lease_id', 'b.customer_id'];
             $where = array();
             $where['a.is_delete'] = NOT_DELETED;
+            $where['b.is_delete'] = NOT_DELETED;
+            $where['b.is_exit'] = NOT_EXIT;
             $where['a.water_id'] = $request['water_id'];
             $join = [
                 'join __LEASE__ b on a.room_id = b.room_id'
@@ -206,14 +209,19 @@ class WaterModel extends BaseModel
             $options['field'] = $field;
             $options['join'] = $join;
             $list = $this->queryRow($options);
-            $list['bill_remark'] = $request['remark'];
-            $result1 = D('Bill')->createBillByWater($list);
-            if ($result1 === false) {
-                $this->rollback();
-                return getReturn(CODE_ERROR, '水表抄表时生成账单失败，请稍后重试！！！！');
+            if (!empty($list)) {
+                $list['bill_remark'] = $request['remark'];
+                $result1 = D('Bill')->createBillByWater($list);
+                if ($result1 === false) {
+                    $this->rollback();
+                    return getReturn(CODE_ERROR, '水表抄表时生成账单失败，请稍后重试！！！！');
+                } else {
+                    $this->commit();
+                    return getReturn(CODE_SUCCESS, '水表抄表成功！！并生成账单');
+                }
             } else {
-                $this->commit();
-                return getReturn(CODE_SUCCESS, '水表抄表成功！！并生成账单');
+                $this->rollback();
+                return getReturn(CODE_ERROR, '查询不到该房屋的租赁状态，所以抄表失败，请查询租赁状态后在进行抄表！！！');
             }
         }
     }

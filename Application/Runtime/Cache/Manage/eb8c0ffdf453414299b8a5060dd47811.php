@@ -46,6 +46,7 @@
             <option value="">请选择</option>
             <option value="1">生效中</option>
             <option value="2">已到期</option>
+            <option value="3">已退租</option>
           </select>
         </div>
         <label class="layui-form-label">租期类型:</label>
@@ -55,6 +56,7 @@
             <option value="1">一季度</option>
             <option value="2">半年</option>
             <option value="3">一年</option>
+            <option value="4">其他</option>
           </select>
         </div>
       </div>
@@ -134,8 +136,9 @@
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-
-
+  {{#  if(d.lease_status !== '已退租'){ }}
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="exit">退租</a>
+  {{#  } }}
 </script>
 <script>
   layui.use(['table', 'layer', 'form'], function () {
@@ -158,14 +161,15 @@
           {field: 'garden_name', width: '5%', title: '园区', align: 'center', sort: 'true'},
           {field: 'building_name', width: '5%', title: '楼宇', align: 'center', sort: 'true'},
           {field: 'room_sn', width: '5%', title: '房屋', align: 'center', sort: 'true'},
-          {field: 'team', width: '6%', title: '租期', align: 'center', sort: 'true'},
+          {field: 'team', width: '5%', title: '租期', align: 'center', sort: 'true'},
           {field: 'create_time', width: '10%', title: '签约时间', align: 'center', sort: 'true'},
-          {field: 'sing_time', width: '10%', title: ' 开始时间', align: 'center', sort: 'true'},
-          {field: 'expire_time', width: '10%', title: ' 到期时间', align: 'center', sort: 'true', style: 'color: red;'},
-          {field: 'rent', width: '7%', title: '月租金', align: 'center', sort: 'true'},
-          {field: 'total_rent', width: '7%', title: '总金额', align: 'center', sort: 'true'},
+          {field: 'sing_time', width: '7%', title: ' 开始时间', align: 'center', sort: 'true'},
+          {field: 'expire_time', width: '7%', title: ' 到期时间', align: 'center', sort: 'true', style: 'color: red;'},
+          {field: 'rent', width: '6%', title: '月租金', align: 'center', sort: 'true'},
+          {field: 'total_rent', width: '6%', title: '总金额', align: 'center', sort: 'true'},
+          {field: 'exit_time', width: '7%', title: '退租时间', align: 'center', sort: 'true'},
           // {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
-          {fixed: 'right', width: '10%', title: '操作', align: 'center', toolbar: '#barDemo'}
+          {fixed: 'right', width: '13%', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
       ],
       id: 'demo'
@@ -227,6 +231,7 @@
               } else {
                 layer.alert(data.msg);
               }
+              table.reload('demo');
             }
           })
         });
@@ -234,6 +239,25 @@
         //隐藏域存放customer_id
         $('#update_lease_id').val(data.lease_id);
         x_admin_show('编辑租赁关系', 'lease_edit', 600, 500);
+      } else if (layEvent === 'exit') {
+        layer.confirm('是否确认申请退租？？', {
+          title: '退租'
+        }, function (index) {
+          $.ajax({
+            url: 'exitLease',
+            type: 'post',
+            data: {'lease_id': data.lease_id},
+            dataType: "JSON",
+            success: function (data) {
+              if (data.code == 200) {
+                layer.msg(data.msg);
+              } else {
+                layer.alert(data.msg);
+              }
+              table.reload('demo');
+            }
+          })
+        })
       }
     })
 
