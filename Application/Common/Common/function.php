@@ -10,6 +10,14 @@ define('BILL_LEASE', 1);
 define('BILL_WATER', 2);
 define('BILL_POWER', 3);
 
+//定义账单支付状态
+define('NOT_PAY', 0);
+define('IS_PAY', 1);
+
+//定义处理状态
+define('IS_DEAL', 1);
+define('NOT_DEAL', 0);
+
 //定义租赁退租与否
 define('NOT_EXIT', 0);
 define('IS_EXIT', 1);

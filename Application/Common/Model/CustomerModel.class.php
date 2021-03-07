@@ -30,7 +30,76 @@ class CustomerModel extends BaseModel
         $options['field'] = $field;
         $options['join'] = $join;
         $list = $this->queryRow($options);
-        $roomInfo = $list['garden_name'].$list['building_name'].$list['room_sn'].'室';
+        $roomInfo = $list['garden_name'] . $list['building_name'] . $list['room_sn'] . '室';
         return $roomInfo;
+    }
+
+    /**
+     * 获取租户个人信息
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-07 15:46:04
+     * Update: 2021-03-07 15:46:04
+     * Version: 1.00
+     */
+    public function getCus()
+    {
+        $where = array();
+        $where['customer_id'] = session('CUSTOMER.customer_id');
+        $list = $this->where($where)->find();
+        return getReturn(CODE_SUCCESS, '查询成功', $list);
+    }
+
+    /**
+     * 验证租户手机号不重复
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-01-29 13:55:50
+     * Update: 2021-01-29 13:55:50
+     * Version: 1.00
+     */
+    public function checkMobileByID($request = [])
+    {
+        $where = array();
+        $where['customer_mobile'] = $request['name'];
+        $where['customer_id'] = array('neq', $request['customer_id']);
+        $where['is_delete'] = NOT_DELETED;
+        $result = $this->where($where)->find();
+        if ($result) {
+            return getReturn(CODE_ERROR, '楼宇管理员登录名重复，请重新输入！！！', $result);
+        } else {
+            return getReturn(CODE_SUCCESS, '没有重复');
+        }
+    }
+
+    /**
+     * 编辑租户个人信息
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-07 15:51:32
+     * Update: 2021-03-07 15:51:32
+     * Version: 1.00
+     */
+    public function editCustomer($request = [])
+    {
+
+        $where = array();
+        $where['customer_id'] = session('CUSTOMER.customer_id');
+        $data = $_POST;
+        if (strcmp($_POST['password'], session('CUSTOMER.password')) == 0) {
+            $data['password'] = $_POST['password'];
+        } else {
+            $data['password'] = md5($_POST['password']);
+        }
+        $this->startTrans();
+        $result = $this->where($where)->save($data);
+        if ($result === false) {
+            $this->rollback();
+            return getReturn(CODE_ERROR, '修改个人信息失败，请稍后再试！！！');
+        } else {
+            $this->commit();
+            $userInfo = $this->where($where)->find();
+            session('CUSTOMER', $userInfo);
+            return getReturn(CODE_SUCCESS, '修改个人信息成功!!');
+        }
     }
 }

@@ -130,7 +130,7 @@
             </a>
           </li>
           <li>
-            <a _href="html/admin-rule.html">
+            <a _href="<?php echo U('Repair/index');?>">
               <i class="iconfont">&#xe6a7;</i>
               <cite>报修处理</cite>
             </a>

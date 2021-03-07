@@ -273,11 +273,36 @@ class BillModel extends BaseModel
             }
             $list[$key]['last_time'] = date('Y-m-d', $value['last_time']);
             $list[$key]['time'] = date('Y-m-d', $value['time']);
-            $list[$key]['cycle'] = $list[$key]['last_time'].'-'.$list[$key]['time'];
-            if ($value['pay_time'] > 0){
-                $list[$key]['pay_time'] = date('Y-m-d H:i:s', $value['pay_time']);
+            $list[$key]['cycle'] = $list[$key]['last_time'] . '-' . $list[$key]['time'];
+            if ($value['pay_time'] > 0) {
+                $list[$key]['pay_time'] = date('Y-m-d', $value['pay_time']);
             }
         }
         return $list;
+    }
+
+    /**
+     * 账单支付
+     * @param int $bill_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-07 14:49:43
+     * Update: 2021-03-07 14:49:43
+     * Version: 1.00
+     */
+    public function payBillById($bill_id = 0)
+    {
+        $where = array();
+        $where['bill_id'] = $bill_id;
+        $data['pay_time'] = time();
+        $data['pay_status'] = IS_PAY;
+        $this->startTrans();
+        $result = $this->where($where)->save($data);
+        if ($result === false) {
+            $this->rollback();
+            return getReturn(CODE_ERROR, '账单支付失败，请稍后再试！！！！');
+        } else {
+            $this->commit();
+            return getReturn(CODE_SUCCESS, '账单支付成功！！！');
+        }
     }
 }

@@ -1,0 +1,2159 @@
+[ 2021-03-07T13:17:14+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000367s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000437s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000974s ]
+
+[ 2021-03-07T13:17:14+08:00 ] 127.0.0.1 /admin.php/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2021-03-07T14:24:46+08:00 ] 127.0.0.1 /admin.php/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+
+[ 2021-03-07T14:24:47+08:00 ] 127.0.0.1 /admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013372s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2021-03-07T14:24:47+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2021-03-07T14:24:48+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2021-03-07T14:24:48+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2021-03-07T14:24:49+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2021-03-07T14:24:49+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2021-03-07T14:24:50+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000866s ]
+
+[ 2021-03-07T14:24:50+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2021-03-07T14:26:10+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `user` WHERE `name` = 'garden' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2021-03-07T14:26:15+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2021-03-07T14:26:15+08:00 ] 127.0.0.1 /admin.php/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2021-03-07T15:09:37+08:00 ] 127.0.0.1 /admin.php/Bill/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001169s ]
+
+[ 2021-03-07T15:09:38+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2021-03-07T15:09:54+08:00 ] 127.0.0.1 /admin.php/Lease/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000669s ]
+
+[ 2021-03-07T15:09:54+08:00 ] 127.0.0.1 /admin.php/Lease/getLeaseList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000909s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2021-03-07T16:20:35+08:00 ] 127.0.0.1 /admin.php/Customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000694s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000887s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2021-03-07T16:20:36+08:00 ] 127.0.0.1 /admin.php/Customer/getCustomerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `customer` WHERE `is_delete` = 0 AND `manager_id` = 1 ORDER BY customer_id LIMIT 0,10   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `customer` WHERE `is_delete` = 0 AND `manager_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0069s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `user` WHERE `manager_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2021-03-07T19:25:40+08:00 ] 127.0.0.1 /admin.php/Index/html/admin-rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+ERR: 非法操作:html
+
+[ 2021-03-07T19:28:29+08:00 ] 127.0.0.1 /admin.php/Index/html/admin-rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+ERR: 非法操作:html
+
+[ 2021-03-07T22:49:26+08:00 ] 127.0.0.1 /admin.php/Index/html/admin-rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015243s ]
+ERR: 非法操作:html
+
+[ 2021-03-07T22:50:11+08:00 ] 127.0.0.1 /admin.php/Power/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001554s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015816s ]
+
+[ 2021-03-07T22:50:12+08:00 ] 127.0.0.1 /admin.php/Power/getPowerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2021-03-07T22:50:47+08:00 ] 127.0.0.1 /admin.php/Index/html/admin-rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+ERR: 非法操作:html
+
+[ 2021-03-07T22:50:49+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0367s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2021-03-07T22:50:49+08:00 ] 127.0.0.1 /admin.php/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.095791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002021s ]
+
+[ 2021-03-07T22:50:51+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+ERR: 无法加载控制器:Repair
+
+[ 2021-03-07T22:51:14+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2021-03-07T22:51:14+08:00 ] 127.0.0.1 /admin.php/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001212s ]
+
+[ 2021-03-07T22:51:16+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2021-03-07T22:51:16+08:00 ] 127.0.0.1 /admin.php/Repair/getPowerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001208s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001282s ]
+
+[ 2021-03-07T22:54:13+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2021-03-07T22:54:13+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0012s ]
+SQL: SELECT a.*,b.deal_content,b.deal_id FROM repair a left join deal b on a.repair_id = b.repair_id  WHERE a.is_delete = 0 AND a.customer_id = '19' ORDER BY a.create_time asc LIMIT 0,20   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: list D:\phpstudy_pro\WWW\poms\Application\Manage\Controller\RepairController.class.php 第 39 行.
+NOTIC: [8] Undefined index: count D:\phpstudy_pro\WWW\poms\Application\Manage\Controller\RepairController.class.php 第 40 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000669s ]
+
+[ 2021-03-07T23:02:48+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2021-03-07T23:02:48+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001608s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001261s ]
+
+[ 2021-03-07T23:03:34+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2021-03-07T23:03:35+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2021-03-07T23:04:57+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001238s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2021-03-07T23:04:57+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001423s ]
+
+[ 2021-03-07T23:06:22+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2021-03-07T23:06:22+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2021-03-07T23:06:43+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2021-03-07T23:06:43+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2021-03-07T23:10:04+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2021-03-07T23:10:04+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0066s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2021-03-07T23:10:10+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2021-03-07T23:10:10+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2021-03-07T23:10:52+08:00 ] 127.0.0.1 /admin.php/Index/user_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.309805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.309851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2021-03-07T23:10:52+08:00 ] 127.0.0.1 /admin.php/Index/getUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0012s ]
+SQL: SELECT a.manager_id,a.manager_name,a.manager_mobile,a.name,a.password,a.remark,b.garden_name,c.building_name FROM user a join garden b on a.garden_id = b.garden_id join building c on a.building_id = c.building_id  WHERE a.manager_id = '1'  [ RunTime:0.0012s ]
+
+[ 2021-03-07T23:11:17+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
+
+[ 2021-03-07T23:11:17+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0071s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2021-03-07T23:12:22+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2021-03-07T23:12:22+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2021-03-07T23:13:11+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2021-03-07T23:13:11+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001622s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2021-03-07T23:13:20+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%张军%' OR b.customer_name LIKE '%张军%' ) LIMIT 1   [ RunTime:0.0393s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%张军%' OR b.customer_name LIKE '%张军%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2021-03-07T23:13:21+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001947s ]
+
+[ 2021-03-07T23:13:24+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=201
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%201%' OR b.customer_name LIKE '%201%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%201%' OR b.customer_name LIKE '%201%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2021-03-07T23:13:27+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%22%' OR b.customer_name LIKE '%22%' ) LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%22%' OR b.customer_name LIKE '%22%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2021-03-07T23:13:29+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2021-03-07T23:13:36+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=%E7%8E%8B%E9%A3%9E
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%王飞%' OR b.customer_name LIKE '%王飞%' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( e.room_sn LIKE '%王飞%' OR b.customer_name LIKE '%王飞%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001030s ]
+
+[ 2021-03-07T23:13:37+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10&key1=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2021-03-07T23:14:44+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2021-03-07T23:14:44+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2021-03-07T23:14:45+08:00 ] 127.0.0.1 /admin.php/Repair/power_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002403s ]
+ERR: 模板不存在:./Application/Manage/View/Repair/power_edit.html
+
+[ 2021-03-07T23:14:58+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2021-03-07T23:14:58+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0192s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,c.deal_id,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2021-03-07T23:15:00+08:00 ] 127.0.0.1 /admin.php/Repair/power_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+ERR: 模板不存在:./Application/Manage/View/Repair/power_edit.html
+
+[ 2021-03-07T23:20:03+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001052s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2021-03-07T23:20:03+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000831s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2021-03-07T23:20:04+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2021-03-07T23:20:04+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000758s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000902s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000941s ]
+
+[ 2021-03-07T23:28:35+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2021-03-07T23:28:35+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2021-03-07T23:28:36+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2021-03-07T23:28:36+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001113s ]
+
+[ 2021-03-07T23:28:37+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2021-03-07T23:29:07+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2021-03-07T23:29:07+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2021-03-07T23:29:08+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2021-03-07T23:29:08+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001227s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001282s ]
+
+[ 2021-03-07T23:29:09+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2021-03-07T23:29:57+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007116s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2021-03-07T23:29:57+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2021-03-07T23:30:36+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2021-03-07T23:30:36+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2021-03-07T23:30:42+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2021-03-07T23:30:42+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2021-03-07T23:30:43+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2021-03-07T23:33:15+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2021-03-07T23:33:16+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2021-03-07T23:33:27+08:00 ] 127.0.0.1 /admin.php/Repair/power_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+ERR: 非法操作:power_edit
+
+[ 2021-03-07T23:33:31+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001107s ]
+
+[ 2021-03-07T23:33:31+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0098s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2021-03-07T23:33:36+08:00 ] 127.0.0.1 /admin.php/Repair/power_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+ERR: 非法操作:power_edit
+
+[ 2021-03-07T23:34:05+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007245s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2021-03-07T23:34:05+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2021-03-07T23:34:08+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2021-03-07T23:34:08+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001840s ]
+
+[ 2021-03-07T23:34:09+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2021-03-07T23:34:09+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2021-03-07T23:34:14+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000953s ]
+
+[ 2021-03-07T23:34:15+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2021-03-07T23:34:16+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2021-03-07T23:34:32+08:00 ] 127.0.0.1 /admin.php/Repair/dealRepair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `deal` [ RunTime:0.0063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2021-03-07T23:36:09+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001544s ]
+
+[ 2021-03-07T23:36:09+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001169s ]
+
+[ 2021-03-07T23:36:14+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000389s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2021-03-07T23:36:14+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2021-03-07T23:36:15+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000863s ]
+
+[ 2021-03-07T23:36:17+08:00 ] 127.0.0.1 /admin.php/Repair/dealRepair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `deal` [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2021-03-07T23:36:18+08:00 ] 127.0.0.1 /admin.php/Repair/dealRepair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2021-03-07T23:40:55+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001707s ]
+
+[ 2021-03-07T23:40:55+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2021-03-07T23:40:58+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2021-03-07T23:40:58+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0031s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2021-03-07T23:40:59+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2021-03-07T23:41:19+08:00 ] 127.0.0.1 /admin.php/Repair/dealRepair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `deal` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `deal` WHERE `repair_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `deal` (`deal_content`,`manager_id`,`create_time`,`repair_id`) VALUES ('预约师傅去处理','1','1615131678','2') [ RunTime:0.0421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2021-03-07T23:41:22+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2021-03-07T23:41:22+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2021-03-07T23:41:37+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2021-03-07T23:41:37+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001258s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001317s ]
+
+[ 2021-03-07T23:45:24+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001569s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002092s ]
+
+[ 2021-03-07T23:45:24+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2021-03-07T23:45:25+08:00 ] 127.0.0.1 /admin.php/Repair/repair_deal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008408s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2021-03-07T23:45:26+08:00 ] 127.0.0.1 /admin.php/Repair/getRepair?repairId=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `repair` WHERE `repair_id` = 2 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2021-03-07T23:45:27+08:00 ] 127.0.0.1 /admin.php/Public/getRoomByPower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `room_status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 5  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 6  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 9  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 16  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2021-03-07T23:45:34+08:00 ] 127.0.0.1 /admin.php/Repair/dealRepair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `deal` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `deal` WHERE `repair_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `deal` SET `deal_content`='预约师傅处理',`manager_id`='1',`create_time`='1615131934' WHERE `repair_id` = 2 [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0010s ]
+SQL: UPDATE `repair` SET `status`='1' WHERE `repair_id` = 2 [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001555s ]
+
+[ 2021-03-07T23:45:38+08:00 ] 127.0.0.1 /admin.php/Repair/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2021-03-07T23:45:38+08:00 ] 127.0.0.1 /admin.php/Repair/getRepairList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+SQL: SHOW COLUMNS FROM `repair` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.deal_content,e.room_sn,g.garden_name,h.building_name FROM repair a join customer b on a.customer_id = b.customer_id left join deal c on a.repair_id = c.repair_id join lease d on b.customer_id = d.customer_id join room e on d.room_id = e.room_id join user f on a.manager_id = f.manager_id join garden g on f.garden_id = g.garden_id join building h on f.building_id = h.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000974s ]
+
