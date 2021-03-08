@@ -203,13 +203,13 @@
       var tr = obj.tr;
 
       if (layEvent === 'del') {
-        layer.confirm('确认解除当前电表嘛？', {
-          title: '解除电表'
+        layer.confirm('确认删除当前报修单嘛？', {
+          title: '删除'
         }, function (index) {
           obj.del();
           layer.close(index);
           $.ajax({
-            url: 'deletePower?powerId=' + data.power_id,
+            url: 'deleteRepair?repairId=' + data.repair_id,
             type: 'get',
             dataType: "JSON",
             success: function (data) {

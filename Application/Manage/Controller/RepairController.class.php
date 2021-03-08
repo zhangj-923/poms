@@ -44,23 +44,23 @@ class RepairController extends Controller
     }
 
     /**
-     * 删除电表
-     * @param int $powerId
+     * 删除报修单
+     * @param int $repairId
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
      * Date: 2021-02-25 16:00:56
      * Update: 2021-02-25 16:00:56
      * Version: 1.00
      */
-    public function deletePower($powerId = 0)
+    public function deleteRepair($repairId = 0)
     {
         if (IS_AJAX) {
-            $result = D('Power')->deletePowerById($powerId);
+            $result = D('Repair')->deleteRepair($repairId);
             echo json_encode($result);
         }
     }
 
     /**
-     * 获取该电表信息
+     * 获取该报修单信息
      * @param int $repairId
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
      * Date: 2021-02-24 16:10:05

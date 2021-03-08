@@ -12,8 +12,9 @@
   <link rel="stylesheet" href="/Data/admin/css/font.css">
   <link rel="stylesheet" href="/Data/admin/css/xadmin.css">
   <script src="/Data/admin/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/Data/admin/lib/layui/layui.js" charset="utf-8"></script>
+<!--  <script type="text/javascript" src="/Data/admin/lib/layui/layui.js" charset="utf-8"></script>-->
   <script type="text/javascript" src="/Data/admin/js/xadmin.js"></script>
+  <script type="text/javascript" src="/Data/admin/layui/layui.js"></script>
   <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
   <!--[if lt IE 9]>
   <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -136,8 +137,11 @@
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-  {{#  if(d.lease_status !== '已退租'){ }}
+  {{#  if(d.lease_status === '生效中'){ }}
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="exit">退租</a>
+  {{#  } }}
+  {{#  if(d.lease_status === '已到期'){ }}
+  <a class="layui-btn layui-btn-danger layui-btn-xs" style="background: deepskyblue" lay-event="reset">释放</a>
   {{#  } }}
 </script>
 <script>
@@ -151,10 +155,11 @@
       height: 450,
       url: 'getLeaseList',  //数据接口
       page: true, //开启分页
+      totalRow: true,
       cols: [
         [ //表头
           {fixed: 'left', type: 'checkbox'},
-          {field: 'lease_id', width: '4%', title: 'Id', align: 'center', sort: 'true'},
+          {field: 'lease_id', width: '4%', title: 'Id', align: 'center', sort: 'true', totalRowText: '合计'},
           {field: 'lease_status', width: '6%', title: '租赁状态', align: 'center', sort: 'true', templet: '#statusTpl'},
           {field: 'customer_name', width: '5%', title: '租户', align: 'center', sort: 'true'},
           {field: 'customer_mobile', width: '7%', title: '联系方式', align: 'center', sort: 'true'},
@@ -165,8 +170,8 @@
           {field: 'create_time', width: '10%', title: '签约时间', align: 'center', sort: 'true'},
           {field: 'sing_time', width: '7%', title: ' 开始时间', align: 'center', sort: 'true'},
           {field: 'expire_time', width: '7%', title: ' 到期时间', align: 'center', sort: 'true', style: 'color: red;'},
-          {field: 'rent', width: '6%', title: '月租金', align: 'center', sort: 'true'},
-          {field: 'total_rent', width: '6%', title: '总金额', align: 'center', sort: 'true'},
+          {field: 'rent', width: '6%', title: '月租金', align: 'center', sort: 'true', totalRow: true},
+          {field: 'total_rent', width: '6%', title: '总金额', align: 'center', sort: 'true', totalRow: true},
           {field: 'exit_time', width: '7%', title: '退租时间', align: 'center', sort: 'true'},
           // {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
           {fixed: 'right', width: '13%', title: '操作', align: 'center', toolbar: '#barDemo'}
@@ -258,6 +263,24 @@
             }
           })
         })
+      }else if (layEvent == 'reset'){
+        layer.confirm('释放当前房屋状态？', function (index) {
+          obj.del();
+          layer.close(index);
+          $.ajax({
+            url: 'resetLease?leaseId=' + data.lease_id,
+            type: 'get',
+            dataType: "JSON",
+            success: function (data) {
+              if (data.code == 200) {
+                layer.msg(data.msg);
+              } else {
+                layer.alert(data.msg);
+              }
+              table.reload('demo');
+            }
+          })
+        });
       }
     })
 

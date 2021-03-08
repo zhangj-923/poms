@@ -49,4 +49,25 @@ class RoomModel extends BaseModel
         }
     }
 
+    /**
+     * 获取欢迎页房屋租赁信息
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-08 15:22:12
+     * Update: 2021-03-08 15:22:12
+     * Version: 1.00
+     */
+    public function welList()
+    {
+        $where = array();
+        $where['is_delete'] = NOT_DELETED;
+        $where['manager_id'] = session('USER.manager_id');
+        $options = array();
+        $options['where'] = $where;
+        $count1 = $this->getCount($options);
+        $where['room_status'] = 1;
+        $options['where'] = $where;
+        $count2 = $this->getCount($options);
+        $count3 = $count1 - $count2;
+        return ['count1' => $count1, 'count2' => $count2, 'count3' => $count3];
+    }
 }

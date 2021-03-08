@@ -112,17 +112,17 @@ class LeaseModel extends BaseModel
                 $list[$key]['lease_status'] = '已退租';
             }
             if ($value['lease_team'] == 1) {
-                $list[$key]['total_rent'] = number_format($value['rent'] * 3, 2);
+                $list[$key]['total_rent'] = $value['rent'] * 3;
                 $list[$key]['team'] = '一季度';
             } else if ($value['lease_team'] == 2) {
-                $list[$key]['total_rent'] = number_format($value['rent'] * 6, 2);
+                $list[$key]['total_rent'] = $value['rent'] * 6;
                 $list[$key]['team'] = '半年';
             } else if ($value['lease_team'] == 3) {
-                $list[$key]['total_rent'] = number_format($value['rent'] * 12, 2);
+                $list[$key]['total_rent'] = $value['rent'] * 12;
                 $list[$key]['team'] = '一年';
             } else if ($value['lease_team'] == 4) {
-                $list[$key]['total_rent'] = number_format($value['rent'] * $value['month'], 2);
-                $list[$key]['team'] = $value['month'].'个月';
+                $list[$key]['total_rent'] = $value['rent'] * $value['month'];
+                $list[$key]['team'] = $value['month'] . '个月';
             }
             if ($value['exit_time'] == 0) {
                 $list[$key]['exit_time'] = '--';
@@ -242,6 +242,27 @@ class LeaseModel extends BaseModel
                 return getReturn(CODE_SUCCESS, '当前租赁关系解除成功!!!!!');
             }
         }
+    }
+
+    public function resetRoomById($lease_id = 0)
+    {
+        $where = array();
+        $where['lease_id'] = $lease_id;
+        $room_id = $this->where($where)->find()['room_id'];
+        $where1 = array();
+        $where1['room_id'] = $room_id;
+        $result1 = M('room')->where($where1)->find()['room_status'];
+        if ($result1 == 0) {
+            return getReturn(CODE_SUCCESS, '房屋状态已释放，不用重复该操作！');
+        } else {
+            $result = M('room')->where($where1)->save(['room_status' => 0]);
+            if ($result === false) {
+                return getReturn(CODE_ERROR, '房屋状态释放失败，请稍后再试！');
+            } else {
+                return getReturn(CODE_SUCCESS, '房屋状态已释放!!!!!');
+            }
+        }
+
     }
 
     /**

@@ -158,4 +158,20 @@ class LeaseController extends Controller
             echo json_encode($result);
         }
     }
+
+    /**
+     * 释放当前房屋状态
+     * @param int $leaseId
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-02-19 14:43:20
+     * Update: 2021-02-19 14:43:20
+     * Version: 1.00
+     */
+    public function resetLease($leaseId = 0)
+    {
+        if (IS_AJAX) {
+            $result = D('Lease')->resetRoomById($leaseId);
+            echo json_encode($result);
+        }
+    }
 }

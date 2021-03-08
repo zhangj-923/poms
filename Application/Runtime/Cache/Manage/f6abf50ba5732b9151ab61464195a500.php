@@ -14,6 +14,7 @@
   <script src="/Data/admin/js/jquery.min.js"></script>
   <script type="text/javascript" src="/Data/admin/lib/layui/layui.js" charset="utf-8"></script>
   <script type="text/javascript" src="/Data/admin/js/xadmin.js"></script>
+  <script type="text/javascript" src="/Data/admin/layui/layui.js"></script>
   <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
   <!--[if lt IE 9]>
   <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -112,21 +113,21 @@
     //第一个实例
     table.render({
       elem: '#demo',
-      height: 450,
+      height: 500,
       url: 'getBillList',  //数据接口
       // toolbar: '#toolbarDemo', //开启头部工具栏，并为其绑定左侧模板
-      page: true, //开启分页
+      totalRow: 'true',
       cols: [
         [ //表头
           {fixed: 'left', type: 'checkbox'},
-          {field: 'bill_id', width: '5%', title: 'Id', align: 'center', sort: 'true'},
+          {field: 'bill_id', width: '5%', title: 'Id', align: 'center', sort: 'true',  unresize: true, totalRowText: '合计'},
           {field: 'bill_cycle', width: '11%', title: '账单周期', align: 'center', sort: 'true'},
           {field: 'garden_name', width: '4%', title: '园区', align: 'center', sort: 'true'},
           {field: 'roomInfo', width: '8%', title: '房屋信息', align: 'center', sort: 'true'},
           {field: 'is_exit', width: '6%', title: '租赁状态', align: 'center', sort: 'true', templet: '#isExit'},
           {field: 'type', width: '5%', title: '收费项', align: 'center', sort: 'true'},
           {field: 'manager_name', width: '5%', title: '收款方', align: 'center', sort: 'true'},
-          {field: 'total', width: '6%', title: '账单金额', align: 'center', sort: 'true'},
+          {field: 'total', width: '6%', title: '账单金额', align: 'center', sort: 'true', totalRow: 'true'},
           {field: 'customer_name', width: '5%', title: '承租方', align: 'center', sort: 'true'},
           {field: 'customer_mobile', width: '7%', title: '联系电话', align: 'center', sort: 'true'},
           {field: 'status', width: '6%', title: '支付状态', align: 'center', sort: 'true', templet: '#statusTpl'},
@@ -136,7 +137,8 @@
           {fixed: 'right', width: '5%', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
       ],
-      id: 'demo'
+      id: 'demo',
+      page: true //开启分页
     });
 
     //日期

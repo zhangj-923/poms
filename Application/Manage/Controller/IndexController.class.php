@@ -93,8 +93,32 @@ class IndexController extends Controller
      */
     public function welcome()
     {
+        $room = D('Room')->welList();
+        $this->assign('room', $room);
         $this->assign('now', date('Y-m-d H:i:s'));
+        $this->assign('phpversion', phpversion());
+        $this->assign('software', $_SERVER["SERVER_SOFTWARE"]);
+        $this->assign('os', PHP_OS);
+
+        $_mysql_ver = M()->query('SELECT VERSION() as ver;');
+
+        if (is_array($_mysql_ver)) {
+            $mysql_ver = $_mysql_ver[0]['ver'];
+        } else {
+            $mysql_ver = '';
+        }
+        $this->assign('mysql_ver', $mysql_ver);
+
+
         $this->display();
+    }
+
+
+    public function welcomeList(){
+        $data = D('Bill')->findTotal($_POST['value']);
+        $list = D('Bill')->payTotal($_POST['value']);
+        $result = array_merge($data, $list);
+        echo json_encode($result);
     }
 
     /**
@@ -103,7 +127,8 @@ class IndexController extends Controller
      * Update: 2021-02-14 14:26:05
      * Version: 1.00
      */
-    public function verifyName(){
+    public function verifyName()
+    {
         if (IS_AJAX) {
             $result = D('User')->checkNameByID($_POST);
             echo json_encode($result);

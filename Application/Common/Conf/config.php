@@ -18,7 +18,7 @@ return array(
         '__ADMIN__' => __ROOT__ . '/Data/admin',
         '__HOME__' => __ROOT__ . '/Data/home',
         '__PULL__' => __ROOT__ . '/Data/pull',
-        '__STATIC__' => __ROOT__ . 'Data/static',
+        '__STATIC__' => __ROOT__ . '/Data/static',
         '__LESSEE__' => __ROOT__ . '/Data/lessee',
     ),
 );

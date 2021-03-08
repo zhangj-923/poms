@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="/Data/pull/plugins/layui/css/layui.css" media="all" />
   <link rel="stylesheet" href="/Data/pull/css/main.css"  media="all"  />
   <!--[if lt IE 9]>
-  <script src="Data/static/js/html5shiv.min.js"></script>
-  <script src="Data/static/js/respond.min.js"></script>
+  <script src="/Data/static/js/html5shiv.min.js"></script>
+  <script src="/Data/static/js/respond.min.js"></script>
   <![endif]-->
   <script type="text/javascript" src="/Data/pull/plugins/layui/layui.js"></script>
 </head>

@@ -17,6 +17,7 @@ class RepairModel extends BaseModel
         $request['repair_time'] = strtotime($request['repair_time']);
         $request['create_time'] = time();
         $request['customer_id'] = session('CUSTOMER.customer_id');
+        $request['manager_id'] = session('CUSTOMER.manager_id');
         $this->startTrans();
         $result = $this->add($request);
         if ($result) {
@@ -97,6 +98,8 @@ class RepairModel extends BaseModel
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
         $where['a.manager_id'] = session('USER.manager_id');
+        $where['d.expire_time'] = array('egt', time());
+        $where['e.room_status'] = 1;
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [

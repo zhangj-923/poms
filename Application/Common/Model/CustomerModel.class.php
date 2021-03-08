@@ -16,7 +16,8 @@ class CustomerModel extends BaseModel
         $field = ['a.customer_name', 'e.garden_name', 'f.building_name', 'c.room_sn'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
-        $where['a.manager_id'] = session('USER.manager_id');
+        $where['a.manager_id'] = session('CUSTOMER.manager_id');
+        $where['a.customer_id'] = session('CUSTOMER.customer_id');
         $join = [
             'join __LEASE__ b on a.customer_id = b.customer_id',
             'join __ROOM__ c on b.room_id = c.room_id',

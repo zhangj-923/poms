@@ -305,4 +305,109 @@ class BillModel extends BaseModel
             return getReturn(CODE_SUCCESS, '账单支付成功！！！');
         }
     }
+
+
+    /**
+     * 获取欢迎页信息
+     * @param int $value
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-08 15:59:02
+     * Update: 2021-03-08 15:59:02
+     * Version: 1.00
+     */
+    public function findTotal($value = 0)
+    {
+        $where = array();
+        $where['is_delete'] = NOT_DELETED;
+        $where['manager_id'] = session('USER.manager_id');
+        if ($value == 1) {
+
+        } else if ($value == 2) {
+            $where['last_time'] = array('egt', strtotime(date('Y-m-01 00:00:00', time())));
+            if (date('m', time()) == '02') {
+                $where['time'] = array('elt', strtotime(date('Y-m-28 23:59:59', time())));
+            } else {
+                $where['time'] = array('elt', strtotime(date('Y-m-30 23:59:59', time())));
+            }
+        } else if ($value == 3) {
+            $where['last_time'] = array('egt', strtotime(date('Y-01-01', time())));
+            $where['time'] = array('elt', strtotime(date('Y-12-31', time())));
+        }
+        $where['bill_type'] = BILL_LEASE;
+        $data = $this->where($where)->select();
+        $leaseTotal = 0;
+        foreach ($data as $key => $value) {
+            $leaseTotal += $value['total'];
+        }
+        $where['bill_type'] = BILL_POWER;
+        $data1 = $this->where($where)->select();
+        $powerTotal = 0;
+        foreach ($data1 as $key => $value) {
+            $powerTotal += $value['total'];
+        }
+        $where['bill_type'] = BILL_WATER;
+        $data2 = $this->where($where)->select();
+        $waterTotal = 0;
+        foreach ($data2 as $key => $value) {
+            $waterTotal += $value['total'];
+        }
+        $list = [];
+        $list['leaseTotal'] = $leaseTotal;
+        $list['powerTotal'] = $powerTotal;
+        $list['waterTotal'] = $waterTotal;
+        return $list;
+    }
+
+    /**
+     *
+     * @param int $value
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * User: hjun
+     * Date: 2021-03-08 19:18:38
+     * Update: 2021-03-08 19:18:38
+     * Version: 1.00
+     */
+    public function payTotal($value = 0)
+    {
+        $where = array();
+        $where['is_delete'] = NOT_DELETED;
+        $where['manager_id'] = session('USER.manager_id');
+        $where['pay_status'] = IS_PAY;
+        if ($value == 1) {
+
+        } else if ($value == 2) {
+            $where['last_time'] = array('egt', strtotime(date('Y-m-01 00:00:00', time())));
+            if (date('m', time()) == '02') {
+                $where['time'] = array('elt', strtotime(date('Y-m-28 23:59:59', time())));
+            } else {
+                $where['time'] = array('elt', strtotime(date('Y-m-30 23:59:59', time())));
+            }
+        } else if ($value == 3) {
+            $where['last_time'] = array('egt', strtotime(date('Y-01-01', time())));
+            $where['time'] = array('elt', strtotime(date('Y-12-31', time())));
+        }
+        $where['bill_type'] = BILL_LEASE;
+        $data = $this->where($where)->select();
+        $leaseTotal = 0;
+        foreach ($data as $key => $value) {
+            $leaseTotal += $value['total'];
+        }
+        $where['bill_type'] = BILL_POWER;
+        $data1 = $this->where($where)->select();
+        $powerTotal = 0;
+        foreach ($data1 as $key => $value) {
+            $powerTotal += $value['total'];
+        }
+        $where['bill_type'] = BILL_WATER;
+        $data2 = $this->where($where)->select();
+        $waterTotal = 0;
+        foreach ($data2 as $key => $value) {
+            $waterTotal += $value['total'];
+        }
+        $list = [];
+        $list['payLease'] = $leaseTotal;
+        $list['payPower'] = $powerTotal;
+        $list['payWater'] = $waterTotal;
+        return $list;
+    }
 }
