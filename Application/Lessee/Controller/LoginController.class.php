@@ -34,8 +34,9 @@ class LoginController extends Controller
         $where1['a.customer_id'] = $customer['customer_id'];
         $where1['b.is_delete'] = NOT_DELETED;
         $where1['b.is_exit'] = NOT_EXIT;
+        $where1['b.expire_time'] = array('egt', time());
         $join = '__LEASE__ b on a.customer_id = b.customer_id';
-        $list = M('customer')->alias('a')->where($where1)->join($join)->find();
+        $list = M('customer')->alias('a')->where($where1)->join($join)->select();
         if (empty($list)) {
             $this->error('暂无该租户的租赁信息，请联系管理员进行查询！！！');
         }

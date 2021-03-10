@@ -165,7 +165,7 @@
       </table>
     </div>
   </fieldset>
-  <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,ThinkPhp,向本系统的提供技术支持。</blockquote>
+<!--  <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,ThinkPhp,向本系统的提供技术支持。</blockquote>-->
 </div>
 <script>
   layui.use(['table', 'layer', 'form', 'laydate'], function () {

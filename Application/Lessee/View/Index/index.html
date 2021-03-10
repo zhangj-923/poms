@@ -16,12 +16,21 @@
 <body>
 <div class="index-content">
   <header class="index-header white">
-    <div class="f-lex al-center">
+    <div class="f-lex al-center" style="margin-top: -20px">
       <h5 class="f-40">{$customer_name}</h5>
       <img class="down-icon ml-12" id="close" src="__LESSEE__/images/icon/close_1_icon.png" alt=""
            style="background: yellow;margin-left: 20px;width: 15px;height: 15px">
     </div>
-    <p class="f-26 show-btn mt-12" style="width: 35vw;color: deeppink">{$roomInfo}</p>
+    <div>
+<!--      <div class="f-lex">-->
+        <p class="f-lex f-28 black-1" style="margin-top: 16px; color: white">所租房屋</p>
+<!--      </div>-->
+      <div class="f-weight" id="header" style="margin-left: 70px; margin-top: -30px">
+    </div>
+
+
+    </div>
+<!--    <p class="f-26 show-btn mt-12" style="width: 35vw;color: deeppink">{$roomInfo}</p>-->
     <!--    <button class="add-btn">-->
     <!--      <img src="__LESSEE__/images/icon/add_icon.png" alt="">-->
     <!--    </button>-->
@@ -98,7 +107,7 @@
           str += "<form class=\"layui-form\">";
           str += "<div class=\"block-icon\">";
           str += "<div class=\"f-lex f-weight j-s-b\">";
-          str += "<p class=\"f-28 black-1\">" + item.bill_remark + "</p>";
+          str += "<p class=\"f-28 black-1\">" + item.bill_remark + '  (' + item.room_sn + '室)' + "</p>";
           str += " <p class=\"f-24 gray-90\">" + item.type + "</p>";
           str += "</div>";
           str += "<div class=\"f-lex j-s-b al-center mt-40\">";
@@ -121,6 +130,18 @@
           str += "</form>";
         });
         $('#contents').html(str);
+      }
+    })
+
+    $.ajax({
+      url: 'getRoomInfo',
+      type: 'post',
+      success: function (data) {
+        var str = '';
+        $.each($.parseJSON(data), function (index, item) {
+          str += "<p class=\"f-26 show-btn mt-12\" style=\"width: 35vw;color: deeppink\">" + item.garden_name + item.building_name + item.room_sn + "</p>";
+        })
+        $('#header').html(str);
       }
     })
 

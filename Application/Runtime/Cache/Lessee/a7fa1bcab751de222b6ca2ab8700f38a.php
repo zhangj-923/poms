@@ -27,6 +27,16 @@
     <!--    TOKEN 避免重复提交表单验证-->
     <input type="hidden" name="TOKEN" value="<?php echo session('TOKEN');?>"/>
     <div class="layui-form-item">
+      <label for="room_id" class="layui-form-label">
+        <span class="x-red">*</span>房屋编号
+      </label>
+      <div class="layui-input-inline">
+        <select class="layui-select" id="room_id" name="room_id" lay-filter="room" lay-verify="required">
+          <option value="">请选择</option>
+        </select>
+      </div>
+    </div>
+    <div class="layui-form-item">
       <label for="content" class="layui-form-label">
         <span class="x-red">*</span>报修内容
       </label>
@@ -89,6 +99,20 @@
       elem: '#repair_time'
     });
     //联系方式不可重复验证
+
+    $.ajax({
+      url: "getRoom",
+      success: function (data) {
+        $.each($.parseJSON(data), function (index, item) {
+          // console.log(item);
+          //option  第一个参数是页面显示的值，第二个参数是传递到后台的值
+          $('#room_id').append(new Option(item.room_sn, item.room_id));//往下拉菜单里添加元素
+          //设置value（这个值就可以是在更新的时候后台传递到前台的值）为2的值为默认选中
+        })
+        form.render(); //更新全部表单内容
+        //form.render('select'); //刷新表单select选择框渲染
+      }
+    });
 
     //监听提交
     form.on('submit(add)', function (data) {

@@ -250,18 +250,22 @@ class BillModel extends BaseModel
     public function getBill($customer_id = 0)
     {
 
+        $field = ['a.*', 'b.room_sn'];
         $where = array();
-        $where['is_delete'] = NOT_DELETED;
-        $where['customer_id'] = $customer_id;
+        $where['a.is_delete'] = NOT_DELETED;
+        $where['a.customer_id'] = $customer_id;
 //        $page = $request['page'];
 //        $limit = $request['limit'];
+        $join = [
+            'join __ROOM__ b on a.room_id = b.room_id'
+        ];
         $options = [];
         $options['where'] = $where;
-        $count = $this->getCount($options);
+//        $count = $this->getCount($options);
         $options['limit'] = 20;
         $options['page'] = 1;
-        $order = 'create_time asc';
-        $list = $this->where($where)->order($order)->select();
+        $order = 'a.create_time asc';
+        $list = $this->alias('a')->where($where)->join($join)->order($order)->select();
 //        return ['list' => $list, 'count' => $count];
         foreach ($list as $key => $value) {
             if ($value['bill_type'] == BILL_LEASE) {

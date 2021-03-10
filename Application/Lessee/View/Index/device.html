@@ -98,7 +98,7 @@
           str += "<form class=\"layui-form\">";
           str += "<div class=\"block-icon\">";
           str += "<div class=\"f-lex f-weight j-s-b\">";
-          str += "<p class=\"f-28 black-1\">" + item.content + "</p>";
+          str += "<p class=\"f-28 black-1\">" + item.content + '  (' + item.room_sn + '室)' + "</p>";
           if (item.status == 0) {
             str += " <p class=\"f-24 red-90\">暂未处理</p>";
           } else {

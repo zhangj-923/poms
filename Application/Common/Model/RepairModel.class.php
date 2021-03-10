@@ -38,12 +38,13 @@ class RepairModel extends BaseModel
      */
     public function getRepairInfo()
     {
-        $field = ['a.*', 'b.deal_content', 'b.deal_id'];
+        $field = ['a.*', 'b.deal_content', 'b.deal_id', 'c.room_sn'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
         $where['a.customer_id'] = session('CUSTOMER.customer_id');
         $join = [
-            'left join __DEAL__ b on a.repair_id = b.repair_id'
+            'left join __DEAL__ b on a.repair_id = b.repair_id',
+            'join __ROOM__ c on a.room_id = c.room_id'
         ];
         $options = [];
         $options['alias'] = 'a';
@@ -98,15 +99,15 @@ class RepairModel extends BaseModel
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
         $where['a.manager_id'] = session('USER.manager_id');
-        $where['d.expire_time'] = array('egt', time());
+//        $where['d.expire_time'] = array('egt', time());
         $where['e.room_status'] = 1;
         $page = $request['page'];
         $limit = $request['limit'];
         $join = [
             'join __CUSTOMER__ b on a.customer_id = b.customer_id',
             'left join __DEAL__ c on a.repair_id = c.repair_id',
-            'join __LEASE__ d on b.customer_id = d.customer_id',
-            'join __ROOM__ e on d.room_id = e.room_id',
+//            'join __LEASE__ d on b.customer_id = d.customer_id',
+            'join __ROOM__ e on a.room_id = e.room_id',
             'join __USER__ f on a.manager_id = f.manager_id',
             'join __GARDEN__ g on f.garden_id = g.garden_id',
             'join __BUILDING__ h on f.building_id = h.building_id'

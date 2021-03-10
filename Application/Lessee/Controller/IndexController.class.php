@@ -22,11 +22,19 @@ class IndexController extends Controller
             $customer_name = session('CUSTOMER.customer_name');
             $this->assign('customer_name', $customer_name);
             //获取租户所租房屋信息
-            $roomInfo = D('Customer')->getRoomInfo();
-            $this->assign('roomInfo', $roomInfo);
+//            $roomInfo = D('Customer')->getRoomInfo();
+//            $this->assign('roomInfo', $roomInfo);
             $this->display();
         } else {
             $this->success('请先登录！！', U('Login/login'), 1);
+        }
+    }
+
+    public function getRoomInfo()
+    {
+        if (IS_AJAX) {
+            $list = D('Customer')->getRoomInfo();
+            echo json_encode($list);
         }
     }
 
@@ -164,4 +172,29 @@ class IndexController extends Controller
             echo json_encode($result);
         }
     }
+
+    /**
+     * 获取租户所租的房屋
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-10 14:41:54
+     * Update: 2021-03-10 14:41:54
+     * Version: 1.00
+     */
+    public function getRoom()
+    {
+        if (IS_AJAX) {
+            $field = ['c.room_sn', 'c.room_id'];
+            $where = array();
+            $where['a.is_delete'] = NOT_DELETED;
+            $where['a.customer_id'] = session('CUSTOMER.customer_id');
+            $where['b.expire_time'] = array('egt', time());
+            $join = [
+                'join __LEASE__ b on a.customer_id = b.customer_id',
+                'join __ROOM__ c on b.room_id = c.room_id'
+            ];
+            $list = M('customer')->alias('a')->where($where)->join($join)->field($field)->select();
+            echo json_encode($list);
+        }
+    }
+
 }

@@ -68,7 +68,7 @@
       </label>
       <div class="layui-input-inline">
         <input type="text" id="month" name="month" required
-               autocomplete="off" class="layui-input" lay-verify="number" placeholder="请输入自定义月份">
+               autocomplete="off" class="layui-input" placeholder="请输入自定义月份">
       </div>
     </div>
     <div class="layui-form-item">
