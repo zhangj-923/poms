@@ -124,6 +124,7 @@
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
   <a class="layui-btn layui-btn-xs" lay-event="addRoom" style="background: cornflowerblue">租赁</a>
+  <a class="layui-btn layui-btn-xs" lay-event="resetPass" style="background: #7c151f">重置密码</a>
 </script>
 <script>
   layui.use(['table', 'layer', 'form'], function () {
@@ -208,6 +209,24 @@
       } else if (layEvent === 'addRoom') {
         $('#update_customer_id').val(data.customer_id);
         x_admin_show('租赁', 'customer_addRoom', 600, 600);
+      } else if (layEvent === 'resetPass') {
+        layer.confirm('确认对该租户初始化密码？', {
+          title: '密码初始化',
+        }, function (index) {
+          layer.close(index);
+          $.ajax({
+            url: 'resetCustomerPass?customerId=' + data.customer_id,
+            type: 'get',
+            dataType: "JSON",
+            success: function (data) {
+              if (data.code == 200) {
+                layer.msg(data.msg);
+              } else {
+                layer.alert(data.msg);
+              }
+            }
+          })
+        });
       }
     })
   });

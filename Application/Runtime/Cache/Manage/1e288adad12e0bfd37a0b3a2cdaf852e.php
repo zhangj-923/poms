@@ -22,13 +22,29 @@
   </blockquote>
   <blockquote class="layui-elem-quote">
     <form class="layui-form">
-      <label class="layui-form-label">账单类型:</label>
-      <div class="layui-input-inline">
-        <select class="layui-select" id="search" name="search" lay-filter="Team">
-          <option value="1">全部时间</option>
-          <option value="2">本月</option>
-          <option value="3">本年</option>
-        </select>
+      <div class="demoTable layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">账单类型:</label>
+          <div class="layui-input-inline">
+            <select class="layui-select" id="type" name="type" lay-filter="Team">
+              <option value="1">全部时间</option>
+              <option value="2">本月</option>
+              <option value="3">本年</option>
+            </select>
+          </div>
+          <label class="layui-form-label">账单周期:</label>
+          <div class="layui-input-inline">
+            <input type="text" name="last_time" id="last_time" placeholder="开始日期" autocomplete="off"
+                   class="layui-input">
+          </div>
+          <label class="layui-form-label" style="margin-left: -80px">--</label>
+          <div class="layui-input-inline">
+            <input type="text" name="time" id="time" placeholder="截止日期" autocomplete="off"
+                   class="layui-input">
+          </div>
+        </div>
+        <button class="layui-btn" data-type="reload" lay-submit lay-filter="search">搜索</button>
+        <div class="layui-btn layui-btn-warm" id="reset" name="reset" style="background: gray">重置</div>
       </div>
     </form>
   </blockquote>
@@ -40,68 +56,78 @@
           <div class="layui-card">
             <div class="layui-card-body">
               <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim="" lay-indicator="inside"
-                   lay-arrow="none" style="width: 100%; height: 90px;">
-                <div carousel-item="">
+                   lay-arrow="none" style="width: 100%; height: 270px;">
+                <div carousel-item="" style="height: 90px; width: 100%">
                   <ul class="layui-row layui-col-space10 layui-this">
-                    <li class="layui-col-xs1">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>总房间数</h3>
+                        <h4 style="color: black">总房间数</h4>
                         <p>
-                          <cite><?php echo ($room['count1']); ?></cite></p>
+                          <cite style="font-size: 22px;color: limegreen;font-weight: bold"><?php echo ($room['count1']); ?></cite></p>
                       </a>
                     </li>
-                    <li class="layui-col-xs1">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>空置房间数</h3>
+                        <h4 style="color: black">空置房间数</h4>
                         <p>
-                          <cite><?php echo ($room['count3']); ?></cite></p>
+                          <cite style="font-size: 22px;color: limegreen;font-weight: bolder"><?php echo ($room['count3']); ?></cite>
+                        </p>
                       </a>
                     </li>
-                    <li class="layui-col-xs1">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>已租房间数</h3>
+                        <h4 style="color: red">已租房间数</h4>
                         <p>
-                          <cite><?php echo ($room['count2']); ?></cite></p>
+                          <cite style="font-size: 22px;color: limegreen;font-weight: bolder"><?php echo ($room['count2']); ?></cite>
+                        </p>
                       </a>
                     </li>
-                    <li class="layui-col-xs1">
+                  </ul>
+                </div>
+                <div carousel-item="" style="height: 90px; width: 100%">
+                  <ul class="layui-row layui-col-space10 layui-this">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>应收房租账单</h3>
+                        <h4 style="color: black">应收房租账单</h4>
                         <p id="lease">
                           <cite><?php echo ($data['leaseTotal']); ?></cite></p>
                       </a>
                     </li>
-                    <li class="layui-col-xs1">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>已收房租账单</h3>
-                        <p id="payLease">
-                          <cite><?php echo ($data['leaseTotal']); ?></cite></p>
-                      </a>
-                    </li>
-                    <li class="layui-col-xs1">
-                      <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>应收水费账单</h3>
+                        <h4 style="color: black">应收水费账单</h4>
                         <p id="water">
                           <cite><?php echo ($data['waterTotal']); ?></cite></p>
                       </a>
                     </li>
-                    <li class="layui-col-xs1">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>已收水费账单</h3>
-                        <p id="payWater">
-                          <cite></cite></p>
-                      </a>
-                    </li>
-                    <li class="layui-col-xs1">
-                      <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>应收电费账单</h3>
+                        <h4 style="color: black">应收电费账单</h4>
                         <p id="power">
                           <cite></cite></p>
                       </a>
                     </li>
-                    <li class="layui-col-xs1">
+                  </ul>
+                </div>
+                <div carousel-item="" style="height: 90px; width: 100%">
+                  <ul class="layui-row layui-col-space10 layui-this">
+                    <li class="layui-col-xs3">
                       <a href="javascript:;" class="x-admin-backlog-body">
-                        <h3>已收电费账单</h3>
+                        <h4 style="color: red">已收房租账单</h4>
+                        <p id="payLease">
+                          <cite><?php echo ($data['leaseTotal']); ?></cite></p>
+                      </a>
+                    </li>
+                    <li class="layui-col-xs3">
+                      <a href="javascript:;" class="x-admin-backlog-body">
+                        <h4 style="color: red">已收水费账单</h4>
+                        <p id="payWater">
+                          <cite></cite></p>
+                      </a>
+                    </li>
+                    <li class="layui-col-xs3">
+                      <a href="javascript:;" class="x-admin-backlog-body">
+                        <h4 style="color: red">已收电费账单</h4>
                         <p id="payPower">
                           <cite></cite></p>
                       </a>
@@ -165,7 +191,7 @@
       </table>
     </div>
   </fieldset>
-<!--  <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,ThinkPhp,向本系统的提供技术支持。</blockquote>-->
+  <!--  <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,ThinkPhp,向本系统的提供技术支持。</blockquote>-->
 </div>
 <script>
   layui.use(['table', 'layer', 'form', 'laydate'], function () {
@@ -186,7 +212,6 @@
 
     var $ = layui.$, active = {
       reload: function () {
-        var search = $('#search').val();
         table.reload('demo', {
           url: 'getBillList',
           method: 'get',
@@ -200,64 +225,81 @@
       },
     }
 
+    form.on('submit(search)', function (data) {
+      var last_time = $('#last_time').val();
+      var time = $('#time').val();
+      $.ajax({
+        url: 'welcomeList',
+        type: 'post',
+        data: {
+          'last_time': last_time,
+          'time': time
+        },
+        success: function (data) {
+          $('#lease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).leaseTotal + "</cite>");
+          $('#water').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).waterTotal + "</cite>");
+          $('#power').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).powerTotal + "</cite>");
+          $('#payPower').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payPower + "</cite>");
+          $('#payLease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payLease + "</cite>");
+          $('#payWater').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payWater + "</cite>");
+        }
+      })
+      return false;
+    });
+
     $.ajax({
       url: 'welcomeList',
       type: 'post',
-      data: {'value': $('#search').val()},
+      data: {'value': $('#type').val()},
       success: function (data) {
-        $('#lease').html("<cite>" + $.parseJSON(data).leaseTotal + "</cite>");
-        $('#water').html("<cite>" + $.parseJSON(data).waterTotal + "</cite>");
-        $('#power').html("<cite>" + $.parseJSON(data).powerTotal + "</cite>");
-        $('#payPower').html("<cite>" + $.parseJSON(data).payPower + "</cite>");
-        $('#payLease').html("<cite>" + $.parseJSON(data).payLease + "</cite>");
-        $('#payWater').html("<cite>" + $.parseJSON(data).payWater + "</cite>");
+        $('#lease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).leaseTotal + "</cite>");
+        $('#water').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).waterTotal + "</cite>");
+        $('#power').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).powerTotal + "</cite>");
+        $('#payPower').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payPower + "</cite>");
+        $('#payLease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payLease + "</cite>");
+        $('#payWater').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payWater + "</cite>");
         // form.render();
       }
     })
 
-    $('#search').ready(function () {
+    $('#type').ready(function () {
       form.on("select", function (data) {
         $.ajax({
           url: 'welcomeList',
           type: 'post',
           data: {'value': data.value},
           success: function (data) {
-            $('#lease').html("<cite>" + $.parseJSON(data).leaseTotal + "</cite>");
-            $('#water').html("<cite>" + $.parseJSON(data).waterTotal + "</cite>");
-            $('#power').html("<cite>" + $.parseJSON(data).powerTotal + "</cite>");
-            $('#payPower').html("<cite>" + $.parseJSON(data).payPower + "</cite>");
-            $('#payLease').html("<cite>" + $.parseJSON(data).payLease + "</cite>");
-            $('#payWater').html("<cite>" + $.parseJSON(data).payWater + "</cite>");
+            $('#lease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bold\">" + $.parseJSON(data).leaseTotal + "</cite>");
+            $('#water').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bold\">" + $.parseJSON(data).waterTotal + "</cite>");
+            $('#power').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bold\">" + $.parseJSON(data).powerTotal + "</cite>");
+            $('#payPower').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bold\">" + $.parseJSON(data).payPower + "</cite>");
+            $('#payLease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bold\">" + $.parseJSON(data).payLease + "</cite>");
+            $('#payWater').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bold\">" + $.parseJSON(data).payWater + "</cite>");
           }
         })
       });
     })
 
-    form.on('submit(search)', function (data) {
-      var type = $(this).data('type');
-      // if($('#customer_name').val()==""){
-      //   layer.msg('查询项目不能为空');
-      //   return false;
-      // }
-      active[type] ? active[type].call(this) : '';
-      return false;
-    });
-    // $('.chu .layui-btn').on('click', function () {         //搜索点击功能
-    //   var type = $(this).data('type');
-    //   // if($('#customer_name').val()==""){
-    //   //   layer.msg('查询项目不能为空');
-    //   //   return false;
-    //   // }
-    //   active[type] ? active[type].call(this) : '';
-    // });
 
     //重置功能
     $('#reset').on('click', function () {
-      $('#search').val("");
-      $('#leaseTeam').val("");
       $('#last_time').val("");
       $('#time').val("");
       form.render();
+      $.ajax({
+        url: 'welcomeList',
+        type: 'post',
+        data: {'value': $('#type').val()},
+        success: function (data) {
+          $('#lease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).leaseTotal + "</cite>");
+          $('#water').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).waterTotal + "</cite>");
+          $('#power').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).powerTotal + "</cite>");
+          $('#payPower').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payPower + "</cite>");
+          $('#payLease').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payLease + "</cite>");
+          $('#payWater').html("<cite style=\"font-size: 22px;color: limegreen;font-weight: bolder\">" + $.parseJSON(data).payWater + "</cite>");
+          // form.render();
+        }
+      })
     });
 
     $('.demoTable .layui-btn').on('click', function () {

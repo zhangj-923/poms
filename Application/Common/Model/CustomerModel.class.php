@@ -105,4 +105,24 @@ class CustomerModel extends BaseModel
             return getReturn(CODE_SUCCESS, '修改个人信息成功!!');
         }
     }
+
+    /**
+     * 重置密码
+     * @param int $customer_id
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-18 13:37:40
+     * Update: 2021-03-18 13:37:40
+     * Version: 1.00
+     */
+    public function resetPass($customer_id = 0)
+    {
+        $where = array();
+        $where['customer_id'] = $customer_id;
+        $result = $this->where($where)->save(['password' => md5('123456')]);
+        if ($result === false) {
+            return getReturn(CODE_ERROR, '系统繁忙，请稍后再试！！！');
+        } else {
+            return getReturn(CODE_SUCCESS, '密码初始化完成！！');
+        }
+    }
 }

@@ -248,21 +248,38 @@ class LeaseModel extends BaseModel
     {
         $where = array();
         $where['lease_id'] = $lease_id;
-        $room_id = $this->where($where)->find()['room_id'];
-        $where1 = array();
-        $where1['room_id'] = $room_id;
-        $result1 = M('room')->where($where1)->find()['room_status'];
-        if ($result1 == 0) {
+        $exit = $this->where($where)->find()['is_exit'];
+        if ($exit == IS_RELEASE){
             return getReturn(CODE_SUCCESS, '房屋状态已释放，不用重复该操作！');
-        } else {
-            $result = M('room')->where($where1)->save(['room_status' => 0]);
-            if ($result === false) {
+        }else if ($exit == NOT_EXIT){
+            $this->startTrans();
+            $this->where($where)->save(['is_exit' => IS_RELEASE]);
+            $room_id = $this->where($where)->find()['room_id'];
+            $where1 = array();
+            $where1['room_id'] = $room_id;
+            $result1 = M('room')->where($where1)->save(['room_status' => 0]);
+            if ($result1 === false) {
+                $this->rollback();
                 return getReturn(CODE_ERROR, '房屋状态释放失败，请稍后再试！');
             } else {
+                $this->commit();
                 return getReturn(CODE_SUCCESS, '房屋状态已释放!!!!!');
             }
         }
-
+//        $room_id = $this->where($where)->find()['room_id'];
+//        $where1 = array();
+//        $where1['room_id'] = $room_id;
+//        $result1 = M('room')->where($where1)->find()['room_status'];
+//        if ($result1 == 0) {
+//            return getReturn(CODE_SUCCESS, '房屋状态已释放，不用重复该操作！');
+//        } else {
+//            $result = M('room')->where($where1)->save(['room_status' => 0]);
+//            if ($result === false) {
+//                return getReturn(CODE_ERROR, '房屋状态释放失败，请稍后再试！');
+//            } else {
+//                return getReturn(CODE_SUCCESS, '房屋状态已释放!!!!!');
+//            }
+//        }
     }
 
     /**

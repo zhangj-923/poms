@@ -140,8 +140,11 @@
   {{#  if(d.lease_status === '生效中'){ }}
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="exit">退租</a>
   {{#  } }}
-  {{#  if(d.lease_status === '已到期'){ }}
+  {{#  if(d.lease_status === '已到期' && d.is_exit === '0'){ }}
   <a class="layui-btn layui-btn-danger layui-btn-xs" style="background: deepskyblue" lay-event="reset">释放</a>
+  {{#  } }}
+  {{#  if(d.lease_status === '已到期' && d.is_exit === '2'){ }}
+  <a class="layui-btn layui-btn-danger layui-btn-xs" style="background: deepskyblue" lay-event="">已释放</a>
   {{#  } }}
 </script>
 <script>

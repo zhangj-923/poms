@@ -115,8 +115,8 @@ class IndexController extends Controller
 
 
     public function welcomeList(){
-        $data = D('Bill')->findTotal($_POST['value']);
-        $list = D('Bill')->payTotal($_POST['value']);
+        $data = D('Bill')->findTotal($_POST);
+        $list = D('Bill')->payTotal($_POST);
         $result = array_merge($data, $list);
         echo json_encode($result);
     }

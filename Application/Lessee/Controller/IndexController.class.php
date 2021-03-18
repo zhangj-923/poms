@@ -41,8 +41,8 @@ class IndexController extends Controller
     public function getBillList()
     {
         if (IS_AJAX) {
-            $customer_id = session('CUSTOMER.customer_id');
-            $data = D('Bill')->getBill($customer_id);
+//            $customer_id = session('CUSTOMER.customer_id');
+            $data = D('Bill')->getBill($_POST);
 //            $msg = [
 //                'code' => 0,
 //                'msg' => '查询成功',
@@ -195,6 +195,24 @@ class IndexController extends Controller
             $list = M('customer')->alias('a')->where($where)->join($join)->field($field)->select();
             echo json_encode($list);
         }
+    }
+
+    /**
+     * 获取平均水电费
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * User: hjun
+     * Date: 2021-03-18 16:37:50
+     * Update: 2021-03-18 16:37:50
+     * Version: 1.00
+     */
+    public function getAverageCost()
+    {
+        $avgWater = D('Bill')->findWater($_POST);
+        $avgPower = D('Bill')->findPower($_POST);
+        $arr = [];
+        $arr['avgWater'] = $avgWater;
+        $arr['avgPower'] = $avgPower;
+        echo json_encode($arr);
     }
 
 }

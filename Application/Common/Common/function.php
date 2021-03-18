@@ -21,6 +21,7 @@ define('NOT_DEAL', 0);
 //定义租赁退租与否
 define('NOT_EXIT', 0);
 define('IS_EXIT', 1);
+define('IS_RELEASE', 2);
 
 //定义状态码
 define('CODE_SUCCESS', 200); // 请求成功

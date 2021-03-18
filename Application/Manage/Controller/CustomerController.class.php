@@ -188,4 +188,20 @@ class CustomerController extends Controller
             echo json_encode($result);
         }
     }
+
+    /**
+     * 重置密码
+     * @param int $customerId
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-18 13:36:10
+     * Update: 2021-03-18 13:36:10
+     * Version: 1.00
+     */
+    public function resetCustomerPass($customerId = 0)
+    {
+        if (IS_AJAX) {
+            $result = D('Customer')->resetPass($customerId);
+            echo json_encode($result);
+        }
+    }
 }

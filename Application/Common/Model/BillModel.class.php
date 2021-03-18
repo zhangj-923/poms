@@ -240,22 +240,29 @@ class BillModel extends BaseModel
 
     /**
      * 获取租户账单
-     * @param int $customer_id
+     * @param array $request
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
      * User: hjun
      * Date: 2021-03-06 17:29:45
      * Update: 2021-03-06 17:29:45
      * Version: 1.00
      */
-    public function getBill($customer_id = 0)
+    public function getBill($request = [])
     {
 
         $field = ['a.*', 'b.room_sn'];
         $where = array();
         $where['a.is_delete'] = NOT_DELETED;
-        $where['a.customer_id'] = $customer_id;
+        $where['a.customer_id'] = session('CUSTOMER.customer_id');
 //        $page = $request['page'];
 //        $limit = $request['limit'];
+        if (!empty($request['value'])) {
+            if ($request['value'] == 0) {
+
+            } else {
+                $where['a.bill_type'] = $request['value'];
+            }
+        }
         $join = [
             'join __ROOM__ b on a.room_id = b.room_id'
         ];
@@ -313,29 +320,37 @@ class BillModel extends BaseModel
 
     /**
      * 获取欢迎页信息
-     * @param int $value
+     * @param array $request
      * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
      * Date: 2021-03-08 15:59:02
      * Update: 2021-03-08 15:59:02
      * Version: 1.00
      */
-    public function findTotal($value = 0)
+    public function findTotal($request = [])
     {
         $where = array();
         $where['is_delete'] = NOT_DELETED;
         $where['manager_id'] = session('USER.manager_id');
-        if ($value == 1) {
+        if (!empty($request['value'])) {
+            if ($request['value'] == 1) {
 
-        } else if ($value == 2) {
-            $where['last_time'] = array('egt', strtotime(date('Y-m-01 00:00:00', time())));
-            if (date('m', time()) == '02') {
-                $where['time'] = array('elt', strtotime(date('Y-m-28 23:59:59', time())));
-            } else {
-                $where['time'] = array('elt', strtotime(date('Y-m-30 23:59:59', time())));
+            } else if ($request['value'] == 2) {
+                $where['last_time'] = array('egt', strtotime(date('Y-m-01 00:00:00', time())));
+                if (date('m', time()) == '02') {
+                    $where['time'] = array('elt', strtotime(date('Y-m-28 23:59:59', time())));
+                } else {
+                    $where['time'] = array('elt', strtotime(date('Y-m-30 23:59:59', time())));
+                }
+            } else if ($request['value'] == 3) {
+                $where['last_time'] = array('egt', strtotime(date('Y-01-01', time())));
+                $where['time'] = array('elt', strtotime(date('Y-12-31', time())));
             }
-        } else if ($value == 3) {
-            $where['last_time'] = array('egt', strtotime(date('Y-01-01', time())));
-            $where['time'] = array('elt', strtotime(date('Y-12-31', time())));
+        }
+        if (!empty($request['last_time'])) {
+            $where['last_time'] = array('egt', strtotime($request['last_time']));
+        }
+        if (!empty($request['time'])) {
+            $where['time'] = array('elt', strtotime($request['time']));
         }
         $where['bill_type'] = BILL_LEASE;
         $data = $this->where($where)->select();
@@ -371,24 +386,32 @@ class BillModel extends BaseModel
      * Update: 2021-03-08 19:18:38
      * Version: 1.00
      */
-    public function payTotal($value = 0)
+    public function payTotal($request = [])
     {
         $where = array();
         $where['is_delete'] = NOT_DELETED;
         $where['manager_id'] = session('USER.manager_id');
         $where['pay_status'] = IS_PAY;
-        if ($value == 1) {
+        if (!empty($request['value'])) {
+            if ($request['value'] == 1) {
 
-        } else if ($value == 2) {
-            $where['last_time'] = array('egt', strtotime(date('Y-m-01 00:00:00', time())));
-            if (date('m', time()) == '02') {
-                $where['time'] = array('elt', strtotime(date('Y-m-28 23:59:59', time())));
-            } else {
-                $where['time'] = array('elt', strtotime(date('Y-m-30 23:59:59', time())));
+            } else if ($request['value'] == 2) {
+                $where['last_time'] = array('egt', strtotime(date('Y-m-01 00:00:00', time())));
+                if (date('m', time()) == '02') {
+                    $where['time'] = array('elt', strtotime(date('Y-m-28 23:59:59', time())));
+                } else {
+                    $where['time'] = array('elt', strtotime(date('Y-m-30 23:59:59', time())));
+                }
+            } else if ($request['value'] == 3) {
+                $where['last_time'] = array('egt', strtotime(date('Y-01-01', time())));
+                $where['time'] = array('elt', strtotime(date('Y-12-31', time())));
             }
-        } else if ($value == 3) {
-            $where['last_time'] = array('egt', strtotime(date('Y-01-01', time())));
-            $where['time'] = array('elt', strtotime(date('Y-12-31', time())));
+        }
+        if (!empty($request['last_time'])) {
+            $where['last_time'] = array('egt', strtotime($request['last_time']));
+        }
+        if (!empty($request['time'])) {
+            $where['time'] = array('elt', strtotime($request['time']));
         }
         $where['bill_type'] = BILL_LEASE;
         $data = $this->where($where)->select();
@@ -413,5 +436,75 @@ class BillModel extends BaseModel
         $list['payPower'] = $powerTotal;
         $list['payWater'] = $waterTotal;
         return $list;
+    }
+
+    /**
+     * 查询平均水电费
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-18 16:38:52
+     * Update: 2021-03-18 16:38:52
+     * Version: 1.00
+     */
+    public function findWater($request = [])
+    {
+        $where = array();
+        $where['customer_id'] = session('CUSTOMER.customer_id');
+        $where['is_delete'] = NOT_DELETED;
+        $where['bill_type'] = BILL_WATER;
+        if (!empty($request['last_time'])) {
+            $where['last_time'] = array('egt', strtotime($request['last_time']));
+        }
+        if (!empty($request['time'])) {
+            $where['time'] = array('elt', strtotime($request['time']));
+        }
+        $list = $this->where($where)->select();
+
+        if (!empty($list)){
+            $total = 0;
+            foreach ($list as $key => $value) {
+                $total += $value['total'];
+            }
+            $avgWater = $total / count($list);
+            return $avgWater;
+        }else{
+            return 0;
+        }
+
+
+    }
+
+    /**
+     * 查询平均电费
+     * @param array $request
+     * @return array ['code'=>200, 'msg'=>'', 'data'=>null]
+     * Date: 2021-03-18 16:49:39
+     * Update: 2021-03-18 16:49:39
+     * Version: 1.00
+     */
+    public function findPower($request = [])
+    {
+        $where = array();
+        $where['customer_id'] = session('CUSTOMER.customer_id');
+        $where['is_delete'] = NOT_DELETED;
+        $where['bill_type'] = BILL_POWER;
+        if (!empty($request['last_time'])) {
+            $where['last_time'] = array('egt', strtotime($request['last_time']));
+        }
+        if (!empty($request['time'])) {
+            $where['time'] = array('elt', strtotime($request['time']));
+        }
+        $list = $this->where($where)->select();
+        if (!empty($list)){
+            $total = 0;
+            foreach ($list as $key => $value) {
+                $total += $value['total'];
+            }
+            $avgPower = $total / count($list);
+            return $avgPower;
+        }else{
+            return 0;
+        }
+
     }
 }

@@ -57,6 +57,15 @@
         </div>
       </div>
       <div class="layui-form-item">
+        <label for="r_pass" class="layui-form-label">
+          <span class="x-red">*</span>确认密码
+        </label>
+        <div class="layui-input-inline">
+          <input type="password" id="r_pass" name="r_pass" required
+                 autocomplete="off" class="layui-input" lay-verify="required|confirmPass">
+        </div>
+      </div>
+      <div class="layui-form-item">
         <label for="remark" class="layui-form-label">
           <span class="x-red">*</span>备注
         </label>
@@ -131,10 +140,9 @@
         }
       }
       , pass: [/(.+){6,12}$/, '密码必须6到12位']
-      , repass: function (value) {
-        if ($('#L_pass').val() != $('#L_repass').val()) {
-          return '两次密码不一致';
-        }
+      , confirmPass: function (value) {
+        if ($('input[name=password]').val() !== value)
+          return '提示：两次输入密码不一致！';
       }
     });
 
@@ -178,6 +186,7 @@
         $("#customer_mobile").val(data.data.customer_mobile);
         $("#customer_name").val(data.data.customer_name);
         $("#password").val(data.data.password);
+        $("#r_pass").val(data.data.password);
         $("#remark").val(data.data.remark);
       }
     });
