@@ -1,0 +1,2337 @@
+[ 2021-05-07T21:36:05+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013926s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001170s ]
+
+[ 2021-05-07T21:36:06+08:00 ] 127.0.0.1 /admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001714s ]
+
+[ 2021-05-07T21:36:06+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001720s ]
+
+[ 2021-05-07T21:36:38+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0503s ]
+SQL: SELECT * FROM `user` WHERE `name` = 'garden' AND `password` = 'c33367701511b4f6020ec61ded352059' AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0038s ]
+
+[ 2021-05-07T21:36:38+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001044s ]
+
+[ 2021-05-07T21:36:44+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+
+[ 2021-05-07T21:36:44+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2021-05-07T21:36:47+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+
+[ 2021-05-07T21:36:47+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000864s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2021-05-07T21:37:40+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `user` WHERE `name` = 'garden' AND `password` = 'c33367701511b4f6020ec61ded352059' AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2021-05-07T21:37:40+08:00 ] 127.0.0.1 /admin.php/Login/verify/id/a_login_1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001675s ]
+
+[ 2021-05-07T21:37:48+08:00 ] 127.0.0.1 /admin.php/Login/toLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `user` WHERE `name` = 'garden' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 LIMIT 1   [ RunTime:0.0617s ]
+
+[ 2021-05-07T21:37:53+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `garden` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `garden` WHERE `garden_id` = 1 AND `is_delete` = 0 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2021-05-07T21:37:54+08:00 ] 127.0.0.1 /admin.php/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `room` WHERE `is_delete` = 0 AND `manager_id` = 1 LIMIT 1   [ RunTime:0.0428s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `room` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `room_status` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT VERSION() as ver; [ RunTime:0.0159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: data D:\phpstudy_pro\WWW\poms\Application\Runtime\Cache\Manage\1e288adad12e0bfd37a0b3a2cdaf852e.php 第 93 行.
+NOTIC: [8] Undefined variable: data D:\phpstudy_pro\WWW\poms\Application\Runtime\Cache\Manage\1e288adad12e0bfd37a0b3a2cdaf852e.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\phpstudy_pro\WWW\poms\Application\Runtime\Cache\Manage\1e288adad12e0bfd37a0b3a2cdaf852e.php 第 118 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002684s ]
+
+[ 2021-05-07T21:37:55+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0236s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2021-05-07T21:41:08+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002439s ]
+
+[ 2021-05-07T21:41:09+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0164s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:41:40+08:00 ] 127.0.0.1 /admin.php/Room/room_addCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002026s ]
+
+[ 2021-05-07T21:41:40+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 10  [ RunTime:0.0141s ]
+
+[ 2021-05-07T21:41:40+08:00 ] 127.0.0.1 /admin.php/Public/getCustomerData.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `customer` WHERE `is_delete` = 0 AND `manager_id` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002031s ]
+
+[ 2021-05-07T21:41:50+08:00 ] 127.0.0.1 /admin.php/Room/addLease
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0009s ]
+SQL: INSERT INTO `lease` (`room_id`,`customer_id`,`lease_team`,`month`,`rent`,`sing_time`,`expire_time`,`create_time`,`manager_id`) VALUES ('10','1','4','2','1200','1619798400','1625068800','1620394910','1') [ RunTime:0.0589s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: UPDATE `room` SET `room_status`='1' WHERE `room_id` = 10 [ RunTime:0.0450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2021-05-07T21:41:54+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2021-05-07T21:41:54+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:41:56+08:00 ] 127.0.0.1 /admin.php/Room/checkWater?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `water` WHERE `room_id` = 10 AND `is_delete` = 0  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001301s ]
+
+[ 2021-05-07T21:41:56+08:00 ] 127.0.0.1 /admin.php/Room/room_addWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2021-05-07T21:41:56+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001670s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 10  [ RunTime:0.0004s ]
+
+[ 2021-05-07T21:42:05+08:00 ] 127.0.0.1 /admin.php/Room/addWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0059s ]
+SQL: INSERT INTO `water` (`room_id`,`water_sn`,`price`,`current`,`time`,`manager_id`,`create_time`) VALUES ('10','P205','5','10','1619798400','1','1620394925') [ RunTime:0.0512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2021-05-07T21:42:08+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2021-05-07T21:42:09+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0014s ]
+
+[ 2021-05-07T21:42:10+08:00 ] 127.0.0.1 /admin.php/Room/checkPower?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10 AND `is_delete` = 0  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002522s ]
+
+[ 2021-05-07T21:42:11+08:00 ] 127.0.0.1 /admin.php/Room/room_addPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032252s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2021-05-07T21:42:11+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 10  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:42:22+08:00 ] 127.0.0.1 /admin.php/Room/addPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0021s ]
+SQL: INSERT INTO `power` (`room_id`,`power_sn`,`p_price`,`p_current`,`p_time`,`manager_id`,`create_time`) VALUES ('10','P205','1','10','1619798400','1','1620394942') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002213s ]
+
+[ 2021-05-07T21:42:25+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2021-05-07T21:42:25+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:42:27+08:00 ] 127.0.0.1 /admin.php/Room/checkWater?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `water` WHERE `room_id` = 10 AND `is_delete` = 0  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001550s ]
+
+[ 2021-05-07T21:42:27+08:00 ] 127.0.0.1 /admin.php/Room/checkPower?roomId=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 10 AND `is_delete` = 0  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2021-05-07T21:42:39+08:00 ] 127.0.0.1 /admin.php/Water/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2021-05-07T21:42:39+08:00 ] 127.0.0.1 /admin.php/Water/getWaterList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0223s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002350s ]
+
+[ 2021-05-07T21:42:42+08:00 ] 127.0.0.1 /admin.php/Water/water_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2021-05-07T21:42:43+08:00 ] 127.0.0.1 /admin.php/Water/getWater?waterId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0014s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.water_id = '11' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2021-05-07T21:42:46+08:00 ] 127.0.0.1 /admin.php/Water/editWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0022s ]
+SQL: UPDATE `water` SET `water_id`='11',`room_id`='10',`water_sn`='W205',`price`='5.00',`current`='10',`time`='1619798400' WHERE `water_id` = 11 [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2021-05-07T21:42:50+08:00 ] 127.0.0.1 /admin.php/Water/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2021-05-07T21:42:50+08:00 ] 127.0.0.1 /admin.php/Water/getWaterList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001553s ]
+
+[ 2021-05-07T21:48:53+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0006s ]
+
+[ 2021-05-07T21:48:54+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:48:55+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001516s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:48:57+08:00 ] 127.0.0.1 /admin.php/Room/room_add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined index: garden_name D:\phpstudy_pro\WWW\poms\Application\Runtime\Cache\Manage\fcd346e1a2c76bfe4095b418da38c0cd.php 第 41 行.
+NOTIC: [8] Undefined index: garden_name D:\phpstudy_pro\WWW\poms\Application\Runtime\Cache\Manage\fcd346e1a2c76bfe4095b418da38c0cd.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001070s ]
+
+[ 2021-05-07T21:49:20+08:00 ] 127.0.0.1 /admin.php/Room/addRoom
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: INSERT INTO `room` (`room_sn`,`remark`,`manager_id`,`garden_id`,`create_time`) VALUES ('401','三向朝光','1','1','1620395359') [ RunTime:0.3025s ]
+
+[ 2021-05-07T21:49:23+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001889s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2021-05-07T21:49:23+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:49:25+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0005s ]
+
+[ 2021-05-07T21:49:35+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:49:36+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:49:42+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:49:46+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:49:47+08:00 ] 127.0.0.1 /admin.php/Room/room_addCustomer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001874s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001394s ]
+
+[ 2021-05-07T21:49:47+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 18  [ RunTime:0.0005s ]
+
+[ 2021-05-07T21:49:47+08:00 ] 127.0.0.1 /admin.php/Public/getCustomerData.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002591s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `customer` WHERE `is_delete` = 0 AND `manager_id` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000959s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2021-05-07T21:49:58+08:00 ] 127.0.0.1 /admin.php/Room/addLease
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0008s ]
+SQL: INSERT INTO `lease` (`room_id`,`customer_id`,`lease_team`,`month`,`rent`,`sing_time`,`expire_time`,`create_time`,`manager_id`) VALUES ('18','2','4','2','1200','1619798400','1625068800','1620395398','1') [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0008s ]
+SQL: UPDATE `room` SET `room_status`='1' WHERE `room_id` = 18 [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2021-05-07T21:50:01+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:50:01+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:50:03+08:00 ] 127.0.0.1 /admin.php/Room/checkWater?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `water` WHERE `room_id` = 18 AND `is_delete` = 0  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2021-05-07T21:50:03+08:00 ] 127.0.0.1 /admin.php/Room/room_addWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2021-05-07T21:50:03+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 18  [ RunTime:0.0004s ]
+
+[ 2021-05-07T21:50:09+08:00 ] 127.0.0.1 /admin.php/Room/addWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0025s ]
+SQL: INSERT INTO `water` (`room_id`,`water_sn`,`price`,`current`,`time`,`manager_id`,`create_time`) VALUES ('18','W401','5','10','1619798400','1','1620395409') [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001240s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001327s ]
+
+[ 2021-05-07T21:50:11+08:00 ] 127.0.0.1 /admin.php/Room/checkPower?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0257s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 18 AND `is_delete` = 0  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2021-05-07T21:50:11+08:00 ] 127.0.0.1 /admin.php/Room/room_addPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2021-05-07T21:50:11+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001621s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 18  [ RunTime:0.0005s ]
+
+[ 2021-05-07T21:50:19+08:00 ] 127.0.0.1 /admin.php/Room/addPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0024s ]
+SQL: INSERT INTO `power` (`room_id`,`power_sn`,`p_price`,`p_current`,`p_time`,`manager_id`,`create_time`) VALUES ('18','P401','1','10','1619798400','1','1620395419') [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2021-05-07T21:50:20+08:00 ] 127.0.0.1 /admin.php/Room/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2021-05-07T21:50:21+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0004s ]
+
+[ 2021-05-07T21:50:22+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=2&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 10,10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:50:23+08:00 ] 127.0.0.1 /admin.php/Room/checkWater?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `water` WHERE `room_id` = 18 AND `is_delete` = 0  [ RunTime:0.0063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002622s ]
+
+[ 2021-05-07T21:50:23+08:00 ] 127.0.0.1 /admin.php/Room/checkPower?roomId=18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 18 AND `is_delete` = 0  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2021-05-07T21:53:10+08:00 ] 127.0.0.1 /admin.php/Bill/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2021-05-07T21:53:11+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2021-05-07T21:53:18+08:00 ] 127.0.0.1 /admin.php/Power/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001829s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000536s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000925s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003182s ]
+
+[ 2021-05-07T21:53:18+08:00 ] 127.0.0.1 /admin.php/Power/getPowerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0066s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2021-05-07T21:53:28+08:00 ] 127.0.0.1 /admin.php/Water/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2021-05-07T21:53:28+08:00 ] 127.0.0.1 /admin.php/Water/getWaterList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2021-05-07T21:53:34+08:00 ] 127.0.0.1 /admin.php/Power/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2021-05-07T21:53:34+08:00 ] 127.0.0.1 /admin.php/Power/getPowerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001912s ]
+
+[ 2021-05-07T21:54:08+08:00 ] 127.0.0.1 /admin.php/Room/getRoomList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1 ORDER BY room_id LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `room` WHERE `is_delete` = 0 AND `garden_id` = 1 AND `manager_id` = 1  [ RunTime:0.0003s ]
+
+[ 2021-05-07T21:54:11+08:00 ] 127.0.0.1 /admin.php/Room/checkPower?roomId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3 AND `is_delete` = 0  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2021-05-07T21:54:11+08:00 ] 127.0.0.1 /admin.php/Room/room_addPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2021-05-07T21:54:11+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 3  [ RunTime:0.0002s ]
+
+[ 2021-05-07T21:54:13+08:00 ] 127.0.0.1 /admin.php/Room/checkWater?roomId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `water` WHERE `room_id` = 3 AND `is_delete` = 0  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2021-05-07T21:54:14+08:00 ] 127.0.0.1 /admin.php/Room/checkPower?roomId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `power` WHERE `room_id` = 3 AND `is_delete` = 0  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2021-05-07T21:54:14+08:00 ] 127.0.0.1 /admin.php/Room/room_addPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2021-05-07T21:54:14+08:00 ] 127.0.0.1 /admin.php/Room/getRoom?roomId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `room` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `room` WHERE `room_id` = 3  [ RunTime:0.0005s ]
+
+[ 2021-05-07T21:54:27+08:00 ] 127.0.0.1 /admin.php/Water/water_read
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2021-05-07T21:54:27+08:00 ] 127.0.0.1 /admin.php/Water/getWater?waterId=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.water_id = '12' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2021-05-07T21:54:38+08:00 ] 127.0.0.1 /admin.php/Water/readWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0008s ]
+SQL: UPDATE `water` SET `water_id`='12',`room_id`='18',`water_sn`='W401',`last_current`='10',`current`='60',`time`='1620316800',`last_time`='1619798400' WHERE `water_id` = 12 [ RunTime:0.0006s ]
+SQL: SELECT a.current,a.last_current,a.price,a.last_time,a.time,a.manager_id,a.room_id,b.lease_id,b.customer_id FROM water a join lease b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND b.is_delete = 0 AND b.is_exit = 0 AND a.water_id = '12' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0015s ]
+SQL: INSERT INTO `bill` (`last_time`,`time`,`manager_id`,`room_id`,`lease_id`,`customer_id`,`bill_remark`,`total`,`bill_type`,`create_time`) VALUES ('1619798400','1620316800','1','18','33','2','五月水费','250','2','1620395678') [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2021-05-07T21:54:42+08:00 ] 127.0.0.1 /admin.php/Water/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2021-05-07T21:54:42+08:00 ] 127.0.0.1 /admin.php/Water/getWaterList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2021-05-07T21:54:47+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=401&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2021-05-07T21:54:47+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=401&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2021-05-07T21:56:22+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2021-05-07T21:56:22+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000854s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2021-05-07T21:56:23+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2021-05-07T21:56:23+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2021-05-07T21:56:25+08:00 ] 127.0.0.1 /admin.php/Lease/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2021-05-07T21:56:25+08:00 ] 127.0.0.1 /admin.php/Lease/getLeaseList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2021-05-07T21:56:27+08:00 ] 127.0.0.1 /admin.php/Lease/getLeaseList?page=1&limit=10&key1=&key2=&key3=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2021-05-07T21:56:30+08:00 ] 127.0.0.1 /admin.php/Power/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2021-05-07T21:56:31+08:00 ] 127.0.0.1 /admin.php/Power/getPowerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000984s ]
+
+[ 2021-05-07T21:56:34+08:00 ] 127.0.0.1 /admin.php/Power/power_read
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2021-05-07T21:56:34+08:00 ] 127.0.0.1 /admin.php/Power/getPower?powerId=11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001714s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0032s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.power_id = '11' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2021-05-07T21:56:43+08:00 ] 127.0.0.1 /admin.php/Power/readPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0022s ]
+SQL: UPDATE `power` SET `power_id`='11',`room_id`='18',`power_sn`='P401',`plast_current`='10',`p_current`='60',`p_time`='1620316800',`plast_time`='1619798400' WHERE `power_id` = 11 [ RunTime:0.0013s ]
+SQL: SELECT a.p_current,a.plast_current,a.p_price,a.plast_time,a.p_time,a.manager_id,a.room_id,b.lease_id,b.customer_id FROM power a join lease b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND b.is_delete = 0 AND b.is_exit = 0 AND a.power_id = '11' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: INSERT INTO `bill` (`manager_id`,`room_id`,`lease_id`,`customer_id`,`bill_remark`,`total`,`bill_type`,`last_time`,`time`,`create_time`) VALUES ('1','18','33','2','五月电费','50','3','1619798400','1620316800','1620395803') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002188s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002321s ]
+
+[ 2021-05-07T21:56:47+08:00 ] 127.0.0.1 /admin.php/Power/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001024s ]
+
+[ 2021-05-07T21:56:47+08:00 ] 127.0.0.1 /admin.php/Power/getPowerList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002966s ]
+
+[ 2021-05-07T21:56:51+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=401&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001066s ]
+
+[ 2021-05-07T21:56:51+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=401&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2021-05-07T21:56:58+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=401&key2=3&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) AND `bill_type` = '3' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) AND `bill_type` = '3' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000795s ]
+
+[ 2021-05-07T21:56:58+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=401&key2=3&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) AND `bill_type` = '3' LIMIT 1   [ RunTime:0.0454s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' OR a.bill_remark LIKE '%401%' ) AND `bill_type` = '3' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2021-05-07T21:57:01+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002450s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2021-05-07T21:57:01+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001510s ]
+
+[ 2021-05-07T21:57:04+08:00 ] 127.0.0.1 /admin.php/Lease/getLeaseList?page=1&limit=10&key1=401&key2=&key3=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%401%' OR c.room_sn LIKE '%401%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001463s ]
+
+[ 2021-05-07T21:57:09+08:00 ] 127.0.0.1 /admin.php/Lease/getLeaseList?page=1&limit=10&key1=&key2=&key3=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND a.expire_time < 1620395829 AND a.is_exit <> 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND a.expire_time < 1620395829 AND a.is_exit <> 1 ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2021-05-07T21:57:15+08:00 ] 127.0.0.1 /admin.php/Lease/getLeaseList?page=1&limit=10&key1=&key2=4&key3=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `lease` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND a.lease_team = '4' AND a.expire_time < 1620395835 AND a.is_exit <> 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name FROM lease a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND a.lease_team = '4' AND a.expire_time < 1620395835 AND a.is_exit <> 1 ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2021-05-07T22:01:13+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2021-05-07T22:01:14+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 3  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 2  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2021-05-07T22:01:16+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002171s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001598s ]
+
+[ 2021-05-07T22:01:20+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2021-05-07T22:01:22+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 3  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000831s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2021-05-07T22:01:41+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2021-05-07T22:01:42+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 1  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1609430400 AND `time` <= 1640880000 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001404s ]
+
+[ 2021-05-07T22:01:43+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 3  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 2  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2021-05-07T22:01:45+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001062s ]
+
+[ 2021-05-07T22:01:49+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 1  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 3  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 1  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1617206400 AND `time` <= 1619798400 AND `bill_type` = 2  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2021-05-07T22:01:50+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `last_time` >= 1619798400 AND `time` <= 1622390399 AND `bill_type` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2021-05-07T22:01:51+08:00 ] 127.0.0.1 /admin.php/Index/welcomeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 1  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 3  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `bill_type` = 2  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 3  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `bill` WHERE `is_delete` = 0 AND `manager_id` = 1 AND `pay_status` = 1 AND `bill_type` = 2  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2021-05-07T22:04:14+08:00 ] 127.0.0.1 /admin.php/Water/water_read
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000394s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2021-05-07T22:04:14+08:00 ] 127.0.0.1 /admin.php/Water/getWater?waterId=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.water_id = '7' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001077s ]
+
+[ 2021-05-07T22:04:25+08:00 ] 127.0.0.1 /admin.php/Water/readWater
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0005s ]
+SQL: UPDATE `water` SET `water_id`='7',`room_id`='6',`water_sn`='W201',`last_current`='50',`current`='100',`time`='1619798400',`last_time`='1614960000' WHERE `water_id` = 7 [ RunTime:0.0012s ]
+SQL: SELECT a.current,a.last_current,a.price,a.last_time,a.time,a.manager_id,a.room_id,b.lease_id,b.customer_id FROM water a join lease b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND b.is_delete = 0 AND b.is_exit = 0 AND a.water_id = '7' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: INSERT INTO `bill` (`last_time`,`time`,`manager_id`,`room_id`,`lease_id`,`customer_id`,`bill_remark`,`total`,`bill_type`,`create_time`) VALUES ('1614960000','1619798400','1','6','22','19','五月水费','250','2','1620396265') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2021-05-07T22:04:28+08:00 ] 127.0.0.1 /admin.php/Water/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2021-05-07T22:04:28+08:00 ] 127.0.0.1 /admin.php/Water/getWaterList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001784s ]
+SQL: SHOW COLUMNS FROM `water` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.*,b.room_sn FROM water a join room b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2021-05-07T22:04:33+08:00 ] 127.0.0.1 /admin.php/Power/power_read
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2021-05-07T22:04:33+08:00 ] 127.0.0.1 /admin.php/Power/getPower?powerId=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.room_sn FROM power a join room b on a.room_id = b.room_id  WHERE a.power_id = '6' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2021-05-07T22:04:43+08:00 ] 127.0.0.1 /admin.php/Power/readPower
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `power` [ RunTime:0.0005s ]
+SQL: UPDATE `power` SET `power_id`='6',`room_id`='6',`power_sn`='P201',`plast_current`='60',`p_current`='100',`p_time`='1619798400',`plast_time`='1614960000' WHERE `power_id` = 6 [ RunTime:0.0012s ]
+SQL: SELECT a.p_current,a.plast_current,a.p_price,a.plast_time,a.p_time,a.manager_id,a.room_id,b.lease_id,b.customer_id FROM power a join lease b on a.room_id = b.room_id  WHERE a.is_delete = 0 AND b.is_delete = 0 AND b.is_exit = 0 AND a.power_id = '6' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: INSERT INTO `bill` (`manager_id`,`room_id`,`lease_id`,`customer_id`,`bill_remark`,`total`,`bill_type`,`last_time`,`time`,`create_time`) VALUES ('1','6','22','19','五月电费','40','3','1614960000','1619798400','1620396283') [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2021-05-07T22:04:45+08:00 ] 127.0.0.1 /admin.php/Bill/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2021-05-07T22:04:45+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002098s ]
+
+[ 2021-05-07T22:04:48+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=201&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%201%' OR c.room_sn LIKE '%201%' OR a.bill_remark LIKE '%201%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%201%' OR c.room_sn LIKE '%201%' OR a.bill_remark LIKE '%201%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2021-05-07T22:04:48+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=201&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%201%' OR c.room_sn LIKE '%201%' OR a.bill_remark LIKE '%201%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%201%' OR c.room_sn LIKE '%201%' OR a.bill_remark LIKE '%201%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2021-05-07T22:05:04+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2021-05-07T22:05:04+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2021-05-07T22:05:19+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=1&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2021-05-07T22:05:19+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=1&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2021-05-07T22:05:25+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=2&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '2' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2021-05-07T22:05:25+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=2&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '2' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '2' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2021-05-07T22:05:27+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=3&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '3' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '3' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2021-05-07T22:05:27+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=3&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '3' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) AND `bill_type` = '3' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000879s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2021-05-07T22:05:28+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2021-05-07T22:05:28+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=%E5%BC%A0%E5%86%9B&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001488s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' AND ( b.customer_name LIKE '%张军%' OR c.room_sn LIKE '%张军%' OR a.bill_remark LIKE '%张军%' ) ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2021-05-07T22:05:30+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2021-05-07T22:05:30+08:00 ] 127.0.0.1 /admin.php/Bill/getBillList?page=1&limit=10&key1=&key2=&last_time=&time=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001934s ]
+SQL: SHOW COLUMNS FROM `bill` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.*,b.customer_name,b.customer_mobile,c.room_sn,d.garden_name,e.building_name,u.manager_name,l.is_exit,l.expire_time FROM bill a join customer b on a.customer_id = b.customer_id join room c on a.room_id = c.room_id join user u on a.manager_id = u.manager_id join garden d on u.garden_id = d.garden_id join building e on u.building_id = e.building_id join lease l on a.lease_id = l.lease_id  WHERE a.is_delete = 0 AND a.manager_id = '1' ORDER BY a.create_time asc LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+

@@ -40,7 +40,7 @@ class RoomController extends Controller
         $page = $_GET['page'];
         $limit = $_GET['limit'];
         $start = $limit * ($page - 1);
-        $data = $room->where($where)->limit($start, $limit)->order('room_id', 'desc')->select();
+        $data = $room->where($where)->limit($start, $limit)->order('room_status')->select();
         $count = count($room->where($where)->select());
         foreach ($data as $key => $value) {
             $data[$key]['create_time'] = date('Y-m-d H:i:s', $value['create_time']);

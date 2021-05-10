@@ -89,7 +89,9 @@ class LeaseModel extends BaseModel
             if ($request['key3'] == 1) {
                 $where['a.expire_time'] = array('egt', time());
             } else if ($request['key3'] == 2) {
+
                 $where['a.expire_time'] = array('lt', time());
+                $where['a.is_exit'] = array('neq', IS_EXIT);
             } else if ($request['key3'] == 3) {
                 $where['a.is_exit'] = IS_EXIT;
             }

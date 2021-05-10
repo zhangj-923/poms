@@ -29,7 +29,7 @@
              onClick="this.src='<?php echo U('Login/verify',array('id' => 'a_login_1'));?>'"
              style="float:right; margin-top: -50px" alt="captcha"/>
       </div>
-      <input class="layui-bg-black" value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+      <input class="" value="登录" lay-submit lay-filter="login" style="width:100%;background: deepskyblue" type="submit">
 
     </form>
   </div>

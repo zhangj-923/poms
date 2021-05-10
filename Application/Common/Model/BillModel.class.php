@@ -460,14 +460,14 @@ class BillModel extends BaseModel
         }
         $list = $this->where($where)->select();
 
-        if (!empty($list)){
+        if (!empty($list)) {
             $total = 0;
             foreach ($list as $key => $value) {
                 $total += $value['total'];
             }
             $avgWater = $total / count($list);
-            return $avgWater;
-        }else{
+            return round($avgWater, 2);
+        } else {
             return 0;
         }
 
@@ -495,14 +495,14 @@ class BillModel extends BaseModel
             $where['time'] = array('elt', strtotime($request['time']));
         }
         $list = $this->where($where)->select();
-        if (!empty($list)){
+        if (!empty($list)) {
             $total = 0;
             foreach ($list as $key => $value) {
                 $total += $value['total'];
             }
             $avgPower = $total / count($list);
-            return $avgPower;
-        }else{
+            return round($avgPower, 2);
+        } else {
             return 0;
         }
 

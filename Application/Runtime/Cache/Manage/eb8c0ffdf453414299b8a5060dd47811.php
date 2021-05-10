@@ -177,7 +177,7 @@
           {field: 'total_rent', width: '6%', title: '总金额', align: 'center', sort: 'true', totalRow: true},
           {field: 'exit_time', width: '7%', title: '退租时间', align: 'center', sort: 'true'},
           // {field: 'remark', width: '15%', title: '备注', align: 'center', sort: 'true'},
-          {fixed: 'right', width: '13%', title: '操作', align: 'center', toolbar: '#barDemo'}
+          {fixed: 'right', width: '20%', title: '操作', align: 'center', toolbar: '#barDemo'}
         ]
       ],
       id: 'demo'
@@ -335,9 +335,12 @@
 <script type="text/html" id="statusTpl">
   {{#  if(d.lease_status === '已到期'){ }}
   <span style="color: red;">{{ d.lease_status }}</span>
+  {{#  }else if(d.lease_status === '已退租'){ }}
+  <span style="color: deepskyblue;">{{ d.lease_status }}</span>
   {{#  } else { }}
   {{ d.lease_status }}
   {{#  } }}
+
 </script>
 </body>
 
